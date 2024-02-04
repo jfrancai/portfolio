@@ -3,6 +3,7 @@ title: The Ethernaut
 logo:
   path: ../ethernaut.png
 layout: wide
+weight: 1
 ---
 
 The Ethernaut is a Web3/Solidity based wargame inspired by [overthewire.org](https://overthewire.org), played in the Ethereum Virtual Machine.

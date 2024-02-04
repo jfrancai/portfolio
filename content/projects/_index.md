@@ -13,4 +13,6 @@ layout: wide
 
 {{< cards >}}
 {{< card link="ethernaut" title="The Ethernaut" image="ethernaut.png" imageStyle="object-fit:cover; aspect-ratio:16/9;" >}}
+{{< card link="node-guardians" title="Node Guardians" image="node-guardians.jpg" imageStyle="object-fit:cover; aspect-ratio:16/9;" >}}
+{{< card link="crypto-zombies" title="Crypto Zombies" image="crypto-zombies.png" imageStyle="object-fit:cover; aspect-ratio:16/9;" >}}
 {{< /cards >}}
