@@ -49,6 +49,11 @@ menu:
         icon: x-twitter
 
 params:
+  title: "Porter"
+  author: "Carolyn Van Slyck"
+  description: "A Friendly Cloud Installer for Cloud Native Application Bundles"
+  image: "images/porter-twitter-card.png"
+
   navbar:
     displayTitle: true
     displayLogo: true
