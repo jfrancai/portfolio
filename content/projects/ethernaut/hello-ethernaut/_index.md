@@ -2,9 +2,12 @@
 title: Hello Ethernaut
 type: docs
 next: fallback
+weight: 1
 ---
 
-Difficulty: ⭐
+[Level0](https://ethernaut.openzeppelin.com/level/0) - ⭐
+
+---
 
 ![Untitled](Hello%20Ethernaut%20dc1fda50a6554dd982628c35f95b8498/Untitled.png)
 

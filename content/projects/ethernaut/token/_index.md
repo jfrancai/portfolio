@@ -1,10 +1,14 @@
 ---
 title: Token
+weight: 6
+type: docs
+next: delegation
+prev: telephone
 ---
 
-Difficulty: ⭐⭐
-Date: 1 février 2024
-État: Terminé
+[Level5](https://ethernaut.openzeppelin.com/level/5) - ⭐⭐
+
+---
 
 ```solidity
 // SPDX-License-Identifier: UNLICENSED

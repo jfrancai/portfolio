@@ -1,10 +1,14 @@
 ---
 title: Delegation
+weight: 7
+type: docs
+next: force
+prev: token
 ---
 
-Difficulty: ⭐⭐
-Date: 1 février 2024
-État: Terminé
+[Level6](https://ethernaut.openzeppelin.com/level/6) - ⭐⭐
+
+---
 
 The goal of this level is for you to claim ownership of the instance you are given.
 

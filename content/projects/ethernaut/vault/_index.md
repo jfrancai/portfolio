@@ -1,11 +1,14 @@
 ---
 title: Vault
+weight: 9
+type: docs
+next: king
+prev: force
 ---
 
-Difficulty: ⭐⭐
-Date: 2 février 2024
-URL: https://ethernaut.openzeppelin.com/level/0xB7257D8Ba61BD1b3Fb7249DCd9330a023a5F3670
-État: Terminé
+[Level8](https://ethernaut.openzeppelin.com/level/8) - ⭐⭐
+
+---
 
 ```solidity
 // SPDX-License-Identifier: MIT

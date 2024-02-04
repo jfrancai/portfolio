@@ -1,10 +1,14 @@
 ---
 title: Coin Flip
+weight: 4
+type: docs
+next: telephone
+prev: fal1out
 ---
 
-Difficulty: ⭐⭐
-Date: 31 janvier 2024
-État: Terminé
+[Level3](https://ethernaut.openzeppelin.com/level/3) - ⭐⭐
+
+---
 
 This is a coin
 flipping game where you need to build up your winning streak by guessing

@@ -1,5 +1,8 @@
 ---
 title: Re-entrancy
+weight: 11
+type: docs
+prev: king
 ---
 
 [Level10](https://ethernaut.openzeppelin.com/level/10) - ⭐⭐⭐
@@ -49,7 +52,6 @@ contract Reentrance {
 }
 ```
 
-<aside>
 💡 In order to prevent re-entrancy attacks when moving funds out of your contract, use the [Checks-Effects-Interactions pattern](https://solidity.readthedocs.io/en/develop/security-considerations.html#use-the-checks-effects-interactions-pattern) being aware that `call` will only return false without interrupting the execution flow. Solutions such as [ReentrancyGuard](https://docs.openzeppelin.com/contracts/2.x/api/utils#ReentrancyGuard) or [PullPayment](https://docs.openzeppelin.com/contracts/2.x/api/payment#PullPayment) can also be used.
 
 `transfer` and `send` are no longer recommended solutions as they can potentially break contracts after the Istanbul hard fork [Source 1](https://diligence.consensys.net/blog/2019/09/stop-using-soliditys-transfer-now/) [Source 2](https://forum.openzeppelin.com/t/reentrancy-after-istanbul/1742).
@@ -63,8 +65,6 @@ Re-entrancy is a common attack. You should always be prepared for it!
 ### The DAO Hack
 
 The famous DAO hack used reentrancy to extract a huge amount of ether from the victim contract. See [15 lines of code that could have prevented TheDAO Hack](https://blog.openzeppelin.com/15-lines-of-code-that-could-have-prevented-thedao-hack-782499e00942).
-
-</aside>
 
 ### Use the Checks-Effects-Interactions Pattern[](https://docs.soliditylang.org/en/develop/security-considerations.html#use-the-checks-effects-interactions-pattern)
 

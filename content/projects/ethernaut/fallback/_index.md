@@ -1,8 +1,14 @@
 ---
 title: Fallback
+weight: 2
+type: docs
+next: fal1out
+prev: hello-ethernaut
 ---
 
-Difficulty: ⭐
+[Level1](https://ethernaut.openzeppelin.com/level/1) - ⭐
+
+---
 
 - How to send ether when interacting with an ABI
 

@@ -1,12 +1,14 @@
 ---
 title: King
-type: blog
+weight: 10
+type: docs
+next: re-entrancy
+prev: vault
 ---
 
-Difficulty: ⭐⭐⭐
-Date: 2 février 2024
-URL: https://ethernaut.openzeppelin.com/level/0x3049C00639E6dfC269ED1451764a046f7aE500c6
-État: Terminé
+[Level9](https://ethernaut.openzeppelin.com/level/9) - ⭐⭐⭐
+
+---
 
 The contract below represents a very simple game: whoever sends it an amount of ether that is larger than the current prize becomes the new king. On such an event, the overthrown king gets paid the new prize, making a bit of ether in the process! As ponzi as it gets xD
 

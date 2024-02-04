@@ -1,11 +1,14 @@
 ---
 title: Force
+weight: 8
+type: docs
+next: vault
+prev: delegation
 ---
 
-Difficulty: ⭐⭐⭐
-Date: 2 février 2024
-URL: https://ethernaut.openzeppelin.com/level/0xb6c2Ec883DaAac76D8922519E63f875c2ec65575
-État: Terminé
+[Level7](https://ethernaut.openzeppelin.com/level/7) - ⭐⭐⭐
+
+---
 
 Some contracts will simply not take your money `¯\_(ツ)_/¯`
 

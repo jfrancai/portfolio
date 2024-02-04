@@ -1,9 +1,14 @@
 ---
 title: Telephone
+weight: 5
+type: docs
+next: token
+prev: coin-flip
 ---
 
-Difficulty: ⭐
-État: Terminé
+[Level4](https://ethernaut.openzeppelin.com/level/4) - ⭐
+
+---
 
 Claim ownership of the contract below to complete this level.
 

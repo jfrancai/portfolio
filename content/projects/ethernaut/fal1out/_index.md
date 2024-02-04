@@ -1,8 +1,14 @@
 ---
 title: Fal1out
+weight: 3
+type: docs
+next: coin-flip
+prev: fallback
 ---
 
-Difficulty: ⭐
+[Level2](https://ethernaut.openzeppelin.com/level/2) - ⭐
+
+---
 
 ```solidity
 // SPDX-License-Identifier: MIT

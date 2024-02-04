@@ -6,6 +6,11 @@ module:
   imports:
     - path: github.com/imfing/hextra
 
+outputs:
+  home: [HTML]
+  page: [HTML]
+  section: [HTML, RSS]
+
 markup:
   # allow raw html
   goldmark:
@@ -51,6 +56,15 @@ params:
       path: images/pp.jpg
       width: 40
       height: 40
+    width: wide
+
+  page:
+    # full (100%), wide (90rem), normal (1280px)
+    width: normal
+
+  blog:
+    list:
+      displayTags: true
 
   footer:
     displayCopyright: false
