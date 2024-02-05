@@ -6,6 +6,8 @@ layout: wide
 weight: 1
 ---
 
+</br>
+
 The Ethernaut is a Web3/Solidity based wargame inspired by [overthewire.org](https://overthewire.org), played in the Ethereum Virtual Machine.
 Each level is a smart contract that needs to be 'hacked'.
 The game is 100% open source and all levels are contributions made by other players.
@@ -13,6 +15,8 @@ The game is 100% open source and all levels are contributions made by other play
 Here you will find my notes on the levels I solved. At this time, they are not intended to be read as a complete guide to understanding Ethernaut levels.
 
 I focus on solving the levels and these notes serve as checkpoints for my knowledge.
+
+</br>
 
 {{< cards >}}
 {{< card link="hello-ethernaut" title="Hello Ethernaut" image="hello-ethernaut.svg" >}}
