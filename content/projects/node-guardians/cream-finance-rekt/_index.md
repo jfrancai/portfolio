@@ -5,7 +5,7 @@ type: docs
 ---
 
 - Link: https://nodeguardians.io/dev-hub/quests/cream-rekt</br>
-- About: low-level calls, reentrency</br>
+- About: low-level calls, re-entrancy</br>
 - Author: Julien</br>
 - Difficulty: 🗡🗡🗡🗡</br>
 - Language: Solidity</br>
