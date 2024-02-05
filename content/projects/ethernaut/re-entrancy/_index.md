@@ -3,6 +3,7 @@ title: Re-entrancy
 weight: 11
 type: docs
 prev: king
+next: elevator
 ---
 
 [Level10](https://ethernaut.openzeppelin.com/level/10) - ⭐⭐⭐

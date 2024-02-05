@@ -26,4 +26,5 @@ I focus on solving the levels and these notes serve as checkpoints for my knowle
 {{< card link="vault" title="Vault" image="vault.svg" >}}
 {{< card link="king" title="King" image="king.svg" >}}
 {{< card link="re-entrancy" title="Re-entrancy" image="re-entrancy.svg" >}}
+{{< card link="elevator" title="Elevator" image="elevator.svg" >}}
 {{< /cards >}}
