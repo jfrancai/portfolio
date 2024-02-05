@@ -14,4 +14,5 @@ You can see my profile [here](https://nodeguardians.io/character/c6fabb197db9).
 
 {{< cards >}}
 {{< card link="cream-finance-rekt" title="Cream Finance Rekt" image="cream-finance-rekt.webp" >}}
+{{< card link="price-oracle-attack" title="Price Oracle Attack" image="price-oracle-attack.webp" >}}
 {{< /cards >}}
