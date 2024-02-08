@@ -1,6 +1,6 @@
 ---
 title: Price Oracle Attack
-weight: 2
+weight: 3
 type: docs
 ---
 
