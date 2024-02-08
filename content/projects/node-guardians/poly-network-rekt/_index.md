@@ -1,5 +1,5 @@
 ---
-title: Poly Network
+title: Poly Network Rekt
 weight: 1
 type: docs
 ---
