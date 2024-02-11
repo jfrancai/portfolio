@@ -7,7 +7,7 @@ async function main() {
   if (process.env.NOTION_TOKEN === "")
     throw Error("The NOTION_TOKEN environment vairable is not set.");
   const config = await loadConfig();
-  console.info("[Info] Config loaded ");
+  console.info("[Info] Config loaded ", JSON.stringify(config));
 }
 
 main()
