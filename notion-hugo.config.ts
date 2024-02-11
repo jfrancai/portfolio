@@ -40,7 +40,7 @@ const userConfig: UserConfig = {
       //    `markup.goldmark.renderer.unsafe` needs to be set to true for the HTML tags to work,
       //    which is the default setting.
       //    https://gohugo.io/getting-started/configuration-markup///configure-markup
-      style: "markdown",
+      style: "html",
     },
   },
 };
