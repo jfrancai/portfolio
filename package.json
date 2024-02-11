@@ -22,9 +22,11 @@
   "dependencies": {
     "@notionhq/client": "^2.2.14",
     "@pclouddev/notion-to-markdown": "^2.7.5",
+    "@types/katex": "^0.16.7",
     "dotenv": "^16.4.2",
     "front-matter": "^4.0.2",
     "fs-extra": "^11.2.0",
+    "katex": "^0.16.9",
     "yaml": "^2.3.4"
   },
   "devDependencies": {
