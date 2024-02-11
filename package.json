@@ -1,0 +1,36 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Personal portfolio using Notion as a CMS and Hextra as a static Hugo template",
+  "main": "src/index.ts",
+  "scripts": {
+    "test": "vitest",
+    "start": "ts-node src/index.ts",
+    "typecheck": "tsc --noEmit",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jfrancai/portfolio.git"
+  },
+  "author": "jfrancai",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jfrancai/portfolio/issues"
+  },
+  "homepage": "https://github.com/jfrancai/portfolio#readme",
+  "dependencies": {
+    "@notionhq/client": "^2.2.14",
+    "@pclouddev/notion-to-markdown": "^2.7.5",
+    "dotenv": "^16.4.2",
+    "front-matter": "^4.0.2",
+    "fs-extra": "^11.2.0",
+    "yaml": "^2.3.4"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.4",
+    "@types/node": "^20.11.17",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  }
+}
