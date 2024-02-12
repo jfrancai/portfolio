@@ -250,7 +250,7 @@ export async function savePage(
 
   const { title, pageString } = await renderPage(page, notion);
   const folderName = getFolderName(title, page.id);
-  const fileName = getFileName(title, page.id);
+  const fileName = "_index.md";
   fs.ensureDirSync(`content/projects/${mount.target_folder}/${folderName}`);
   await sh(`touch "${mount.target_folder}/${folderName}/${fileName}"`, false);
   fs.writeFileSync(
