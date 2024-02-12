@@ -26,19 +26,20 @@ async function main() {
   console.log(config.mount.databases);
 
   // process mounted databases
-  // for (const mount of config.mount.databases) {
-  //   fs.ensureDirSync(`content/projects${mount.target_folder}`);
-  //   for await (const page of iteratePaginatedAPI(notion.databases.query, {
-  //     database_id: mount.database_id,
-  //   })) {
-  //     if (!isFullPageOrDatabase(page) || page.object !== "page") {
-  //       continue;
-  //     }
-  //     console.info(`[Info] Start processing page ${page.id}`);
-  //     page_ids.push(page.id);
-  //     await savePage(page, notion, mount);
-  //   }
-  // }
+  for (const mount of config.mount.databases) {
+    fs.ensureDirSync(`content/projects/${mount.target_folder}`);
+    console.log(mount.target_folder);
+    for await (const page of iteratePaginatedAPI(notion.databases.query, {
+      database_id: mount.database_id,
+    })) {
+      if (!isFullPageOrDatabase(page) || page.object !== "page") {
+        continue;
+      }
+      console.info(`[Info] Start processing page ${page.id}`);
+      page_ids.push(page.id);
+      await savePage(page, notion, mount);
+    }
+  }
 }
 
 main()

@@ -8,7 +8,12 @@ import { NotionToMarkdown } from "@pclouddev/notion-to-markdown";
 import YAML from "yaml";
 import { sh } from "./sh";
 import { DatabaseMount, loadConfig, PageMount } from "./config";
-import { getPageTitle, getCoverLink, getFileName } from "./helpers";
+import {
+  getPageTitle,
+  getCoverLink,
+  getFileName,
+  getFolderName,
+} from "./helpers";
 import katex from "katex";
 import { MdBlock } from "@pclouddev/notion-to-markdown/build/types";
 import path from "path";
@@ -193,16 +198,6 @@ export async function renderPage(page: PageObjectResponse, notion: Client) {
     }
   }
 
-  // set default author
-  if (frontMatter.authors == null) {
-    const response = await notion.users.retrieve({
-      user_id: page.last_edited_by.id,
-    });
-    if (response.name) {
-      frontMatter.authors = [response.name];
-    }
-  }
-
   // save metadata
   frontMatter.NOTION_METADATA = page;
 
@@ -231,11 +226,13 @@ export async function savePage(
   notion: Client,
   mount: DatabaseMount | PageMount,
 ) {
+  console.log(page);
   const postpath = path.join(
-    "content",
+    "content/projects",
     mount.target_folder,
     getFileName(getPageTitle(page), page.id),
   );
+
   const post = getContentFile(postpath);
   if (post) {
     const metadata = post.metadata;
@@ -252,7 +249,12 @@ export async function savePage(
   console.info(`[Info] Updating ${postpath}`);
 
   const { title, pageString } = await renderPage(page, notion);
+  const folderName = getFolderName(title, page.id);
   const fileName = getFileName(title, page.id);
-  await sh(`hugo new "${mount.target_folder}/${fileName}"`, false);
-  fs.writeFileSync(`content/${mount.target_folder}/${fileName}`, pageString);
+  fs.ensureDirSync(`content/projects/${mount.target_folder}/${folderName}`);
+  await sh(`touch "${mount.target_folder}/${folderName}/${fileName}"`, false);
+  fs.writeFileSync(
+    `content/projects/${mount.target_folder}/${folderName}/${fileName}`,
+    pageString,
+  );
 }
