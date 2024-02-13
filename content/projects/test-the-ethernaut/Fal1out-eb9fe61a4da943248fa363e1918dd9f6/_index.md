@@ -1,18 +1,20 @@
 ---
 title: "Fal1out"
 date: "2024-01-16"
-lastmod: "2024-02-12T13:54:00.000Z"
+lastmod: "2024-02-12T14:37:00.000Z"
 draft: false
 difficulty: "⭐"
+prev: "Fallback-0f16d7ea49bd4084a635ec4d24c77563"
 weight: 2
 state: "Terminé"
 level-url: "https://ethernaut.openzeppelin.com/level/2"
+next: "Coin-Flip-c27578d40d2f427d968d5623d7000dab"
 type: "docs"
 NOTION_METADATA:
   object: "page"
   id: "eb9fe61a-4da9-4324-8fa3-63e1918dd9f6"
   created_time: "2024-02-12T13:39:00.000Z"
-  last_edited_time: "2024-02-12T13:54:00.000Z"
+  last_edited_time: "2024-02-12T14:37:00.000Z"
   created_by:
     object: "user"
     id: "7866207c-089f-43df-9333-1dc33859c6a9"
@@ -39,7 +41,20 @@ NOTION_METADATA:
     prev:
       id: "LLP%5C"
       type: "rich_text"
-      rich_text: []
+      rich_text:
+        - type: "text"
+          text:
+            content: "Fallback-0f16d7ea49bd4084a635ec4d24c77563"
+            link: null
+          annotations:
+            bold: false
+            italic: false
+            strikethrough: false
+            underline: false
+            code: false
+            color: "default"
+          plain_text: "Fallback-0f16d7ea49bd4084a635ec4d24c77563"
+          href: null
     date:
       id: "Y%40Gy"
       type: "date"
@@ -65,7 +80,20 @@ NOTION_METADATA:
     next:
       id: "pocA"
       type: "rich_text"
-      rich_text: []
+      rich_text:
+        - type: "text"
+          text:
+            content: "Coin-Flip-c27578d40d2f427d968d5623d7000dab"
+            link: null
+          annotations:
+            bold: false
+            italic: false
+            strikethrough: false
+            underline: false
+            code: false
+            color: "default"
+          plain_text: "Coin-Flip-c27578d40d2f427d968d5623d7000dab"
+          href: null
     type:
       id: "s%7DKc"
       type: "rich_text"
@@ -102,7 +130,7 @@ NOTION_METADATA:
           href: null
   url: "https://www.notion.so/Fal1out-eb9fe61a4da943248fa363e1918dd9f6"
   public_url: null
-UPDATE_TIME: "2024-02-12T14:33:52.870Z"
+UPDATE_TIME: "2024-02-13T10:45:14.845Z"
 
 ---
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.css" integrity="sha384-bYdxxUwYipFNohQlHt0bjN/LCpueqWz13HufFEV1SUatKs1cm4L6fFgCi1jT643X" crossorigin="anonymous">

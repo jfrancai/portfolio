@@ -1,18 +1,20 @@
 ---
 title: "King"
 date: "2024-02-02"
-lastmod: "2024-02-12T13:54:00.000Z"
+lastmod: "2024-02-12T14:45:00.000Z"
 draft: false
 difficulty: "⭐⭐⭐"
+prev: "Vault-d8ba3eafb273440f9a492b042e65f214"
 weight: 9
 state: "Terminé"
 level-url: "https://ethernaut.openzeppelin.com/level/9"
+next: "Re-entrancy-6ea65e4888e349dabdc4ca12c8e6d22d"
 type: "docs"
 NOTION_METADATA:
   object: "page"
   id: "8338a297-a2b4-47b3-b401-66c68586199d"
   created_time: "2024-02-12T13:39:00.000Z"
-  last_edited_time: "2024-02-12T13:54:00.000Z"
+  last_edited_time: "2024-02-12T14:45:00.000Z"
   created_by:
     object: "user"
     id: "7866207c-089f-43df-9333-1dc33859c6a9"
@@ -39,7 +41,20 @@ NOTION_METADATA:
     prev:
       id: "LLP%5C"
       type: "rich_text"
-      rich_text: []
+      rich_text:
+        - type: "text"
+          text:
+            content: "Vault-d8ba3eafb273440f9a492b042e65f214"
+            link: null
+          annotations:
+            bold: false
+            italic: false
+            strikethrough: false
+            underline: false
+            code: false
+            color: "default"
+          plain_text: "Vault-d8ba3eafb273440f9a492b042e65f214"
+          href: null
     date:
       id: "Y%40Gy"
       type: "date"
@@ -65,7 +80,20 @@ NOTION_METADATA:
     next:
       id: "pocA"
       type: "rich_text"
-      rich_text: []
+      rich_text:
+        - type: "text"
+          text:
+            content: "Re-entrancy-6ea65e4888e349dabdc4ca12c8e6d22d"
+            link: null
+          annotations:
+            bold: false
+            italic: false
+            strikethrough: false
+            underline: false
+            code: false
+            color: "default"
+          plain_text: "Re-entrancy-6ea65e4888e349dabdc4ca12c8e6d22d"
+          href: null
     type:
       id: "s%7DKc"
       type: "rich_text"
@@ -102,7 +130,7 @@ NOTION_METADATA:
           href: null
   url: "https://www.notion.so/King-8338a297a2b447b3b40166c68586199d"
   public_url: null
-UPDATE_TIME: "2024-02-12T14:32:20.472Z"
+UPDATE_TIME: "2024-02-13T10:44:01.014Z"
 
 ---
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.css" integrity="sha384-bYdxxUwYipFNohQlHt0bjN/LCpueqWz13HufFEV1SUatKs1cm4L6fFgCi1jT643X" crossorigin="anonymous">
