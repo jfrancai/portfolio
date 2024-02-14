@@ -226,7 +226,6 @@ export async function savePage(
   notion: Client,
   mount: DatabaseMount | PageMount,
 ) {
-  console.log(page);
   const postpath = path.join(
     "content/projects",
     mount.target_folder,

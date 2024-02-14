@@ -82,21 +82,11 @@ NOTION_METADATA:
       rich_text: []
     type:
       id: "s%7DKc"
-      type: "rich_text"
-      rich_text:
-        - type: "text"
-          text:
-            content: "docs"
-            link: null
-          annotations:
-            bold: false
-            italic: false
-            strikethrough: false
-            underline: false
-            code: false
-            color: "default"
-          plain_text: "docs"
-          href: null
+      type: "select"
+      select:
+        id: "OnJy"
+        name: "docs"
+        color: "default"
     title:
       id: "title"
       type: "title"
@@ -116,7 +106,7 @@ NOTION_METADATA:
           href: null
   url: "https://www.notion.so/Gatekeeper-One-9bbda6efa6c24367aa643eb73ae92a6a"
   public_url: null
-UPDATE_TIME: "2024-02-14T13:35:11.773Z"
+UPDATE_TIME: "2024-02-14T14:48:22.085Z"
 
 ---
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.css" integrity="sha384-bYdxxUwYipFNohQlHt0bjN/LCpueqWz13HufFEV1SUatKs1cm4L6fFgCi1jT643X" crossorigin="anonymous">
