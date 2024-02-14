@@ -121,20 +121,18 @@ NOTION_METADATA:
   url: "https://www.notion.so/Delegation-0c005c8b167c4966926771bad0ff918c"
   public_url: null
 UPDATE_TIME: "2024-02-14T14:49:16.869Z"
-
 ---
+
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.css" integrity="sha384-bYdxxUwYipFNohQlHt0bjN/LCpueqWz13HufFEV1SUatKs1cm4L6fFgCi1jT643X" crossorigin="anonymous">
 
-
 The goal of this level is for you to claim ownership of the instance you are given.
-
 
 Things that might help
 
 - Look into Solidity's documentation on the `delegatecall`
-low level function, how it works, how it can be used to delegate
-operations to on-chain libraries, and what implications it has on
-execution scope.
+  low level function, how it works, how it can be used to delegate
+  operations to on-chain libraries, and what implications it has on
+  execution scope.
 - Fallback methods
 - Method ids
 
@@ -174,9 +172,7 @@ contract Delegation {
 }
 ```
 
-
 Solution:
-
 
 ```solidity
 // SPDX-License-Identifier: UNLICENSED
@@ -214,10 +210,7 @@ contract POC is Script {
 }
 ```
 
-
-Usage of `delegatecall` is particularly risky and has been used as an attack vector on multiple historic hacks. With it, your contract is practically saying "here, 
+Usage of `delegatecall` is particularly risky and has been used as an attack vector on multiple historic hacks. With it, your contract is practically saying "here,
 -other contract- or -other library-, do whatever you want with my state". Delegates have complete access to your contract's state. The `delegatecall` function is a powerful feature, but a dangerous one, and must be used with extreme care.
 
-
 Please refer to the [The Parity Wallet Hack Explained](https://blog.openzeppelin.com/on-the-parity-wallet-multisig-hack-405a8c12e8f7) article for an accurate explanation of how this idea was used to steal 30M USD.
-

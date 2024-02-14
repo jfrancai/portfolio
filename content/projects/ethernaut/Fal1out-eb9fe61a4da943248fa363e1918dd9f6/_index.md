@@ -121,10 +121,9 @@ NOTION_METADATA:
   url: "https://www.notion.so/Fal1out-eb9fe61a4da943248fa363e1918dd9f6"
   public_url: null
 UPDATE_TIME: "2024-02-14T14:49:47.077Z"
-
 ---
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.css" integrity="sha384-bYdxxUwYipFNohQlHt0bjN/LCpueqWz13HufFEV1SUatKs1cm4L6fFgCi1jT643X" crossorigin="anonymous">
 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.css" integrity="sha384-bYdxxUwYipFNohQlHt0bjN/LCpueqWz13HufFEV1SUatKs1cm4L6fFgCi1jT643X" crossorigin="anonymous">
 
 ```solidity
 // SPDX-License-Identifier: MIT
@@ -133,7 +132,7 @@ pragma solidity ^0.6.0;
 import 'openzeppelin-contracts-06/math/SafeMath.sol';
 
 contract Fallout {
-  
+
   using SafeMath for uint256;
   mapping (address => uint) allocations;
   address payable public owner;
@@ -172,9 +171,7 @@ contract Fallout {
 }
 ```
 
-
 We have to claim the owner ship of the program, we can see that their is nothing that seems to prevent us from calling Fal1out() so let’s try that:
-
 
 ```solidity
 // SPDX-License-Identifier: UNLICENSED
@@ -212,9 +209,7 @@ contract POC is Script {
 }
 ```
 
-
 ```solidity
 source .env
 forge script ./script/02.s.sol --rpc-url $SEPOLIA_RPC_URL --broadcast --verify -vvvv
 ```
-

@@ -14,7 +14,8 @@ Node Guardians is a platform for builders, thinkers, and stakers. Their mission 
 </br>
 
 {{< cards >}}
-{{< card link="cream-finance-rekt" title="Cream Finance Rekt" image="cream-finance-rekt.webp" >}}
-{{< card link="poly-network-rekt" title="Poly Network Rekt" image="poly-network-rekt.webp" >}}
-{{< card link="price-oracle-attack" title="Price Oracle Attack" image="price-oracle-attack.webp" >}}
+{{< card link="price-oracle-attack-48bb5fd1fcf5428e84266833aecafe4f" title="Price Oracle Attack" image="price-oracle-attack.webp" >}}
+{{< card link="wintermute-rekt-d0fd4609147941e6af7fcc68ef81da6a" title="Wintermute Rekt" image="wintermute-rekt.webp" >}}
+{{< card link="cream-finance-rekt-04ac5f09eb5d42c0b28fcdd8aabdc19d" title="Cream Finance Rekt" image="cream-finance-rekt.webp" >}}
+{{< card link="poly-network-rekt-b7b8b11820c249bcb1f96a50fc20d478" title="Poly Network Rekt" image="poly-network-rekt.webp" >}}
 {{< /cards >}}
