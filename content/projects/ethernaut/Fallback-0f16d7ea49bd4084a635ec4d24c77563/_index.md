@@ -1,11 +1,11 @@
 ---
 title: "Fallback"
 date: "2024-01-07"
-lastmod: "2024-02-12T14:36:00.000Z"
+lastmod: "2024-02-14T16:51:00.000Z"
 draft: false
 difficulty: "⭐"
 prev: "Hello-Ethernaut-9a7c00bee0ac470faad194c59361cd05"
-weight: 1
+weight: 2
 state: "Terminé"
 level-url: "https://ethernaut.openzeppelin.com/level/1"
 next: "Fal1out-eb9fe61a4da943248fa363e1918dd9f6"
@@ -14,7 +14,7 @@ NOTION_METADATA:
   object: "page"
   id: "0f16d7ea-49bd-4084-a635-ec4d24c77563"
   created_time: "2024-02-12T13:39:00.000Z"
-  last_edited_time: "2024-02-12T14:36:00.000Z"
+  last_edited_time: "2024-02-14T16:51:00.000Z"
   created_by:
     object: "user"
     id: "7866207c-089f-43df-9333-1dc33859c6a9"
@@ -65,7 +65,7 @@ NOTION_METADATA:
     weight:
       id: "%5Dyda"
       type: "number"
-      number: 1
+      number: 2
     state:
       id: "f%40ps"
       type: "status"
@@ -120,24 +120,24 @@ NOTION_METADATA:
           href: null
   url: "https://www.notion.so/Fallback-0f16d7ea49bd4084a635ec4d24c77563"
   public_url: null
-UPDATE_TIME: "2024-02-14T14:49:11.134Z"
-EXPIRY_TIME: "2024-02-14T15:49:04.156Z"
+UPDATE_TIME: "2024-02-14T17:11:30.209Z"
+EXPIRY_TIME: "2024-02-14T18:11:23.028Z"
 
 ---
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.css" integrity="sha384-bYdxxUwYipFNohQlHt0bjN/LCpueqWz13HufFEV1SUatKs1cm4L6fFgCi1jT643X" crossorigin="anonymous">
 
 - How to send ether when interacting with an ABI
 
-![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/84bfeab1-c35b-45ab-a346-76e13736aabe/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240214%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240214T144904Z&X-Amz-Expires=3600&X-Amz-Signature=4f32e8698029ce8ac3b8606b21c564599c6aa7ef10e56be4aac5d104a754507a&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/84bfeab1-c35b-45ab-a346-76e13736aabe/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240214%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240214T171123Z&X-Amz-Expires=3600&X-Amz-Signature=0cd02485205f762968bcc4e65517da68ae2cb2f1031b3d92b019d97fc2340e55&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 - How to send ether outside of the ABI
 - Converting to and from wei/ether units (see `help()` command)
 - Fallback methods
 
-	![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/b4ce3656-36aa-4beb-bc96-ece2f5a7c0ba/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240214%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240214T144904Z&X-Amz-Expires=3600&X-Amz-Signature=b4e1869ebecd58e1f91e3f4b74a2305bc884c8398d00b1c3d655b2f2d00a77c2&X-Amz-SignedHeaders=host&x-id=GetObject)
+	![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/b4ce3656-36aa-4beb-bc96-ece2f5a7c0ba/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240214%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240214T171123Z&X-Amz-Expires=3600&X-Amz-Signature=dbff9c9406c5281a0805a7fc4b13b526c945f8b4d79de5b64725fdb1cb4e5f99&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 
-	![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/c4aa3c76-5994-4d9d-82a5-9042c15a0b75/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240214%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240214T144904Z&X-Amz-Expires=3600&X-Amz-Signature=601c59d7a59aae3567cb8e239448c60ec27d396a80d87e6d579f223100e8b13f&X-Amz-SignedHeaders=host&x-id=GetObject)
+	![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/c4aa3c76-5994-4d9d-82a5-9042c15a0b75/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240214%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240214T171123Z&X-Amz-Expires=3600&X-Amz-Signature=08a224187bcc2dffa7d0402dcc26a9525e9f6af986bb1c4d71af66a03e33ee37&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 
 	```solidity

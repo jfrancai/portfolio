@@ -1,26 +1,28 @@
 ---
 title: "Wintermute Rekt"
 date: "2024-02-14T14:27:00.000Z"
-lastmod: "2024-02-14T14:47:00.000Z"
+lastmod: "2024-02-14T17:10:00.000Z"
 draft: false
 featuredImage: "https://cdn.nodeguardians.io/backend-production/Wintermute_Rekt\
   _part1_1200px_66fcb9642f/Wintermute_Rekt_part1_1200px_66fcb9642f.webp"
-weight: 1
+weight: 2
 difficulty: "🗡🗡🗡🗡🗡"
 language:
   - "Solidity"
+next: "Cream-Finance-Rekt-04ac5f09eb5d42c0b28fcdd8aabdc19d"
 level-url: "https://nodeguardians.io/dev-hub/quests/wintermute-rekt"
-type: "default"
+type: "docs"
 skill-cat:
   - "Security"
 state: "Done"
 about:
   - "ctf"
+prev: "Price-Oracle-Attack-48bb5fd1fcf5428e84266833aecafe4f"
 NOTION_METADATA:
   object: "page"
   id: "d0fd4609-1479-41e6-af7f-cc68ef81da6a"
   created_time: "2024-02-14T14:27:00.000Z"
-  last_edited_time: "2024-02-14T14:47:00.000Z"
+  last_edited_time: "2024-02-14T17:10:00.000Z"
   created_by:
     object: "user"
     id: "7866207c-089f-43df-9333-1dc33859c6a9"
@@ -43,7 +45,7 @@ NOTION_METADATA:
     weight:
       id: "%3BQ%60q"
       type: "number"
-      number: 1
+      number: 2
     difficulty:
       id: "%3DCqv"
       type: "status"
@@ -58,6 +60,23 @@ NOTION_METADATA:
         - id: "d01ac056-199f-4b78-96ee-583126c15462"
           name: "Solidity"
           color: "blue"
+    next:
+      id: "%60Q~a"
+      type: "rich_text"
+      rich_text:
+        - type: "text"
+          text:
+            content: "Cream-Finance-Rekt-04ac5f09eb5d42c0b28fcdd8aabdc19d"
+            link: null
+          annotations:
+            bold: false
+            italic: false
+            strikethrough: false
+            underline: false
+            code: false
+            color: "default"
+          plain_text: "Cream-Finance-Rekt-04ac5f09eb5d42c0b28fcdd8aabdc19d"
+          href: null
     level-url:
       id: "cjvw"
       type: "url"
@@ -66,9 +85,9 @@ NOTION_METADATA:
       id: "khE_"
       type: "select"
       select:
-        id: "_p~}"
-        name: "default"
-        color: "green"
+        id: "Qq?l"
+        name: "docs"
+        color: "default"
     skill-cat:
       id: "n%7CzF"
       type: "multi_select"
@@ -90,6 +109,23 @@ NOTION_METADATA:
         - id: "8003f5ac-a320-4dd2-8d86-081c00f91f54"
           name: "ctf"
           color: "red"
+    prev:
+      id: "~LUC"
+      type: "rich_text"
+      rich_text:
+        - type: "text"
+          text:
+            content: "Price-Oracle-Attack-48bb5fd1fcf5428e84266833aecafe4f"
+            link: null
+          annotations:
+            bold: false
+            italic: false
+            strikethrough: false
+            underline: false
+            code: false
+            color: "default"
+          plain_text: "Price-Oracle-Attack-48bb5fd1fcf5428e84266833aecafe4f"
+          href: null
     title:
       id: "title"
       type: "title"
@@ -109,8 +145,8 @@ NOTION_METADATA:
           href: null
   url: "https://www.notion.so/Wintermute-Rekt-d0fd4609147941e6af7fcc68ef81da6a"
   public_url: null
-UPDATE_TIME: "2024-02-14T14:49:58.545Z"
-EXPIRY_TIME: "2024-02-14T15:49:52.935Z"
+UPDATE_TIME: "2024-02-14T17:12:27.038Z"
+EXPIRY_TIME: "2024-02-14T18:12:21.113Z"
 
 ---
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.css" integrity="sha384-bYdxxUwYipFNohQlHt0bjN/LCpueqWz13HufFEV1SUatKs1cm4L6fFgCi1jT643X" crossorigin="anonymous">
@@ -134,19 +170,19 @@ EXPIRY_TIME: "2024-02-14T15:49:52.935Z"
 [bookmark](https://medium.com/coinmonks/the-profanity-address-hack-how-are-vanity-addresses-generated-cce40ba5ed39)
 
 
-![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/6bb075f4-fbe6-47d6-9009-d08cefa8ab49/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240214%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240214T144952Z&X-Amz-Expires=3600&X-Amz-Signature=c1a9129a27bdefd56ed1fd76b326cdb0395c4f3cbdf69fa732064460ae7f1a16&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/6bb075f4-fbe6-47d6-9009-d08cefa8ab49/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240214%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240214T171221Z&X-Amz-Expires=3600&X-Amz-Signature=9558c32778086457cecf4e4c9c19c39701c0c17f6f902b89643c886d9a08394e&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 
-![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/5f896cbd-b61b-43fa-8bbd-e68c8e287de6/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240214%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240214T144952Z&X-Amz-Expires=3600&X-Amz-Signature=5ccc417331a283284c4a68df198164b81ba6ce866c525eecada01e0d8f58b1d1&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/5f896cbd-b61b-43fa-8bbd-e68c8e287de6/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240214%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240214T171221Z&X-Amz-Expires=3600&X-Amz-Signature=625b3605a5f0e0f9ca0de41240870b9978fb2fdf88c2bc60a430e786496bc2ae&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 
-![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/d8816adc-72fb-42a6-8d8f-0e8c61639ec2/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240214%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240214T144952Z&X-Amz-Expires=3600&X-Amz-Signature=da351c42d8da02fa385ad91e46a8864c823ac7401c75ab1f2e40e310798708ff&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/d8816adc-72fb-42a6-8d8f-0e8c61639ec2/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240214%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240214T171221Z&X-Amz-Expires=3600&X-Amz-Signature=1800559816bcd581b1ec4c0a6751d477bfc523e7242e59e749a070ac30cfe6d4&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 
 [https://vast.ai/](https://vast.ai/)
 
 
-![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/df0e6e95-e2b1-40ae-a3be-74f6b1974daf/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240214%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240214T144952Z&X-Amz-Expires=3600&X-Amz-Signature=749ff7fc998a04a79c4bb516f92d0714e13c4f4e9e831ecdf12e4068475b33e4&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/df0e6e95-e2b1-40ae-a3be-74f6b1974daf/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240214%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240214T171221Z&X-Amz-Expires=3600&X-Amz-Signature=1f1b3c94cbeb07d611847881de5edb43569810d2a1fd0697e92a3a3f10091e5b&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 
 ```solidity
@@ -156,7 +192,7 @@ Returned Raw Transaction Hex :
 ```
 
 
-![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/1897b71a-84d2-4668-ab07-846c21840b57/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240214%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240214T144952Z&X-Amz-Expires=3600&X-Amz-Signature=bb1a3b25f3720b86656a5631c3bc76d7c7090872c1fac4dd83026dee91476121&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/1897b71a-84d2-4668-ab07-846c21840b57/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240214%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240214T171221Z&X-Amz-Expires=3600&X-Amz-Signature=fae371b30ee201e0e49e2c860f5f39e8751a1257a196a7c3fe53f9f558b92fc8&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 
 ```python
@@ -236,19 +272,19 @@ for (let i = 0; i < MAX_UINT16; i++) {
 [https://blog.safeheron.com/blog/insights/safeheron-originals/a-deep-dive-of-how-profanity-caused-wintermute-to-lose-usd160m](https://blog.safeheron.com/blog/insights/safeheron-originals/a-deep-dive-of-how-profanity-caused-wintermute-to-lose-usd160m)
 
 
-![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/2ef5764e-eb17-415f-9411-64d0ac450ec1/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240214%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240214T144952Z&X-Amz-Expires=3600&X-Amz-Signature=28afb9f73a8164bf7aaea3374714ee8228100da6ed628f3845629102faed7f17&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/2ef5764e-eb17-415f-9411-64d0ac450ec1/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240214%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240214T171221Z&X-Amz-Expires=3600&X-Amz-Signature=c8d3734c6da3235afb9058192164b26ad3de9e0d77123145bfe4d67ba47622c1&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 
 [bookmark](https://ethereum.stackexchange.com/questions/13778/get-public-key-of-any-ethereum-account)
 
 
-![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/932426b9-1f57-47b7-aab6-18bff19f1360/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240214%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240214T144952Z&X-Amz-Expires=3600&X-Amz-Signature=ff8821ca58900249687f6efa52a0a27e488eb66bafadb826bd837d47fc7fc5dd&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/932426b9-1f57-47b7-aab6-18bff19f1360/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240214%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240214T171221Z&X-Amz-Expires=3600&X-Amz-Signature=90bd6cc67993519b74dd6c92d271983202008243188f6bcdcc7bfc9ad2d4ef55&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 
 [bookmark](https://toolkit.abdk.consulting/ethereum#recover-address)
 
 
-![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/79b5b115-1e41-4144-ab22-492a91367fe7/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240214%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240214T144952Z&X-Amz-Expires=3600&X-Amz-Signature=ccf62d7de6427adc505f55a65c68691ccb6028ff0f11e8299d43557d8e94677a&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/79b5b115-1e41-4144-ab22-492a91367fe7/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240214%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240214T171221Z&X-Amz-Expires=3600&X-Amz-Signature=f2d568c1a6c3b73e8d9bf53ee2dc69d937ad5e253dc4f9bbc7335ce4900b887c&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 
 ```python
@@ -275,7 +311,7 @@ v = 0xf81d53b9d2fa44bb0c31913b55eeabf38492d187fc2fe162a6359850c2320b97
 ```
 
 
-![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/0cb37632-2928-440c-96c3-8bba3f1c7666/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240214%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240214T144952Z&X-Amz-Expires=3600&X-Amz-Signature=8948d6c085626450a0e8e04b0f7ed256791679315b388992a650b9f6c2d6816b&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/0cb37632-2928-440c-96c3-8bba3f1c7666/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240214%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240214T171221Z&X-Amz-Expires=3600&X-Amz-Signature=42f3b3d707853f1253ad66162adef39121404e5ea99e80c8f1523fdc64a2f5be&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 
 [https://cryptobook.nakov.com/digital-signatures/ecdsa-sign-verify-messages](https://cryptobook.nakov.com/digital-signatures/ecdsa-sign-verify-messages)
@@ -383,5 +419,5 @@ for (let i = 1; ; i++) {
 ```
 
 
-![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/a4dca9c4-5f68-4844-b2e8-63b0b6ae98c9/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240214%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240214T144952Z&X-Amz-Expires=3600&X-Amz-Signature=2e3c93c3fc3a2d3cd6f93b27fc545eed2946d7ce36538b8f2ca3358f8aa08cb5&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/a4dca9c4-5f68-4844-b2e8-63b0b6ae98c9/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240214%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240214T171221Z&X-Amz-Expires=3600&X-Amz-Signature=20399eb518f2297c8cf1bf206e147129306d200ae81d01ce91fdbfd8a36811aa&X-Amz-SignedHeaders=host&x-id=GetObject)
 

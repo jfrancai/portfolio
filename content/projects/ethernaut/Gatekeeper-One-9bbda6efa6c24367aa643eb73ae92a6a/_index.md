@@ -1,11 +1,11 @@
 ---
 title: "Gatekeeper One"
 date: "2024-02-10"
-lastmod: "2024-02-12T14:46:00.000Z"
+lastmod: "2024-02-14T16:51:00.000Z"
 draft: false
 difficulty: "⭐⭐⭐⭐"
 prev: "Privacy-0141c59931824d74a8311099eb338d5d"
-weight: 13
+weight: 14
 state: "En cours"
 level-url: "https://ethernaut.openzeppelin.com/level/13"
 type: "docs"
@@ -13,7 +13,7 @@ NOTION_METADATA:
   object: "page"
   id: "9bbda6ef-a6c2-4367-aa64-3eb73ae92a6a"
   created_time: "2024-02-12T13:39:00.000Z"
-  last_edited_time: "2024-02-12T14:46:00.000Z"
+  last_edited_time: "2024-02-14T16:51:00.000Z"
   created_by:
     object: "user"
     id: "7866207c-089f-43df-9333-1dc33859c6a9"
@@ -64,7 +64,7 @@ NOTION_METADATA:
     weight:
       id: "%5Dyda"
       type: "number"
-      number: 13
+      number: 14
     state:
       id: "f%40ps"
       type: "status"
@@ -106,7 +106,7 @@ NOTION_METADATA:
           href: null
   url: "https://www.notion.so/Gatekeeper-One-9bbda6efa6c24367aa643eb73ae92a6a"
   public_url: null
-UPDATE_TIME: "2024-02-14T14:48:22.085Z"
+UPDATE_TIME: "2024-02-14T17:10:42.782Z"
 
 ---
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.css" integrity="sha384-bYdxxUwYipFNohQlHt0bjN/LCpueqWz13HufFEV1SUatKs1cm4L6fFgCi1jT643X" crossorigin="anonymous">

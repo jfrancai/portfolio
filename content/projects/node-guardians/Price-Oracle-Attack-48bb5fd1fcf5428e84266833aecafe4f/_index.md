@@ -1,13 +1,15 @@
 ---
 title: "Price Oracle Attack"
 date: "2024-02-14T14:27:00.000Z"
-lastmod: "2024-02-14T14:47:00.000Z"
+lastmod: "2024-02-14T17:10:00.000Z"
 draft: false
+weight: 1
 difficulty: "🗡🗡🗡🗡🗡"
 language:
   - "Solidity"
+next: "Wintermute-Rekt-d0fd4609147941e6af7fcc68ef81da6a"
 level-url: "https://nodeguardians.io/dev-hub/quests/price-oracle-attack"
-type: "default"
+type: "docs"
 skill-cat:
   - "Security"
 state: "Done"
@@ -17,7 +19,7 @@ NOTION_METADATA:
   object: "page"
   id: "48bb5fd1-fcf5-428e-8426-6833aecafe4f"
   created_time: "2024-02-14T14:27:00.000Z"
-  last_edited_time: "2024-02-14T14:47:00.000Z"
+  last_edited_time: "2024-02-14T17:10:00.000Z"
   created_by:
     object: "user"
     id: "7866207c-089f-43df-9333-1dc33859c6a9"
@@ -36,7 +38,7 @@ NOTION_METADATA:
     weight:
       id: "%3BQ%60q"
       type: "number"
-      number: 0
+      number: 1
     difficulty:
       id: "%3DCqv"
       type: "status"
@@ -51,6 +53,23 @@ NOTION_METADATA:
         - id: "d01ac056-199f-4b78-96ee-583126c15462"
           name: "Solidity"
           color: "blue"
+    next:
+      id: "%60Q~a"
+      type: "rich_text"
+      rich_text:
+        - type: "text"
+          text:
+            content: "Wintermute-Rekt-d0fd4609147941e6af7fcc68ef81da6a"
+            link: null
+          annotations:
+            bold: false
+            italic: false
+            strikethrough: false
+            underline: false
+            code: false
+            color: "default"
+          plain_text: "Wintermute-Rekt-d0fd4609147941e6af7fcc68ef81da6a"
+          href: null
     level-url:
       id: "cjvw"
       type: "url"
@@ -59,9 +78,9 @@ NOTION_METADATA:
       id: "khE_"
       type: "select"
       select:
-        id: "_p~}"
-        name: "default"
-        color: "green"
+        id: "Qq?l"
+        name: "docs"
+        color: "default"
     skill-cat:
       id: "n%7CzF"
       type: "multi_select"
@@ -83,6 +102,10 @@ NOTION_METADATA:
         - id: "1b009358-c680-417f-bbf2-7491f9fd6959"
           name: "flashloan"
           color: "purple"
+    prev:
+      id: "~LUC"
+      type: "rich_text"
+      rich_text: []
     title:
       id: "title"
       type: "title"
@@ -102,8 +125,8 @@ NOTION_METADATA:
           href: null
   url: "https://www.notion.so/Price-Oracle-Attack-48bb5fd1fcf5428e84266833aecafe4f"
   public_url: null
-UPDATE_TIME: "2024-02-14T14:49:52.198Z"
-EXPIRY_TIME: "2024-02-14T15:49:47.828Z"
+UPDATE_TIME: "2024-02-14T17:12:20.650Z"
+EXPIRY_TIME: "2024-02-14T18:12:12.855Z"
 
 ---
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.css" integrity="sha384-bYdxxUwYipFNohQlHt0bjN/LCpueqWz13HufFEV1SUatKs1cm4L6fFgCi1jT643X" crossorigin="anonymous">
@@ -112,7 +135,7 @@ EXPIRY_TIME: "2024-02-14T15:49:47.828Z"
 Deployment address : `0x1FD0357FcD623C5a1472B7C922CdB7aa262FaEC1`
 
 
-![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/05e2b6a9-5161-4f73-974e-0bbe2933f99d/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240214%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240214T144947Z&X-Amz-Expires=3600&X-Amz-Signature=2de1998fb592121e791bf15154f7099ca0f9d63c067000ed53809efe2d491c2d&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/05e2b6a9-5161-4f73-974e-0bbe2933f99d/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240214%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240214T171212Z&X-Amz-Expires=3600&X-Amz-Signature=888b82384665cf1b2d4f5067ea30e5c9507e70ad4332b686eb07ef39dd9c9903&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 
 ```solidity

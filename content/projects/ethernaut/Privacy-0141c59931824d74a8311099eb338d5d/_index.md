@@ -1,11 +1,11 @@
 ---
 title: "Privacy"
 date: "2024-02-10"
-lastmod: "2024-02-14T14:46:00.000Z"
+lastmod: "2024-02-14T16:51:00.000Z"
 draft: false
 difficulty: "⭐⭐⭐"
 prev: "Elevator-59c41c694afa45c68e603000da840a2e"
-weight: 12
+weight: 13
 state: "En cours"
 level-url: "https://ethernaut.openzeppelin.com/level/12"
 next: "Gatekeeper-One-9bbda6efa6c24367aa643eb73ae92a6a"
@@ -14,7 +14,7 @@ NOTION_METADATA:
   object: "page"
   id: "0141c599-3182-4d74-a831-1099eb338d5d"
   created_time: "2024-02-12T13:39:00.000Z"
-  last_edited_time: "2024-02-14T14:46:00.000Z"
+  last_edited_time: "2024-02-14T16:51:00.000Z"
   created_by:
     object: "user"
     id: "7866207c-089f-43df-9333-1dc33859c6a9"
@@ -65,7 +65,7 @@ NOTION_METADATA:
     weight:
       id: "%5Dyda"
       type: "number"
-      number: 12
+      number: 13
     state:
       id: "f%40ps"
       type: "status"
@@ -120,7 +120,7 @@ NOTION_METADATA:
           href: null
   url: "https://www.notion.so/Privacy-0141c59931824d74a8311099eb338d5d"
   public_url: null
-UPDATE_TIME: "2024-02-14T14:49:03.557Z"
+UPDATE_TIME: "2024-02-14T17:11:21.627Z"
 
 ---
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.css" integrity="sha384-bYdxxUwYipFNohQlHt0bjN/LCpueqWz13HufFEV1SUatKs1cm4L6fFgCi1jT643X" crossorigin="anonymous">

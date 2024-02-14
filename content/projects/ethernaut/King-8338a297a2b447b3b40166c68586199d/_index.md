@@ -1,11 +1,11 @@
 ---
 title: "King"
 date: "2024-02-02"
-lastmod: "2024-02-12T14:45:00.000Z"
+lastmod: "2024-02-14T16:51:00.000Z"
 draft: false
 difficulty: "⭐⭐⭐"
 prev: "Vault-d8ba3eafb273440f9a492b042e65f214"
-weight: 9
+weight: 10
 state: "Terminé"
 level-url: "https://ethernaut.openzeppelin.com/level/9"
 next: "Re-entrancy-6ea65e4888e349dabdc4ca12c8e6d22d"
@@ -14,7 +14,7 @@ NOTION_METADATA:
   object: "page"
   id: "8338a297-a2b4-47b3-b401-66c68586199d"
   created_time: "2024-02-12T13:39:00.000Z"
-  last_edited_time: "2024-02-12T14:45:00.000Z"
+  last_edited_time: "2024-02-14T16:51:00.000Z"
   created_by:
     object: "user"
     id: "7866207c-089f-43df-9333-1dc33859c6a9"
@@ -65,7 +65,7 @@ NOTION_METADATA:
     weight:
       id: "%5Dyda"
       type: "number"
-      number: 9
+      number: 10
     state:
       id: "f%40ps"
       type: "status"
@@ -120,7 +120,7 @@ NOTION_METADATA:
           href: null
   url: "https://www.notion.so/King-8338a297a2b447b3b40166c68586199d"
   public_url: null
-UPDATE_TIME: "2024-02-14T14:48:33.294Z"
+UPDATE_TIME: "2024-02-14T17:10:58.028Z"
 
 ---
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.css" integrity="sha384-bYdxxUwYipFNohQlHt0bjN/LCpueqWz13HufFEV1SUatKs1cm4L6fFgCi1jT643X" crossorigin="anonymous">

@@ -1,11 +1,11 @@
 ---
 title: "Fal1out"
 date: "2024-01-16"
-lastmod: "2024-02-12T14:37:00.000Z"
+lastmod: "2024-02-14T16:51:00.000Z"
 draft: false
 difficulty: "⭐"
 prev: "Fallback-0f16d7ea49bd4084a635ec4d24c77563"
-weight: 2
+weight: 3
 state: "Terminé"
 level-url: "https://ethernaut.openzeppelin.com/level/2"
 next: "Coin-Flip-c27578d40d2f427d968d5623d7000dab"
@@ -14,7 +14,7 @@ NOTION_METADATA:
   object: "page"
   id: "eb9fe61a-4da9-4324-8fa3-63e1918dd9f6"
   created_time: "2024-02-12T13:39:00.000Z"
-  last_edited_time: "2024-02-12T14:37:00.000Z"
+  last_edited_time: "2024-02-14T16:51:00.000Z"
   created_by:
     object: "user"
     id: "7866207c-089f-43df-9333-1dc33859c6a9"
@@ -65,7 +65,7 @@ NOTION_METADATA:
     weight:
       id: "%5Dyda"
       type: "number"
-      number: 2
+      number: 3
     state:
       id: "f%40ps"
       type: "status"
@@ -120,10 +120,11 @@ NOTION_METADATA:
           href: null
   url: "https://www.notion.so/Fal1out-eb9fe61a4da943248fa363e1918dd9f6"
   public_url: null
-UPDATE_TIME: "2024-02-14T14:49:47.077Z"
----
+UPDATE_TIME: "2024-02-14T17:12:05.758Z"
 
+---
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.css" integrity="sha384-bYdxxUwYipFNohQlHt0bjN/LCpueqWz13HufFEV1SUatKs1cm4L6fFgCi1jT643X" crossorigin="anonymous">
+
 
 ```solidity
 // SPDX-License-Identifier: MIT
@@ -132,7 +133,7 @@ pragma solidity ^0.6.0;
 import 'openzeppelin-contracts-06/math/SafeMath.sol';
 
 contract Fallout {
-
+  
   using SafeMath for uint256;
   mapping (address => uint) allocations;
   address payable public owner;
@@ -171,7 +172,9 @@ contract Fallout {
 }
 ```
 
+
 We have to claim the owner ship of the program, we can see that their is nothing that seems to prevent us from calling Fal1out() so let’s try that:
+
 
 ```solidity
 // SPDX-License-Identifier: UNLICENSED
@@ -209,7 +212,9 @@ contract POC is Script {
 }
 ```
 
+
 ```solidity
 source .env
 forge script ./script/02.s.sol --rpc-url $SEPOLIA_RPC_URL --broadcast --verify -vvvv
 ```
+

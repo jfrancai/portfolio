@@ -1,11 +1,11 @@
 ---
 title: "Delegation"
 date: "2024-02-01"
-lastmod: "2024-02-12T14:45:00.000Z"
+lastmod: "2024-02-14T16:51:00.000Z"
 draft: false
 difficulty: "⭐⭐"
 prev: "Token-4a8cb8765f8c412190f2db4a7989f9b5"
-weight: 6
+weight: 7
 state: "Terminé"
 level-url: "https://ethernaut.openzeppelin.com/level/6"
 next: "Force-79bc75128abc41f2b25e56b521833ab6"
@@ -14,7 +14,7 @@ NOTION_METADATA:
   object: "page"
   id: "0c005c8b-167c-4966-9267-71bad0ff918c"
   created_time: "2024-02-12T13:39:00.000Z"
-  last_edited_time: "2024-02-12T14:45:00.000Z"
+  last_edited_time: "2024-02-14T16:51:00.000Z"
   created_by:
     object: "user"
     id: "7866207c-089f-43df-9333-1dc33859c6a9"
@@ -65,7 +65,7 @@ NOTION_METADATA:
     weight:
       id: "%5Dyda"
       type: "number"
-      number: 6
+      number: 7
     state:
       id: "f%40ps"
       type: "status"
@@ -120,19 +120,21 @@ NOTION_METADATA:
           href: null
   url: "https://www.notion.so/Delegation-0c005c8b167c4966926771bad0ff918c"
   public_url: null
-UPDATE_TIME: "2024-02-14T14:49:16.869Z"
----
+UPDATE_TIME: "2024-02-14T17:11:37.491Z"
 
+---
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.css" integrity="sha384-bYdxxUwYipFNohQlHt0bjN/LCpueqWz13HufFEV1SUatKs1cm4L6fFgCi1jT643X" crossorigin="anonymous">
 
+
 The goal of this level is for you to claim ownership of the instance you are given.
+
 
 Things that might help
 
 - Look into Solidity's documentation on the `delegatecall`
-  low level function, how it works, how it can be used to delegate
-  operations to on-chain libraries, and what implications it has on
-  execution scope.
+low level function, how it works, how it can be used to delegate
+operations to on-chain libraries, and what implications it has on
+execution scope.
 - Fallback methods
 - Method ids
 
@@ -172,7 +174,9 @@ contract Delegation {
 }
 ```
 
+
 Solution:
+
 
 ```solidity
 // SPDX-License-Identifier: UNLICENSED
@@ -210,7 +214,10 @@ contract POC is Script {
 }
 ```
 
-Usage of `delegatecall` is particularly risky and has been used as an attack vector on multiple historic hacks. With it, your contract is practically saying "here,
+
+Usage of `delegatecall` is particularly risky and has been used as an attack vector on multiple historic hacks. With it, your contract is practically saying "here, 
 -other contract- or -other library-, do whatever you want with my state". Delegates have complete access to your contract's state. The `delegatecall` function is a powerful feature, but a dangerous one, and must be used with extreme care.
 
+
 Please refer to the [The Parity Wallet Hack Explained](https://blog.openzeppelin.com/on-the-parity-wallet-multisig-hack-405a8c12e8f7) article for an accurate explanation of how this idea was used to steal 30M USD.
+

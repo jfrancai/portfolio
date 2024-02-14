@@ -1,11 +1,11 @@
 ---
 title: "Vault"
 date: "2024-02-02"
-lastmod: "2024-02-12T14:45:00.000Z"
+lastmod: "2024-02-14T16:51:00.000Z"
 draft: false
 difficulty: "⭐⭐"
 prev: "Force-79bc75128abc41f2b25e56b521833ab6"
-weight: 8
+weight: 9
 state: "Terminé"
 level-url: "https://ethernaut.openzeppelin.com/level/8"
 next: "King-8338a297a2b447b3b40166c68586199d"
@@ -14,7 +14,7 @@ NOTION_METADATA:
   object: "page"
   id: "d8ba3eaf-b273-440f-9a49-2b042e65f214"
   created_time: "2024-02-12T13:39:00.000Z"
-  last_edited_time: "2024-02-12T14:45:00.000Z"
+  last_edited_time: "2024-02-14T16:51:00.000Z"
   created_by:
     object: "user"
     id: "7866207c-089f-43df-9333-1dc33859c6a9"
@@ -65,7 +65,7 @@ NOTION_METADATA:
     weight:
       id: "%5Dyda"
       type: "number"
-      number: 8
+      number: 9
     state:
       id: "f%40ps"
       type: "status"
@@ -120,8 +120,8 @@ NOTION_METADATA:
           href: null
   url: "https://www.notion.so/Vault-d8ba3eafb273440f9a492b042e65f214"
   public_url: null
-UPDATE_TIME: "2024-02-14T14:49:28.873Z"
-EXPIRY_TIME: "2024-02-14T15:49:22.679Z"
+UPDATE_TIME: "2024-02-14T17:11:54.394Z"
+EXPIRY_TIME: "2024-02-14T18:11:46.496Z"
 
 ---
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.css" integrity="sha384-bYdxxUwYipFNohQlHt0bjN/LCpueqWz13HufFEV1SUatKs1cm4L6fFgCi1jT643X" crossorigin="anonymous">
@@ -152,10 +152,10 @@ contract Vault {
 Unlock the vault to pass the level!
 
 
-![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/13409f0d-cf98-499c-92f7-e5f7df0852ad/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240214%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240214T144922Z&X-Amz-Expires=3600&X-Amz-Signature=db2b073edd5b7f9337d5c1a074dc22fea8d128684664c0ba26020d31a07bc61d&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/13409f0d-cf98-499c-92f7-e5f7df0852ad/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240214%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240214T171146Z&X-Amz-Expires=3600&X-Amz-Signature=bedc461d9f2849f729179c2dc37eb15f4f1e282b4f5ab17cdabbce4c7a1b9deb&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 
-![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/88b316f9-391f-422d-967a-94391194a992/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240214%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240214T144922Z&X-Amz-Expires=3600&X-Amz-Signature=20a52e04f6e84f262c6eef343d42df6ce38331082789712bc6b152d0d50ef2cd&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/88b316f9-391f-422d-967a-94391194a992/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240214%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240214T171146Z&X-Amz-Expires=3600&X-Amz-Signature=cff67dc56ecc0dc419796790440843ae6a8d3987bd74197fbc8da40905c63dcd&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 
 > 💡 It's important to remember that marking a variable as private only prevents   
