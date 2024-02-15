@@ -120,24 +120,24 @@ NOTION_METADATA:
           href: null
   url: "https://www.notion.so/Fallback-0f16d7ea49bd4084a635ec4d24c77563"
   public_url: null
-UPDATE_TIME: "2024-02-15T12:46:20.737Z"
-EXPIRY_TIME: "2024-02-15T13:46:13.657Z"
+UPDATE_TIME: "2024-02-15T19:35:38.905Z"
+EXPIRY_TIME: "2024-02-15T20:35:34.443Z"
 
 ---
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.css" integrity="sha384-bYdxxUwYipFNohQlHt0bjN/LCpueqWz13HufFEV1SUatKs1cm4L6fFgCi1jT643X" crossorigin="anonymous">
 
 - How to send ether when interacting with an ABI
 
-![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/84bfeab1-c35b-45ab-a346-76e13736aabe/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240215%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240215T124613Z&X-Amz-Expires=3600&X-Amz-Signature=2b0ad213f40409d9d87b26162fac892cb5a7128cff373d549316994874da17fa&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/84bfeab1-c35b-45ab-a346-76e13736aabe/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240215%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240215T193534Z&X-Amz-Expires=3600&X-Amz-Signature=9916598e10eda5cbd7e6dc4889ae98746ab7022cf3da04cd4f183ab926d01094&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 - How to send ether outside of the ABI
 - Converting to and from wei/ether units (see `help()` command)
 - Fallback methods
 
-	![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/b4ce3656-36aa-4beb-bc96-ece2f5a7c0ba/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240215%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240215T124614Z&X-Amz-Expires=3600&X-Amz-Signature=ae954fe126005cfabe4cc5d109db25f82c481d75fbffc91137125a553dada235&X-Amz-SignedHeaders=host&x-id=GetObject)
+	![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/b4ce3656-36aa-4beb-bc96-ece2f5a7c0ba/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240215%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240215T193535Z&X-Amz-Expires=3600&X-Amz-Signature=4f18583a4e1414d5a47acf0c85c1886e16825ca3590b6179f3cbe0aaa8acdf07&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 
-	![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/c4aa3c76-5994-4d9d-82a5-9042c15a0b75/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240215%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240215T124614Z&X-Amz-Expires=3600&X-Amz-Signature=3846561b86bc1ef929d6a89d490a7fd1f9590769f4c33f54670cd022425f13eb&X-Amz-SignedHeaders=host&x-id=GetObject)
+	![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/c4aa3c76-5994-4d9d-82a5-9042c15a0b75/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240215%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240215T193535Z&X-Amz-Expires=3600&X-Amz-Signature=674f3d90fd18787f0d27dfa54685fd9bcd9f8cd4de32e1ce18e6ccd1e4a16485&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 
 	```solidity

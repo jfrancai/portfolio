@@ -120,8 +120,8 @@ NOTION_METADATA:
           href: null
   url: "https://www.notion.so/Vault-d8ba3eafb273440f9a492b042e65f214"
   public_url: null
-UPDATE_TIME: "2024-02-15T12:46:43.880Z"
-EXPIRY_TIME: "2024-02-15T13:46:37.609Z"
+UPDATE_TIME: "2024-02-15T19:36:07.166Z"
+EXPIRY_TIME: "2024-02-15T20:36:01.617Z"
 
 ---
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.css" integrity="sha384-bYdxxUwYipFNohQlHt0bjN/LCpueqWz13HufFEV1SUatKs1cm4L6fFgCi1jT643X" crossorigin="anonymous">
@@ -152,10 +152,10 @@ contract Vault {
 Unlock the vault to pass the level!
 
 
-![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/13409f0d-cf98-499c-92f7-e5f7df0852ad/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240215%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240215T124637Z&X-Amz-Expires=3600&X-Amz-Signature=dce00af5135ad4221edc086d002e9787eaca1507862a8d8021e7e30515c94dfa&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/13409f0d-cf98-499c-92f7-e5f7df0852ad/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240215%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240215T193601Z&X-Amz-Expires=3600&X-Amz-Signature=308373ee3111068da1c8bb0683373ad56020b2a92b9e3b881814b7588e2eadbe&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 
-![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/88b316f9-391f-422d-967a-94391194a992/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240215%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240215T124637Z&X-Amz-Expires=3600&X-Amz-Signature=4c45789c0e1667b9fc3ec3a30f292647c9aa131082095a2f242bc48aeeb9a4bc&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/88b316f9-391f-422d-967a-94391194a992/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240215%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240215T193601Z&X-Amz-Expires=3600&X-Amz-Signature=8cd4bc294405d8621c3f6ca75beb83ded8aba3110a1236604b429798bc5bba4c&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 
 > 💡 It's important to remember that marking a variable as private only prevents   

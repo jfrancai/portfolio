@@ -149,8 +149,8 @@ NOTION_METADATA:
           href: null
   url: "https://www.notion.so/Cream-Finance-Rekt-04ac5f09eb5d42c0b28fcdd8aabdc19d"
   public_url: null
-UPDATE_TIME: "2024-02-15T12:47:25.071Z"
-EXPIRY_TIME: "2024-02-15T13:47:18.084Z"
+UPDATE_TIME: "2024-02-15T19:36:48.822Z"
+EXPIRY_TIME: "2024-02-15T20:36:43.917Z"
 
 ---
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.css" integrity="sha384-bYdxxUwYipFNohQlHt0bjN/LCpueqWz13HufFEV1SUatKs1cm4L6fFgCi1jT643X" crossorigin="anonymous">
@@ -159,7 +159,7 @@ EXPIRY_TIME: "2024-02-15T13:47:18.084Z"
 [https://rekt.news/cream-rekt/](https://rekt.news/cream-rekt/)
 
 
-![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/178ae4f1-c8c0-4d72-b2e0-4ea382dde02f/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240215%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240215T124718Z&X-Amz-Expires=3600&X-Amz-Signature=d0adcde0f5f91ab778ded920f7210d300647f7a362b7a37e3c644db6141ff1db&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/178ae4f1-c8c0-4d72-b2e0-4ea382dde02f/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240215%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240215T193643Z&X-Amz-Expires=3600&X-Amz-Signature=2004c61fea5e883d9e8da572647004e907f53ee4950093dd691a586c4f9cd55f&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 
 Flash Loan EIP : [https://eips.ethereum.org/EIPS/eip-3156](https://eips.ethereum.org/EIPS/eip-3156)
@@ -212,7 +212,7 @@ entry points.
 without charging a fee, effectively allowing flash loans bounded by
 computational constraints instead of asset ownership constraints.
 
-![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/2beec3bf-2d47-445d-8dd0-30068879468f/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240215%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240215T124718Z&X-Amz-Expires=3600&X-Amz-Signature=f76382fd3dd0fae92fa9d9b0a97137892327beb027e040bbea81d4157d64b174&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/2beec3bf-2d47-445d-8dd0-30068879468f/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240215%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240215T193643Z&X-Amz-Expires=3600&X-Amz-Signature=471d9ae61ee58dfbe46ac123a7474b04c19c0bbdc799559c95357edb17e91467&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 
 First thing first, I want to have a look at the current state of the vault contract:
@@ -258,7 +258,7 @@ contract POC is Script {
 which gives me the following output :
 
 
-![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/d77a8fc9-bff8-4e31-8f60-59bb6cbce852/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240215%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240215T124718Z&X-Amz-Expires=3600&X-Amz-Signature=f3366a7e26e711cf0ab3ca277c203b03e5af0367eee70c769190d3a116b94c8d&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/d77a8fc9-bff8-4e31-8f60-59bb6cbce852/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240215%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240215T193643Z&X-Amz-Expires=3600&X-Amz-Signature=4340885e3da802ad0e7a8d5b088e987f49076c363447fab4dcaa77e0e96b3e2d&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 
 So this is our target to still !
@@ -479,7 +479,7 @@ function updatedAccount(
 but this call presuppose that `account = accounts[_accountOwner];` is the correct value, which we know is wrong since we can call withdraw as many time as we want without changing the `accounts[msg.sender]` . In order to create an attack, first we need so GOLD collateral. Let’s see how many GOLD we can borrow from the flash lender:
 
 
-![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/890f84cd-9c23-471d-91f8-eb71c84fa3df/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240215%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240215T124718Z&X-Amz-Expires=3600&X-Amz-Signature=46a1da7c91cf6e5184ab94b089bff8fe050e9cb6fc2faf02c9dbe039ae518c9d&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/890f84cd-9c23-471d-91f8-eb71c84fa3df/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240215%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240215T193643Z&X-Amz-Expires=3600&X-Amz-Signature=58aa6bee856f7f70c4ccdc40e3407100db0c30046b1c72fe5b191076d26b8105&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 
 So, 1 000 Gold token.
@@ -570,7 +570,7 @@ def transfer(address _to, uint256 _value) payable:
 and the first transaction log from my first POC (see further below) we can see that their is some call to `getInterfaceImplementer()` function:
 
 
-![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/427c63e2-b8fe-4244-81c2-e8726a8c6a11/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240215%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240215T124718Z&X-Amz-Expires=3600&X-Amz-Signature=a4a04792d393322749d17190b862507caf4d849edfcaeabc3dbc56882e8382ae&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/427c63e2-b8fe-4244-81c2-e8726a8c6a11/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240215%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240215T193643Z&X-Amz-Expires=3600&X-Amz-Signature=c9d58dfd2ad48df7d1a37872c917a245837a7cc2e42edeffc6b08d73296ee29f&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 
 Here is the correponding eip : [https://eips.ethereum.org/EIPS/eip-1820](https://eips.ethereum.org/EIPS/eip-1820)
@@ -640,7 +640,7 @@ static call 0x1820a4b7618bde71dce8cdc73aab6c95905fad24.getInterfaceImplementer(a
 after a quick google search we can find that:
 
 
-![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/b85d9ee1-db3e-4f34-a986-0b8ab8f7f018/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240215%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240215T124718Z&X-Amz-Expires=3600&X-Amz-Signature=5419b6e630257904e11d8e6d748dfa4392b67008af927df40c729cd8fc091f54&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/b85d9ee1-db3e-4f34-a986-0b8ab8f7f018/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240215%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240215T193643Z&X-Amz-Expires=3600&X-Amz-Signature=d80550da7dd271562f74cfd49cf07d152d0a10b978d5f57b5ead46e9cea72d4a&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 
 [bookmark](https://docs.openzeppelin.com/contracts/3.x/erc777)
@@ -664,19 +664,19 @@ Here we have it :
 We can clearly see here that if we implement the tokensReceived function we can have a re-entrancy attack:
 
 
-![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/a92b9812-e364-4481-a5e4-d551245477ff/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240215%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240215T124718Z&X-Amz-Expires=3600&X-Amz-Signature=e8720e10acc43a3338d71c0d6bb5b9d2723b2b262d9035acd6cb6ce6808ce4c8&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/a92b9812-e364-4481-a5e4-d551245477ff/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240215%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240215T193643Z&X-Amz-Expires=3600&X-Amz-Signature=0c7844632cafffe2b0bb971a96b31f000f692939c574dbe3516d2447459930fa&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 
 So let’s implement the function in our flashloan contract + we can see that the address is called on  the return data which is the _to address from the params of the function which is msg.sender which is our flash loan contract !
 
 
-![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/ca7dfac6-2e86-42e5-91a2-a9ba70189cbe/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240215%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240215T124718Z&X-Amz-Expires=3600&X-Amz-Signature=16c09e584514a844e2db1becf6569cf2039446402d3ea6a4843e78e2da2db936&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/ca7dfac6-2e86-42e5-91a2-a9ba70189cbe/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240215%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240215T193643Z&X-Amz-Expires=3600&X-Amz-Signature=38f920c3402d3ef49045c1f98209b189935f6bfdd7f834ec24898129d378b5be&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 
 Once we have implemented the function there is still one thing to do:
 
 
-![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/a3c117a4-c87e-441e-81ee-8b43f01fa31c/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240215%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240215T124718Z&X-Amz-Expires=3600&X-Amz-Signature=65805e8dd8ce5858f6b3f9b82708340b779c5acb35e0602113da85c4e75c2d0e&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/a3c117a4-c87e-441e-81ee-8b43f01fa31c/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240215%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240215T193643Z&X-Amz-Expires=3600&X-Amz-Signature=df8834dfa202641e91baddb90f1475367ca40a12eb583e384f8a3259919ab573&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 
 We can see that there is no interface implementer registered, so there are no call that is made here :
@@ -748,7 +748,7 @@ registry.setInterfaceImplementer(address(flashLoan), 0xb281fc8c12954d22544db45de
 but I felt onto:
 
 
-![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/8df87b9b-3bbf-40b6-a273-28ceb0f98bd3/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240215%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240215T124718Z&X-Amz-Expires=3600&X-Amz-Signature=72ff001ea2fa4c8986bcebd3cd14920d0a3c563eccb3ab0ba249976e03790d9a&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/8df87b9b-3bbf-40b6-a273-28ceb0f98bd3/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240215%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240215T193643Z&X-Amz-Expires=3600&X-Amz-Signature=1297d49d8934398806772db6431dc458735759fb5453c4a053319421b3ac6d37&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 
 Question: who is the manager ?
