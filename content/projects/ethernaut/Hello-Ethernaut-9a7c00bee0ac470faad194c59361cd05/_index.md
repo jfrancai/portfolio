@@ -1,7 +1,7 @@
 ---
 title: "Hello Ethernaut"
 date: "2024-01-07"
-lastmod: "2024-02-23T22:27:00.000Z"
+lastmod: "2024-02-23T22:39:00.000Z"
 draft: false
 difficulty: "⭐"
 weight: 1
@@ -13,7 +13,7 @@ NOTION_METADATA:
   object: "page"
   id: "9a7c00be-e0ac-470f-aad1-94c59361cd05"
   created_time: "2024-02-12T13:39:00.000Z"
-  last_edited_time: "2024-02-23T22:27:00.000Z"
+  last_edited_time: "2024-02-23T22:39:00.000Z"
   created_by:
     object: "user"
     id: "7866207c-089f-43df-9333-1dc33859c6a9"
@@ -106,39 +106,29 @@ NOTION_METADATA:
           href: null
   url: "https://www.notion.so/Hello-Ethernaut-9a7c00bee0ac470faad194c59361cd05"
   public_url: null
-UPDATE_TIME: "2024-02-23T22:27:33.202Z"
-EXPIRY_TIME: "2024-02-23T23:27:27.046Z"
-
+UPDATE_TIME: "2024-02-23T22:41:10.623Z"
+EXPIRY_TIME: "2024-02-23T23:41:05.144Z"
 ---
+
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.css" integrity="sha384-bYdxxUwYipFNohQlHt0bjN/LCpueqWz13HufFEV1SUatKs1cm4L6fFgCi1jT643X" crossorigin="anonymous">
 
-
-![](https://images.unsplash.com/photo-1465153690352-10c1b29577f8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZHVja3xlbnwwfHwwfHx8MA%3D%3D)
-
+[](/images/0213fd26-c086-4887-9e0c-1359f7edeb17.png)
 
 Here we can see the player address, do `ctrl + shift + i` to open your browser console.
 
-
-![](https://images.unsplash.com/photo-1465153690352-10c1b29577f8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZHVja3xlbnwwfHwwfHx8MA%3D%3D)
-
+![](/images/f5af399c-b149-4da9-8435-638e9979e7b1.png)
 
 After requesting a new contract instance I got the following:
 
+![](/images/b5727041-60af-49b7-943c-5fe1e3906e3a.png)
 
-![](https://images.unsplash.com/photo-1465153690352-10c1b29577f8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZHVja3xlbnwwfHwwfHx8MA%3D%3D)
-
-
-![](https://images.unsplash.com/photo-1465153690352-10c1b29577f8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZHVja3xlbnwwfHwwfHx8MA%3D%3D)
-
+![](/images/554635c5-b58c-4572-ae51-1fb04f33fc75.png)
 
 Here is how I solved the it:
 
-
-![](https://images.unsplash.com/photo-1465153690352-10c1b29577f8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZHVja3xlbnwwfHwwfHx8MA%3D%3D)
-
+![](/images/efcf5184-d5ab-469a-a7a5-d7c4b67bfae0.png)
 
 Here is the source code after submiting the instance of the contract:
-
 
 ```solidity
 // SPDX-License-Identifier: MIT
@@ -191,26 +181,19 @@ contract Instance {
 }
 ```
 
-
 Let’s create a PoC using Foundry. A proof of concept (PoC) exploit is **a non-harmful attack against a computer or network**. PoC exploits are not meant to cause harm, but to show security weaknesses within software.
-
 
 Let’s configure Forge to deploy our PoC to the Sepolia testnet.
 
-
 > Solidity scripts are like the scripts you write when working with tools like Hardhat; what makes Solidity scripting different is that they are written in Solidity instead of JavaScript, and they are run on the fast Foundry EVM backend, which provides dry-run capabilities.
 
-
 First thing first, we have to initialize the forge repository using the following command:
-
 
 ```bash
 forge init solidity-scripting
 ```
 
-
 Once this is done we end up with the following directory structure and git initiliazied project:
-
 
 ```bash
 .
@@ -227,9 +210,7 @@ Once this is done we end up with the following directory structure and git initi
 └── test
 ```
 
-
 Inside the `.env` file, you have to configure your environment variables :
-
 
 ```solidity
 SEPOLIA_RPC_URL=...
@@ -237,26 +218,19 @@ PRIVATE_KEY=...
 ETHERSCAN_API_KEY=...
 ```
 
-
 Then, we can clean the default example code provided by forge with the following command:
-
 
 ```bash
 rm script/* src/* test/*
 ```
 
-
 Now we have settle our environment, we can start creating our Forge script.
-
 
 Following the [documentation](https://book.getfoundry.sh/tutorials/solidity-scripting) our script should be written inside the script folder (what a surprise)
 
-
 The script for the first challenge, which is Hello Ethernaut, is written under the `script/00.s.sol` file. We will use the same naming convention for the following challenges.
 
-
-Here is the first (incomplete) version of our script: 
-
+Here is the first (incomplete) version of our script:
 
 ```solidity
 // SPDX-License-Identifier: UNLICENSED
@@ -274,92 +248,70 @@ contract PoC is Script {
 }
 ```
 
-
 I’m just going to highlight the part of the documentation that are relevent in the case of this script by quoting them. Make sure you go by yourself into the documentation. Those notes are not meant to be exaustive.
 
-
 Now let’s read through the code and figure out what it actually means and does.
-
 
 ```solidity
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.13;
 ```
 
-
-Remember even if it’s a script it still works like a smart contract, 
-but is never deployed, so just like any other smart contract written in 
+Remember even if it’s a script it still works like a smart contract,
+but is never deployed, so just like any other smart contract written in
 Solidity the `pragma version` has to be specified.
-
 
 ```solidity
 import "forge-std/Script.sol";
 ```
 
-
-Just like we may import Forge Std to get testing utilities when 
-writing tests, Forge Std also provides some scripting utilities that we 
+Just like we may import Forge Std to get testing utilities when
+writing tests, Forge Std also provides some scripting utilities that we
 import here.
-
 
 ```solidity
 contract PoC is Script {
 ```
 
-
 We create a contract called `PoC` and it inherits `Script` from Forge Std.
-
 
 ```solidity
 function run() external {
 ```
 
-
 By default, scripts are executed by calling the function named `run`, our entrypoint.
-
 
 ```solidity
 uint256 deployerPrivateKey = vm.envUint("PRIVATE_KEY");
 ```
 
-
 This loads in the private key from our `.env` file. **Note:** you must be careful when exposing private keys in a `.env`
- file and loading them into programs. This is only recommended for use 
+file and loading them into programs. This is only recommended for use
 with non-privileged deployers or for local / test setups. For production
- setups please review the various [wallet options](https://book.getfoundry.sh/reference/forge/forge-script.html#wallet-options---raw) that Foundry supports.
-
+setups please review the various [wallet options](https://book.getfoundry.sh/reference/forge/forge-script.html#wallet-options---raw) that Foundry supports.
 
 ```solidity
 vm.startBroadcast(deployerPrivateKey);
 
 ```
 
-
 This is a special cheatcode that records calls and contract creations made by our main script contract. We pass the `deployerPrivateKey`
- in order to instruct it to use that key for signing the transactions. 
+in order to instruct it to use that key for signing the transactions.
 Later, we will broadcast these transactions to deploy our PoC contract.
-
 
 ## How to interact with a smart contract that you don’t have the code
 
-
 In order to do that, we have to create an interface of the contract we want to interact with.
-
 
 From the Ethernaut guidelines we see that their is an `info` method available on the contract instance.
 
+![](images/5e536713-71db-447c-8ecc-baeb3a3750d8.png)
 
-![](https://images.unsplash.com/photo-1465153690352-10c1b29577f8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZHVja3xlbnwwfHwwfHx8MA%3D%3D)
+Looking into the console, we see that there are multiple other method available.
 
-
-Looking into the console, we see that there are multiple other method available. 
-
-
-![](https://images.unsplash.com/photo-1465153690352-10c1b29577f8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZHVja3xlbnwwfHwwfHx8MA%3D%3D)
-
+![](images/21cdd6e7-4290-4a9b-8e3d-d78e2bff585a.png)
 
 Let’s begin with the interface for the `info` method:
-
 
 ```solidity
 interface Callee {
@@ -367,24 +319,17 @@ interface Callee {
 }
 ```
 
-
 From what we can see in the data object from the console, the state mutability of the function is `pure` . But we have no idea if the function takes parameters or what is its return type.
-
 
 Let’s try to find out by expending the object:
 
-
-![](https://images.unsplash.com/photo-1465153690352-10c1b29577f8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZHVja3xlbnwwfHwwfHx8MA%3D%3D)
-
+![](images/61126dbd-aaff-4eb1-98c2-c145f6f9f58d.png)
 
 And there it is!
 
-
 There are no inputs and one output type: a `string`
 
-
 So, here is what our final interafce looks like:
-
 
 ```solidity
 interface Callee {
@@ -392,9 +337,7 @@ interface Callee {
 }
 ```
 
-
 Now, we can use this interface inside our script, create a contract instance and call the info function:
-
 
 ```solidity
 interface Callee {
@@ -412,17 +355,13 @@ contract POC is Script {
 }
 ```
 
-
 Perfect, let’s run our script:
-
 
 ```solidity
 forge script ./script/00.s.sol --rpc-url $SEPOLIA_RPC_URL --broadcast --verify -vvvv
 ```
 
-
 Don’t forget to `source .env` if you haven’t done it yet, so you can use env variable.
-
 
 Command Breakdown:
 
@@ -435,34 +374,25 @@ Command Breakdown:
 
 And here is the output we got:
 
-
-![](https://images.unsplash.com/photo-1465153690352-10c1b29577f8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZHVja3xlbnwwfHwwfHx8MA%3D%3D)
-
+![](images/1ee1ce79-e02d-4cb9-9170-be48adf774de.png)
 
 ## How to decypher the return value ?
 
-
 Do you recall that we are supposed to return a string from our function, but here is the output we got: `0x00000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000027596f752077696c6c2066696e64207768617420796f75206e65656420696e20696e666f3128292e00000000000000000000000000000000000000000000000000`
 
-
 One way to interpret this is by using the cast tooling solution that comes with foundry:
-
 
 ```solidity
 cast to-ascii 0x00000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000027596f752077696c6c2066696e64207768617420796f75206e65656420696e20696e666f3128292e00000000000000000000000000000000000000000000000000
 ```
 
-
 which output the following result:
-
 
 ```solidity
 'You will find what you need in info1().
 ```
 
-
 A more systematic approach consist maybe to console log the result from within our script:
-
 
 ```solidity
 ...
@@ -471,15 +401,11 @@ console.logString(result);
 ...
 ```
 
-
 Now we have access to the logs directly within the ouput of our script:
 
-
-![](https://images.unsplash.com/photo-1465153690352-10c1b29577f8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZHVja3xlbnwwfHwwfHx8MA%3D%3D)
-
+![](images/b6ae6141-369f-4057-87b6-c4955e6b61b8.png)
 
 So, let’s call the next function `info1()` don’t forget to add the `info1()` function to the interface as we did for `info()` :
-
 
 ```solidity
 interface Callee {
@@ -488,24 +414,17 @@ interface Callee {
 }
 ```
 
-
 We got the following logs:
 
-
-![](https://images.unsplash.com/photo-1465153690352-10c1b29577f8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZHVja3xlbnwwfHwwfHx8MA%3D%3D)
-
+![](images/9014755d-fed0-452a-a843-571c8732780b.png)
 
 Let’s continue the process until we find something interesting…
 
-
 OK after several method calls we finally got the password to pass the level:
 
-
-![](https://images.unsplash.com/photo-1465153690352-10c1b29577f8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZHVja3xlbnwwfHwwfHx8MA%3D%3D)
-
+![](images/881a6223-3240-461d-a8f1-73aa122d6b52.png)
 
 Here is the code to get the password:
-
 
 ```solidity
 // SPDX-License-Identifier: UNLICENSED
@@ -560,18 +479,13 @@ contract POC is Script {
 }
 ```
 
-
 Now the last thing to do is to call the authenticate method with the correct password as parameter. With the same method we look at the abi from the js console of the browser the correct method interface:
 
-
-![](https://images.unsplash.com/photo-1465153690352-10c1b29577f8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZHVja3xlbnwwfHwwfHx8MA%3D%3D)
-
+![](images/f6c1a437-b6ad-49d1-9c69-1bf452b1c44c.png)
 
 We can see that there is one `passKey` input param and no outputs. Also, we see that the method state mutability is `nonpayable`.
 
-
 Let’s create the correct interface in our Callee contract interface:
-
 
 ```solidity
 interface Callee {
@@ -580,9 +494,7 @@ interface Callee {
 }
 ```
 
-
 and call the method from within our script:
-
 
 ```solidity
 contract POC is Script {
@@ -603,9 +515,7 @@ contract POC is Script {
 }
 ```
 
-
 After few seconds (this correspond to the time that the transaction get verified), we can see the following logs to the console:
-
 
 ```solidity
 ## Setting up 1 EVM.
@@ -665,9 +575,6 @@ Transactions saved to: /home/jfrancai/repos/ethernaut/broadcast/00.s.sol/1115511
 Sensitive values saved to: /home/jfrancai/repos/ethernaut/cache/00.s.sol/11155111/run-latest.json
 ```
 
-
 Now you can submit the instance through the Ethernaut web interface to validate the level.
 
-
 Congrats ! You finished the first level of Ethernaut using the Foundry tool chain !🥳
-

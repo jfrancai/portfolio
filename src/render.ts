@@ -61,7 +61,7 @@ export async function renderPage(page: PageObjectResponse, notion: Client) {
       const urlParts = url.split("/");
       const extension = urlParts[5].split("?")[0].slice(-3);
       const imageName = `${urlParts[4]}.${extension}`;
-      const file = fs.createWriteStream(imageName);
+      const file = fs.createWriteStream(`static/images/${imageName}`);
       https
         .get(url, (response) => {
           response.pipe(file);
@@ -75,8 +75,9 @@ export async function renderPage(page: PageObjectResponse, notion: Client) {
           fs.unlink(imageName);
           console.error(`Error downloading image: ${err.message}`);
         });
+      return `![](/images/${imageName})`;
     }
-    return "![](https://images.unsplash.com/photo-1465153690352-10c1b29577f8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZHVja3xlbnwwfHwwfHx8MA%3D%3D)";
+    return "";
   });
   switch (formatterConfig.equation.style) {
     case "markdown":
@@ -254,11 +255,9 @@ export async function savePage(
   mount: DatabaseMount | PageMount,
 ) {
   const pageTitle = getPageTitle(page);
-  const postpath = path.join(
-    `content/projects/${mount.target_folder}`,
-    getFolderName(pageTitle, page.id),
-    "_index.md",
-  );
+  const folderName = getFolderName(pageTitle, page.id);
+  const base = `content/projects/${mount.target_folder}`;
+  const postpath = path.join(base, folderName, "_index.md");
 
   const post = getContentFile(postpath);
   if (post) {
@@ -275,10 +274,9 @@ export async function savePage(
   // otherwise update the page
   console.info(`[Info] Updating ${postpath}`);
 
-  const { title, pageString } = await renderPage(page, notion);
-  const folderName = getFolderName(title, page.id);
+  const { pageString } = await renderPage(page, notion);
   const fileName = "_index.md";
-  fs.ensureDirSync(`content/projects/${mount.target_folder}/${folderName}`);
+  fs.ensureDirSync(`${base}/${folderName}`);
   await sh(`touch "${mount.target_folder}/${folderName}/${fileName}"`, false);
   fs.writeFileSync(
     `content/projects/${mount.target_folder}/${folderName}/${fileName}`,
