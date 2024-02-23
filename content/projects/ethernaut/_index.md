@@ -32,4 +32,7 @@ My primary focus is on solving the levels, and these notes act as checkpoints fo
 {{< card link="re-entrancy-6ea65e4888e349dabdc4ca12c8e6d22d" title="Re-entrancy" image="re-entrancy.svg" >}}
 {{< card link="elevator-59c41c694afa45c68e603000da840a2e" title="Elevator" image="elevator.svg" >}}
 {{< card link="privacy-0141c59931824d74a8311099eb338d5d" title="Elevator" image="privacy.svg" >}}
+{{< card link="gatekeeper-one-9bbda6efa6c24367aa643eb73ae92a6a" title="Gatekeeper One" image="gatekeeper-one.svg" >}}
+{{< card link="gatekeeper-two-d4a070f38b644143a295ecf4467fb7fa" title="Gatekeeper Two" image="gatekeeper-two.svg" >}}
+{{< card link="naught-coin-5013cfef45d646e693a6feaac127ac33" title="Naught Coin" image="naught-coin.svg" >}}
 {{< /cards >}}

@@ -145,8 +145,8 @@ NOTION_METADATA:
           href: null
   url: "https://www.notion.so/Wintermute-Rekt-d0fd4609147941e6af7fcc68ef81da6a"
   public_url: null
-UPDATE_TIME: "2024-02-15T19:36:41.328Z"
-EXPIRY_TIME: "2024-02-15T20:36:37.646Z"
+UPDATE_TIME: "2024-02-23T20:56:29.741Z"
+EXPIRY_TIME: "2024-02-23T21:56:21.678Z"
 
 ---
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.css" integrity="sha384-bYdxxUwYipFNohQlHt0bjN/LCpueqWz13HufFEV1SUatKs1cm4L6fFgCi1jT643X" crossorigin="anonymous">
@@ -376,16 +376,16 @@ We have to recover a public key from the address. The process implies that we us
 which has the followin associated encoded data (click on `Get Raw Tx Hex` on the etherscan more button of the transaction):
 
 
-![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/b13540f7-a757-47fb-95ea-9ab5708f7214/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240215%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240215T193637Z&X-Amz-Expires=3600&X-Amz-Signature=866218966caf605ab94e9d68900c0c60fb2a5c47add7f9069998c62c3be3de4b&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/b13540f7-a757-47fb-95ea-9ab5708f7214/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240223%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240223T205621Z&X-Amz-Expires=3600&X-Amz-Signature=e1f3543b0741a966929e618d55feb225f19d8bf50ad34077ebc5e5adbdb5c870&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 
-![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/b597e66d-183c-47d3-bb30-103a7908cc82/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240215%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240215T193637Z&X-Amz-Expires=3600&X-Amz-Signature=cf796bca92331373c562b74c18fdbadc78b09845c88ac06f839112d6d6c61dbc&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/b597e66d-183c-47d3-bb30-103a7908cc82/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240223%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240223T205621Z&X-Amz-Expires=3600&X-Amz-Signature=8daf890e150a4b98ff67187c93cb5330ca489c482c9dc6289b562aa3261ecdd7&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 
 From here we have to retrieve the r,s,v value, we can use [ABDK TollKit](https://toolkit.abdk.consulting/ethereum#recover-address) to do that from web interface:
 
 
-![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/ad71154e-77cb-4743-bfdb-d93e472738b5/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240215%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240215T193637Z&X-Amz-Expires=3600&X-Amz-Signature=c296f1eb267a80cfd7a79a3626cb6d0c0887d94366484edde9725e53e9e3c8db&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/ad71154e-77cb-4743-bfdb-d93e472738b5/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240223%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240223T205621Z&X-Amz-Expires=3600&X-Amz-Signature=b7d5c39ae55ebc136d961bdec33d6a814644f6f8d0f5a6a52c1072621940c874&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 
 After, that I used the following script to recover the public from the transaction details: `ransactionToPublicKey.js`
@@ -446,7 +446,7 @@ recover({
 which gave me the following output :
 
 
-![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/3967a493-d450-4454-9709-5279f65c3b1e/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240215%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240215T193637Z&X-Amz-Expires=3600&X-Amz-Signature=2c4dbf4e1595fb60469916c1a3d160e5f3d2cdf5c7692f9b09859679c6eeb7dc&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/3967a493-d450-4454-9709-5279f65c3b1e/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240223%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240223T205621Z&X-Amz-Expires=3600&X-Amz-Signature=d343d2a0af9489a5f060eec1eb0e5532226557df4b75d3ffa2034765a286ae5b&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 
 Let’s go ! We have the public key of LADY_WHITEFROST, the only thing left to do is bruteforcing the public key so that we can retrieve the seed public key which will gave us the associated private key thanks to our mapping.
@@ -497,7 +497,7 @@ for (let i = 1; ; i++) {
 ```
 
 
-![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/57fe8d28-b53a-4afe-b0f5-e2d9b826b510/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240215%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240215T193637Z&X-Amz-Expires=3600&X-Amz-Signature=5283edf10e0bb97ab474733511ba6f7073d952f89a4a998c537c732dce1fa94d&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/57fe8d28-b53a-4afe-b0f5-e2d9b826b510/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240223%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240223T205621Z&X-Amz-Expires=3600&X-Amz-Signature=0ee9c83ce44a55c24e16c94ad655063d1ea916e77b3950d1611eea2e8133acfd&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 
 Here we have it!
@@ -521,25 +521,25 @@ Here we have it!
 <u>**Some screen shot from my research during the quest:**</u>
 
 
-![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/6bb075f4-fbe6-47d6-9009-d08cefa8ab49/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240215%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240215T193637Z&X-Amz-Expires=3600&X-Amz-Signature=aa1c7261e594a60e0ff4279bf48eff8e617c80aeff3387e91c112d2c70243350&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/6bb075f4-fbe6-47d6-9009-d08cefa8ab49/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240223%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240223T205621Z&X-Amz-Expires=3600&X-Amz-Signature=79a04f198f14f12bce15261a3b27ce3727683d277441a0e09b1538bcc98c6697&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 
-![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/5f896cbd-b61b-43fa-8bbd-e68c8e287de6/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240215%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240215T193637Z&X-Amz-Expires=3600&X-Amz-Signature=e2f85a4189ce7f5556e0980e3e513bef5ca3eef7904176626b5747895dddcda5&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/5f896cbd-b61b-43fa-8bbd-e68c8e287de6/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240223%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240223T205621Z&X-Amz-Expires=3600&X-Amz-Signature=ae03719381c0cf53f7de8f2b9064d69ce56348cbcde3dae94f6b82dfe1476cc5&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 
-![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/d8816adc-72fb-42a6-8d8f-0e8c61639ec2/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240215%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240215T193637Z&X-Amz-Expires=3600&X-Amz-Signature=9e3f22f391c425e903816e6bfe5080cc094c483724c49b703383984ab6996752&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/d8816adc-72fb-42a6-8d8f-0e8c61639ec2/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240223%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240223T205621Z&X-Amz-Expires=3600&X-Amz-Signature=1e6b7aced8c96177a0d7df53ac3c55d38d27de31acd6593c2697c109b70c4dcc&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 
-![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/df0e6e95-e2b1-40ae-a3be-74f6b1974daf/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240215%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240215T193637Z&X-Amz-Expires=3600&X-Amz-Signature=e80c58ed549d4137967360c19d0174ec7f24a7e7aab5d85526e894bc9a9a02fb&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/df0e6e95-e2b1-40ae-a3be-74f6b1974daf/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240223%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240223T205621Z&X-Amz-Expires=3600&X-Amz-Signature=5e8045d80be52bd68c3eb0aafbbd623893a0a4f55509fa91f87b054ad4609b25&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 
-![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/1897b71a-84d2-4668-ab07-846c21840b57/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240215%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240215T193637Z&X-Amz-Expires=3600&X-Amz-Signature=9fb0f6d145c0a05a5b189acfe7a5b50302366f9a2122e61bb61f677da3b88fa7&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/1897b71a-84d2-4668-ab07-846c21840b57/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240223%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240223T205621Z&X-Amz-Expires=3600&X-Amz-Signature=a224494c5a51169b453d15ad63e7c54c7bd58b25c5178b7652815752e4823cd4&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 
-![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/2ef5764e-eb17-415f-9411-64d0ac450ec1/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240215%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240215T193637Z&X-Amz-Expires=3600&X-Amz-Signature=fed40f9876a804aa398c23f1703c0c4be6f437b64b307b897b0cb9bbeba1c1e4&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/2ef5764e-eb17-415f-9411-64d0ac450ec1/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240223%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240223T205621Z&X-Amz-Expires=3600&X-Amz-Signature=b3c9d288ed1f65bfadd929b5836871444db0b786f2cd4476854f110bea0dd7ba&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 
-![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/932426b9-1f57-47b7-aab6-18bff19f1360/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240215%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240215T193637Z&X-Amz-Expires=3600&X-Amz-Signature=9161cf7c38e5be91024947e2ae908626300aa30a0668b5ae72d35655baf294b5&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/932426b9-1f57-47b7-aab6-18bff19f1360/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240223%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240223T205621Z&X-Amz-Expires=3600&X-Amz-Signature=f8a0d4555670ab60e6fdeb3f61f22991cd82f6e89118001bbf79b5aa36323397&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 
 ```bash
@@ -552,5 +552,5 @@ v = 0xf81d53b9d2fa44bb0c31913b55eeabf38492d187fc2fe162a6359850c2320b97
 ```
 
 
-![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/0cb37632-2928-440c-96c3-8bba3f1c7666/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240215%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240215T193637Z&X-Amz-Expires=3600&X-Amz-Signature=41f1ea18d4630979718f969a3eff61a8b4007b7b622444e88137e5dbdd31a183&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/0cb37632-2928-440c-96c3-8bba3f1c7666/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240223%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240223T205621Z&X-Amz-Expires=3600&X-Amz-Signature=259ec91208429d3932d9db3a9afe4c9e317c50f17a48a5441805da0fc4769a6c&X-Amz-SignedHeaders=host&x-id=GetObject)
 

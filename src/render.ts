@@ -53,6 +53,12 @@ export async function renderPage(page: PageObjectResponse, notion: Client) {
 
   switch (formatterConfig.equation.style) {
     case "markdown":
+      n2m.setCustomTransformer("image", async (block) => {
+        const { image } = block as any;
+        console.log(block);
+        console.log(`image ${image}`);
+        return "![](https://images.unsplash.com/photo-1465153690352-10c1b29577f8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZHVja3xlbnwwfHwwfHx8MA%3D%3D)";
+      });
       n2m.setCustomTransformer("equation", async (block) => {
         const { equation } = block as EquationBlockObjectResponse;
         return `\\[${equation}\\]`;
@@ -226,10 +232,11 @@ export async function savePage(
   notion: Client,
   mount: DatabaseMount | PageMount,
 ) {
+  const pageTitle = getPageTitle(page);
   const postpath = path.join(
-    "content/projects",
-    mount.target_folder,
-    getFileName(getPageTitle(page), page.id),
+    `content/projects/${mount.target_folder}`,
+    getFolderName(pageTitle, page.id),
+    "_index.md",
   );
 
   const post = getContentFile(postpath);
@@ -237,7 +244,7 @@ export async function savePage(
     const metadata = post.metadata;
     // if the page is not modified, continue
     if (
-      post.expiry_time == null &&
+      /* post.expiry_time == null && */
       metadata.last_edited_time === page.last_edited_time
     ) {
       console.info(`[Info] The post ${postpath} is up-to-date, skipped.`);

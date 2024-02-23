@@ -1,12 +1,12 @@
 ---
 title: "Privacy"
 date: "2024-02-10"
-lastmod: "2024-02-14T16:51:00.000Z"
+lastmod: "2024-02-16T09:12:00.000Z"
 draft: false
 difficulty: "⭐⭐⭐"
 prev: "Elevator-59c41c694afa45c68e603000da840a2e"
 weight: 13
-state: "En cours"
+state: "Terminé"
 level-url: "https://ethernaut.openzeppelin.com/level/12"
 next: "Gatekeeper-One-9bbda6efa6c24367aa643eb73ae92a6a"
 type: "docs"
@@ -14,7 +14,7 @@ NOTION_METADATA:
   object: "page"
   id: "0141c599-3182-4d74-a831-1099eb338d5d"
   created_time: "2024-02-12T13:39:00.000Z"
-  last_edited_time: "2024-02-14T16:51:00.000Z"
+  last_edited_time: "2024-02-16T09:12:00.000Z"
   created_by:
     object: "user"
     id: "7866207c-089f-43df-9333-1dc33859c6a9"
@@ -62,6 +62,10 @@ NOTION_METADATA:
         start: "2024-02-10"
         end: null
         time_zone: null
+    Last edited time:
+      id: "ZdmN"
+      type: "last_edited_time"
+      last_edited_time: "2024-02-16T09:12:00.000Z"
     weight:
       id: "%5Dyda"
       type: "number"
@@ -70,13 +74,19 @@ NOTION_METADATA:
       id: "f%40ps"
       type: "status"
       status:
-        id: "e1f6ef4b-49ae-427f-9bb4-8736089f3aa2"
-        name: "En cours"
-        color: "blue"
+        id: "abb7fad3-add1-4b13-946c-06bff36598bf"
+        name: "Terminé"
+        color: "green"
     level-url:
       id: "juZs"
       type: "url"
       url: "https://ethernaut.openzeppelin.com/level/12"
+    Last edited by:
+      id: "mIQC"
+      type: "last_edited_by"
+      last_edited_by:
+        object: "user"
+        id: "7866207c-089f-43df-9333-1dc33859c6a9"
     next:
       id: "pocA"
       type: "rich_text"
@@ -120,7 +130,7 @@ NOTION_METADATA:
           href: null
   url: "https://www.notion.so/Privacy-0141c59931824d74a8311099eb338d5d"
   public_url: null
-UPDATE_TIME: "2024-02-15T19:35:32.147Z"
+UPDATE_TIME: "2024-02-23T20:55:31.001Z"
 
 ---
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.css" integrity="sha384-bYdxxUwYipFNohQlHt0bjN/LCpueqWz13HufFEV1SUatKs1cm4L6fFgCi1jT643X" crossorigin="anonymous">

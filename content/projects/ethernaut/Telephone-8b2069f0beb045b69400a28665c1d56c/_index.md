@@ -62,6 +62,10 @@ NOTION_METADATA:
         start: "2024-01-16"
         end: null
         time_zone: null
+    Last edited time:
+      id: "ZdmN"
+      type: "last_edited_time"
+      last_edited_time: "2024-02-14T16:51:00.000Z"
     weight:
       id: "%5Dyda"
       type: "number"
@@ -77,6 +81,12 @@ NOTION_METADATA:
       id: "juZs"
       type: "url"
       url: "https://ethernaut.openzeppelin.com/level/4"
+    Last edited by:
+      id: "mIQC"
+      type: "last_edited_by"
+      last_edited_by:
+        object: "user"
+        id: "7866207c-089f-43df-9333-1dc33859c6a9"
     next:
       id: "pocA"
       type: "rich_text"
@@ -120,7 +130,7 @@ NOTION_METADATA:
           href: null
   url: "https://www.notion.so/Telephone-8b2069f0beb045b69400a28665c1d56c"
   public_url: null
-UPDATE_TIME: "2024-02-15T19:35:59.424Z"
+UPDATE_TIME: "2024-02-23T20:55:45.127Z"
 
 ---
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.css" integrity="sha384-bYdxxUwYipFNohQlHt0bjN/LCpueqWz13HufFEV1SUatKs1cm4L6fFgCi1jT643X" crossorigin="anonymous">

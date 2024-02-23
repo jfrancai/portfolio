@@ -1,0 +1,19 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>jfrancai – King</title>
+    <link>//localhost:1313/projects/ethernaut/king-8338a297a2b447b3b40166c68586199d/</link>
+    <description>Recent content in King on jfrancai</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 02 Feb 2024 00:00:00 +0000</lastBuildDate>
+    
+	  <atom:link href="//localhost:1313/projects/ethernaut/king-8338a297a2b447b3b40166c68586199d/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+  </channel>
+</rss>
