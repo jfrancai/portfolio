@@ -62,10 +62,6 @@ NOTION_METADATA:
         start: "2024-02-23"
         end: null
         time_zone: null
-    Last edited time:
-      id: "ZdmN"
-      type: "last_edited_time"
-      last_edited_time: "2024-02-23T15:25:00.000Z"
     weight:
       id: "%5Dyda"
       type: "number"
@@ -81,12 +77,6 @@ NOTION_METADATA:
       id: "juZs"
       type: "url"
       url: "https://ethernaut.openzeppelin.com/level/14"
-    Last edited by:
-      id: "mIQC"
-      type: "last_edited_by"
-      last_edited_by:
-        object: "user"
-        id: "7866207c-089f-43df-9333-1dc33859c6a9"
     next:
       id: "pocA"
       type: "rich_text"
@@ -130,8 +120,8 @@ NOTION_METADATA:
           href: null
   url: "https://www.notion.so/Gatekeeper-Two-d4a070f38b644143a295ecf4467fb7fa"
   public_url: null
-UPDATE_TIME: "2024-02-23T20:57:46.065Z"
-EXPIRY_TIME: "2024-02-23T21:57:38.637Z"
+UPDATE_TIME: "2024-02-23T21:51:06.414Z"
+EXPIRY_TIME: "2024-02-23T22:51:01.957Z"
 
 ---
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.css" integrity="sha384-bYdxxUwYipFNohQlHt0bjN/LCpueqWz13HufFEV1SUatKs1cm4L6fFgCi1jT643X" crossorigin="anonymous">
@@ -183,10 +173,10 @@ contract GatekeeperTwo {
 Evm op codes: [https://www.evm.codes/?fork=shanghai](https://www.evm.codes/?fork=shanghai)
 
 
-![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/01b0d58a-bfc6-43bb-bfaf-44883de909fc/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240223%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240223T205738Z&X-Amz-Expires=3600&X-Amz-Signature=633fbf269a4dae14d30632050731ba29e21044f1f48d14ac7948ab41ef0f2c9a&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/01b0d58a-bfc6-43bb-bfaf-44883de909fc/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240223%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240223T215101Z&X-Amz-Expires=3600&X-Amz-Signature=1c5aeeee34adee796552f65f856958e233b4f5745c434f811a4d69216a6549c5&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 
-![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/fca58f0b-c3a4-4025-9aef-756a0e94ff30/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240223%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240223T205738Z&X-Amz-Expires=3600&X-Amz-Signature=79fad0ace04c29ae45b5408acea8b1a5e9fda44aa0c8a01d63dd7b6d26f5dcde&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/fca58f0b-c3a4-4025-9aef-756a0e94ff30/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240223%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240223T215101Z&X-Amz-Expires=3600&X-Amz-Signature=b8ad3c51333a934838e41f5b4c7d0c728fe534652c57177384accc587a12187e&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 
 Solution:

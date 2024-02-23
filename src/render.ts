@@ -1,7 +1,9 @@
 import fs from "fs-extra";
+import https from "https";
 import { Client, isFullUser, iteratePaginatedAPI } from "@notionhq/client";
 import {
   EquationBlockObjectResponse,
+  ImageBlockObjectResponse,
   PageObjectResponse,
 } from "@notionhq/client/build/src/api-endpoints";
 import { NotionToMarkdown } from "@pclouddev/notion-to-markdown";
@@ -51,14 +53,33 @@ export async function renderPage(page: PageObjectResponse, notion: Client) {
   const n2m = new NotionToMarkdown({ notionClient: notion });
   let frontInjectString = "";
 
+  n2m.setCustomTransformer("image", async (block) => {
+    const { image } = block as ImageBlockObjectResponse;
+    const { type } = image;
+    if (type === "file") {
+      const { url } = image.file;
+      const urlParts = url.split("/");
+      const extension = urlParts[5].split("?")[0].slice(-3);
+      const imageName = `${urlParts[4]}.${extension}`;
+      const file = fs.createWriteStream(imageName);
+      https
+        .get(url, (response) => {
+          response.pipe(file);
+
+          file.on("finish", () => {
+            file.close();
+            console.log(`Image downloaded as ${imageName}`);
+          });
+        })
+        .on("error", (err) => {
+          fs.unlink(imageName);
+          console.error(`Error downloading image: ${err.message}`);
+        });
+    }
+    return "![](https://images.unsplash.com/photo-1465153690352-10c1b29577f8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZHVja3xlbnwwfHwwfHx8MA%3D%3D)";
+  });
   switch (formatterConfig.equation.style) {
     case "markdown":
-      n2m.setCustomTransformer("image", async (block) => {
-        const { image } = block as any;
-        console.log(block);
-        console.log(`image ${image}`);
-        return "![](https://images.unsplash.com/photo-1465153690352-10c1b29577f8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZHVja3xlbnwwfHwwfHx8MA%3D%3D)";
-      });
       n2m.setCustomTransformer("equation", async (block) => {
         const { equation } = block as EquationBlockObjectResponse;
         return `\\[${equation}\\]`;

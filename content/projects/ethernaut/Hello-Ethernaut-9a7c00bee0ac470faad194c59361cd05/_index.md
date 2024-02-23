@@ -1,7 +1,7 @@
 ---
 title: "Hello Ethernaut"
 date: "2024-01-07"
-lastmod: "2024-02-23T21:06:00.000Z"
+lastmod: "2024-02-23T22:27:00.000Z"
 draft: false
 difficulty: "⭐"
 weight: 1
@@ -13,7 +13,7 @@ NOTION_METADATA:
   object: "page"
   id: "9a7c00be-e0ac-470f-aad1-94c59361cd05"
   created_time: "2024-02-12T13:39:00.000Z"
-  last_edited_time: "2024-02-23T21:06:00.000Z"
+  last_edited_time: "2024-02-23T22:27:00.000Z"
   created_by:
     object: "user"
     id: "7866207c-089f-43df-9333-1dc33859c6a9"
@@ -48,10 +48,6 @@ NOTION_METADATA:
         start: "2024-01-07"
         end: null
         time_zone: null
-    Last edited time:
-      id: "ZdmN"
-      type: "last_edited_time"
-      last_edited_time: "2024-02-23T21:06:00.000Z"
     weight:
       id: "%5Dyda"
       type: "number"
@@ -67,12 +63,6 @@ NOTION_METADATA:
       id: "juZs"
       type: "url"
       url: "https://ethernaut.openzeppelin.com/level/0"
-    Last edited by:
-      id: "mIQC"
-      type: "last_edited_by"
-      last_edited_by:
-        object: "user"
-        id: "7866207c-089f-43df-9333-1dc33859c6a9"
     next:
       id: "pocA"
       type: "rich_text"
@@ -116,35 +106,35 @@ NOTION_METADATA:
           href: null
   url: "https://www.notion.so/Hello-Ethernaut-9a7c00bee0ac470faad194c59361cd05"
   public_url: null
-UPDATE_TIME: "2024-02-23T21:07:13.511Z"
-EXPIRY_TIME: "2024-02-23T22:07:05.060Z"
+UPDATE_TIME: "2024-02-23T22:27:33.202Z"
+EXPIRY_TIME: "2024-02-23T23:27:27.046Z"
 
 ---
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.css" integrity="sha384-bYdxxUwYipFNohQlHt0bjN/LCpueqWz13HufFEV1SUatKs1cm4L6fFgCi1jT643X" crossorigin="anonymous">
 
 
-![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/0213fd26-c086-4887-9e0c-1359f7edeb17/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240223%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240223T210705Z&X-Amz-Expires=3600&X-Amz-Signature=2e876cfbd3d0dd47a2939f987de25553ed7beb92df4a2ca8f3ab3bd16f4156aa&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](https://images.unsplash.com/photo-1465153690352-10c1b29577f8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZHVja3xlbnwwfHwwfHx8MA%3D%3D)
 
 
 Here we can see the player address, do `ctrl + shift + i` to open your browser console.
 
 
-![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/f5af399c-b149-4da9-8435-638e9979e7b1/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240223%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240223T210705Z&X-Amz-Expires=3600&X-Amz-Signature=0d8a67d30074acb637e76c898bf824554be76607360fe4a2978fe3ebdbf4b408&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](https://images.unsplash.com/photo-1465153690352-10c1b29577f8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZHVja3xlbnwwfHwwfHx8MA%3D%3D)
 
 
 After requesting a new contract instance I got the following:
 
 
-![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/b5727041-60af-49b7-943c-5fe1e3906e3a/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240223%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240223T210705Z&X-Amz-Expires=3600&X-Amz-Signature=200a30bf1d6d168729107f720045436aef9be45755b294626a8da043c36e7b25&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](https://images.unsplash.com/photo-1465153690352-10c1b29577f8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZHVja3xlbnwwfHwwfHx8MA%3D%3D)
 
 
-![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/554635c5-b58c-4572-ae51-1fb04f33fc75/what_is_smart_contract_compilation.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240223%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240223T210705Z&X-Amz-Expires=3600&X-Amz-Signature=9d905fed338b5427d40618b027c16e50a385f2a991e6284b699dfe71270365a7&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](https://images.unsplash.com/photo-1465153690352-10c1b29577f8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZHVja3xlbnwwfHwwfHx8MA%3D%3D)
 
 
 Here is how I solved the it:
 
 
-![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/efcf5184-d5ab-469a-a7a5-d7c4b67bfae0/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240223%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240223T210705Z&X-Amz-Expires=3600&X-Amz-Signature=4e0977edd98984197258c35bf75cae2198a560f7c9e42839a227ea6df8086c65&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](https://images.unsplash.com/photo-1465153690352-10c1b29577f8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZHVja3xlbnwwfHwwfHx8MA%3D%3D)
 
 
 Here is the source code after submiting the instance of the contract:
@@ -359,13 +349,13 @@ In order to do that, we have to create an interface of the contract we want to i
 From the Ethernaut guidelines we see that their is an `info` method available on the contract instance.
 
 
-![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/5e536713-71db-447c-8ecc-baeb3a3750d8/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240223%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240223T210705Z&X-Amz-Expires=3600&X-Amz-Signature=3d71cafa7ca23d011ec06d96125598b01a43ad7152056a29ff9a9fc3784d1ff3&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](https://images.unsplash.com/photo-1465153690352-10c1b29577f8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZHVja3xlbnwwfHwwfHx8MA%3D%3D)
 
 
 Looking into the console, we see that there are multiple other method available. 
 
 
-![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/21cdd6e7-4290-4a9b-8e3d-d78e2bff585a/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240223%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240223T210705Z&X-Amz-Expires=3600&X-Amz-Signature=891ecc9f244ef257e465e837da42c41aecfe4439f6d090ff868c7e612e667610&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](https://images.unsplash.com/photo-1465153690352-10c1b29577f8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZHVja3xlbnwwfHwwfHx8MA%3D%3D)
 
 
 Let’s begin with the interface for the `info` method:
@@ -384,7 +374,7 @@ From what we can see in the data object from the console, the state mutability o
 Let’s try to find out by expending the object:
 
 
-![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/61126dbd-aaff-4eb1-98c2-c145f6f9f58d/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240223%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240223T210705Z&X-Amz-Expires=3600&X-Amz-Signature=41afea3185255124ac04de77accdac52d17fbea032da92c108b8c0637c73b18f&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](https://images.unsplash.com/photo-1465153690352-10c1b29577f8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZHVja3xlbnwwfHwwfHx8MA%3D%3D)
 
 
 And there it is!
@@ -446,7 +436,7 @@ Command Breakdown:
 And here is the output we got:
 
 
-![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/1ee1ce79-e02d-4cb9-9170-be48adf774de/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240223%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240223T210705Z&X-Amz-Expires=3600&X-Amz-Signature=287566bbf81b6ff0aa1d2e3ad127c126cf1b112ff41bb3835924b4be73d7b011&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](https://images.unsplash.com/photo-1465153690352-10c1b29577f8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZHVja3xlbnwwfHwwfHx8MA%3D%3D)
 
 
 ## How to decypher the return value ?
@@ -485,7 +475,7 @@ console.logString(result);
 Now we have access to the logs directly within the ouput of our script:
 
 
-![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/b6ae6141-369f-4057-87b6-c4955e6b61b8/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240223%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240223T210705Z&X-Amz-Expires=3600&X-Amz-Signature=7e0dcbf6abecf89a30a74410762f454e7a6e6b74b2284155ea750515e5f95179&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](https://images.unsplash.com/photo-1465153690352-10c1b29577f8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZHVja3xlbnwwfHwwfHx8MA%3D%3D)
 
 
 So, let’s call the next function `info1()` don’t forget to add the `info1()` function to the interface as we did for `info()` :
@@ -502,7 +492,7 @@ interface Callee {
 We got the following logs:
 
 
-![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/9014755d-fed0-452a-a843-571c8732780b/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240223%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240223T210705Z&X-Amz-Expires=3600&X-Amz-Signature=5f144187df0c9991062f71d8ae5557e7edbd6c15db7696125bd00773ca398f10&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](https://images.unsplash.com/photo-1465153690352-10c1b29577f8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZHVja3xlbnwwfHwwfHx8MA%3D%3D)
 
 
 Let’s continue the process until we find something interesting…
@@ -511,7 +501,7 @@ Let’s continue the process until we find something interesting…
 OK after several method calls we finally got the password to pass the level:
 
 
-![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/881a6223-3240-461d-a8f1-73aa122d6b52/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240223%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240223T210705Z&X-Amz-Expires=3600&X-Amz-Signature=db8133969254d93a355a187d404490440789a1d11663a89e33c3d259932dc4d1&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](https://images.unsplash.com/photo-1465153690352-10c1b29577f8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZHVja3xlbnwwfHwwfHx8MA%3D%3D)
 
 
 Here is the code to get the password:
@@ -574,7 +564,7 @@ contract POC is Script {
 Now the last thing to do is to call the authenticate method with the correct password as parameter. With the same method we look at the abi from the js console of the browser the correct method interface:
 
 
-![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/f6c1a437-b6ad-49d1-9c69-1bf452b1c44c/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240223%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240223T210705Z&X-Amz-Expires=3600&X-Amz-Signature=771b551cc9ddd04f0c9574aaeec8e9c4be7226cb90ec324654ba1f1fce926907&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](https://images.unsplash.com/photo-1465153690352-10c1b29577f8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZHVja3xlbnwwfHwwfHx8MA%3D%3D)
 
 
 We can see that there is one `passKey` input param and no outputs. Also, we see that the method state mutability is `nonpayable`.

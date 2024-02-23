@@ -62,10 +62,6 @@ NOTION_METADATA:
         start: "2024-01-07"
         end: null
         time_zone: null
-    Last edited time:
-      id: "ZdmN"
-      type: "last_edited_time"
-      last_edited_time: "2024-02-14T16:51:00.000Z"
     weight:
       id: "%5Dyda"
       type: "number"
@@ -81,12 +77,6 @@ NOTION_METADATA:
       id: "juZs"
       type: "url"
       url: "https://ethernaut.openzeppelin.com/level/1"
-    Last edited by:
-      id: "mIQC"
-      type: "last_edited_by"
-      last_edited_by:
-        object: "user"
-        id: "7866207c-089f-43df-9333-1dc33859c6a9"
     next:
       id: "pocA"
       type: "rich_text"
@@ -130,24 +120,24 @@ NOTION_METADATA:
           href: null
   url: "https://www.notion.so/Fallback-0f16d7ea49bd4084a635ec4d24c77563"
   public_url: null
-UPDATE_TIME: "2024-02-23T20:55:24.727Z"
-EXPIRY_TIME: "2024-02-23T21:55:13.646Z"
+UPDATE_TIME: "2024-02-23T21:51:20.925Z"
+EXPIRY_TIME: "2024-02-23T22:51:16.147Z"
 
 ---
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.css" integrity="sha384-bYdxxUwYipFNohQlHt0bjN/LCpueqWz13HufFEV1SUatKs1cm4L6fFgCi1jT643X" crossorigin="anonymous">
 
 - How to send ether when interacting with an ABI
 
-![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/84bfeab1-c35b-45ab-a346-76e13736aabe/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240223%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240223T205513Z&X-Amz-Expires=3600&X-Amz-Signature=9c428e0e85d64c6d3ee27d606ce0a924403cb99355c19feb6762bfc7fd28fe05&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/84bfeab1-c35b-45ab-a346-76e13736aabe/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240223%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240223T215116Z&X-Amz-Expires=3600&X-Amz-Signature=745e364c2ef157c0fe33d57e74ef5079bd38c9b32991bffbe2c4c6dd75911058&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 - How to send ether outside of the ABI
 - Converting to and from wei/ether units (see `help()` command)
 - Fallback methods
 
-	![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/b4ce3656-36aa-4beb-bc96-ece2f5a7c0ba/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240223%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240223T205513Z&X-Amz-Expires=3600&X-Amz-Signature=48c02bbc0c664e253b4254dfdbdeb5df468812b9cf78f0484f3689cca680bdaf&X-Amz-SignedHeaders=host&x-id=GetObject)
+	![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/b4ce3656-36aa-4beb-bc96-ece2f5a7c0ba/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240223%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240223T215116Z&X-Amz-Expires=3600&X-Amz-Signature=4b9fa6e0935bd2c590f9605d9ca613800e8fb97298a4f266988cf1fc112c9289&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 
-	![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/c4aa3c76-5994-4d9d-82a5-9042c15a0b75/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240223%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240223T205513Z&X-Amz-Expires=3600&X-Amz-Signature=43acfb3d691cd61b2be2618fd29a7fcfc27f31f7973ec52676f39b9812adfcb2&X-Amz-SignedHeaders=host&x-id=GetObject)
+	![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/c4aa3c76-5994-4d9d-82a5-9042c15a0b75/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240223%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240223T215116Z&X-Amz-Expires=3600&X-Amz-Signature=532026d5f2bd654b6a8d7ff4fe896bfe57514ed96650edfb9d36b768371fa97d&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 
 	```solidity
