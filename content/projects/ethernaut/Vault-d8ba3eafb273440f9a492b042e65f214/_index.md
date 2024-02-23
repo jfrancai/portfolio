@@ -62,10 +62,6 @@ NOTION_METADATA:
         start: "2024-02-02"
         end: null
         time_zone: null
-    Last edited time:
-      id: "ZdmN"
-      type: "last_edited_time"
-      last_edited_time: "2024-02-14T16:51:00.000Z"
     weight:
       id: "%5Dyda"
       type: "number"
@@ -81,12 +77,6 @@ NOTION_METADATA:
       id: "juZs"
       type: "url"
       url: "https://ethernaut.openzeppelin.com/level/8"
-    Last edited by:
-      id: "mIQC"
-      type: "last_edited_by"
-      last_edited_by:
-        object: "user"
-        id: "7866207c-089f-43df-9333-1dc33859c6a9"
     next:
       id: "pocA"
       type: "rich_text"
@@ -130,8 +120,8 @@ NOTION_METADATA:
           href: null
   url: "https://www.notion.so/Vault-d8ba3eafb273440f9a492b042e65f214"
   public_url: null
-UPDATE_TIME: "2024-02-23T20:55:51.272Z"
-EXPIRY_TIME: "2024-02-23T21:55:45.620Z"
+UPDATE_TIME: "2024-02-23T22:51:12.480Z"
+EXPIRY_TIME: "2024-02-23T23:51:05.520Z"
 
 ---
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.css" integrity="sha384-bYdxxUwYipFNohQlHt0bjN/LCpueqWz13HufFEV1SUatKs1cm4L6fFgCi1jT643X" crossorigin="anonymous">
@@ -162,10 +152,10 @@ contract Vault {
 Unlock the vault to pass the level!
 
 
-![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/13409f0d-cf98-499c-92f7-e5f7df0852ad/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240223%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240223T205545Z&X-Amz-Expires=3600&X-Amz-Signature=624324317deb40a2ad74a9d15035c73b54c968be4a3bbe7a1f995504b9a8f5a8&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](/images/13409f0d-cf98-499c-92f7-e5f7df0852ad.png)
 
 
-![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/88b316f9-391f-422d-967a-94391194a992/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240223%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240223T205545Z&X-Amz-Expires=3600&X-Amz-Signature=5b0e7ba3a40293bd0f9b259406d1dbb41ab66e91bbad23188fdbdd0bcd8f2737&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](/images/88b316f9-391f-422d-967a-94391194a992.png)
 
 
 > 💡 It's important to remember that marking a variable as private only prevents   

@@ -7,8 +7,8 @@ featuredImage: "https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b\
   7f7-443a-aca8-598247fb6d93/49b1753b-3215-43e4-84b8-59e8018eea6a/Poly_Rekt_pre\
   lude_1200px_3471026003.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sh\
   a256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240223%2Fus-w\
-  est-2%2Fs3%2Faws4_request&X-Amz-Date=20240223T205609Z&X-Amz-Expires=3600&X-Am\
-  z-Signature=be69c944f1edde0d7e28b13532156cb5d1c743a312f735d4abeb13bdc3499faa&\
+  est-2%2Fs3%2Faws4_request&X-Amz-Date=20240223T225129Z&X-Amz-Expires=3600&X-Am\
+  z-Signature=48051dd00d39d66a5fdd5cef9a9b646836b5c29b28e4b1963a8f9ab8bb20a567&\
   X-Amz-SignedHeaders=host&x-id=GetObject"
 weight: 4
 difficulty: "🗡🗡🗡🗡"
@@ -40,10 +40,10 @@ NOTION_METADATA:
         ca8-598247fb6d93/49b1753b-3215-43e4-84b8-59e8018eea6a/Poly_Rekt_prelude\
         _1200px_3471026003.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-\
         Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F2024022\
-        3%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240223T205608Z&X-Amz-Exp\
-        ires=3600&X-Amz-Signature=a42df555357f4ccaa1012e362655172fbd0286b220def\
-        0143491b2aea48a3f92&X-Amz-SignedHeaders=host&x-id=GetObject"
-      expiry_time: "2024-02-23T21:56:08.074Z"
+        3%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240223T225127Z&X-Amz-Exp\
+        ires=3600&X-Amz-Signature=02a5f3f15419ade5d4c9726a5e5f1a782516045c82699\
+        d01e308e1d20dba5e32&X-Amz-SignedHeaders=host&x-id=GetObject"
+      expiry_time: "2024-02-23T23:51:27.127Z"
   icon:
     type: "emoji"
     emoji: "✅"
@@ -142,14 +142,14 @@ NOTION_METADATA:
           href: null
   url: "https://www.notion.so/Poly-Network-Rekt-b7b8b11820c249bcb1f96a50fc20d478"
   public_url: null
-UPDATE_TIME: "2024-02-23T20:56:14.377Z"
-EXPIRY_TIME: "2024-02-23T21:56:08.803Z"
+UPDATE_TIME: "2024-02-23T22:51:33.810Z"
+EXPIRY_TIME: "2024-02-23T23:51:29.071Z"
 
 ---
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.css" integrity="sha384-bYdxxUwYipFNohQlHt0bjN/LCpueqWz13HufFEV1SUatKs1cm4L6fFgCi1jT643X" crossorigin="anonymous">
 
 
-![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/01477dc9-56d4-448b-bb5b-a05aba278bf2/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240223%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240223T205608Z&X-Amz-Expires=3600&X-Amz-Signature=778285dc2ea0fd03e03f00b638c74c11d377669ba4a5d3612a3473fd4d3614c1&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](/images/01477dc9-56d4-448b-bb5b-a05aba278bf2.png)
 
 
 First here the the boat address on Goerli (the target contract we have to interact with):
@@ -181,7 +181,7 @@ output:
 Now we can call the offchain trademaster to generate a signature:
 
 
-![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/ac89d8dd-d421-4426-a48a-9845d6295511/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240223%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240223T205608Z&X-Amz-Expires=3600&X-Amz-Signature=17c6847bee670b77bad4cd3fc886954a33eaf04f1082b5ba612e77b7f481aca3&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](/images/ac89d8dd-d421-4426-a48a-9845d6295511.png)
 
 
 ```solidity
@@ -260,19 +260,19 @@ contract POC is Script {
 without a surprise the contract revert :
 
 
-![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/3f4739aa-a29a-46d3-b7e3-f6905d9db757/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240223%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240223T205608Z&X-Amz-Expires=3600&X-Amz-Signature=64749dbbdb0be46f3234ca59ccdf8968d936897d04f097df1dd36cf116ed6016&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](/images/3f4739aa-a29a-46d3-b7e3-f6905d9db757.png)
 
 
 This is because the relay function add some params (bytes32[],uint64,address) that we don’t need and that change the function selector resulting in calling the wrong method on the target contract:
 
 
-![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/4f32ddf8-fe57-441b-ba74-95b1c9f1061e/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240223%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240223T205608Z&X-Amz-Expires=3600&X-Amz-Signature=1278aeea26cdb87fe520372632430eda2f1a6097bae8d2d9cd5cabd78646c2f0&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](/images/4f32ddf8-fe57-441b-ba74-95b1c9f1061e.png)
 
 
 We can see on the error message above that we call the selector `0x3b2e7145` whereas we were expecting to call `0xef51774d` :
 
 
-![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/b4a0a8cc-58ff-40aa-95cb-a077dcaab6a6/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240223%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240223T205608Z&X-Amz-Expires=3600&X-Amz-Signature=01bf7aa59bb5f4c383ba814494f1d7a99bec1aad4f2ab5ce85411bbc3a3945a4&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](/images/b4a0a8cc-58ff-40aa-95cb-a077dcaab6a6.png)
 
 
 Now we know that it’s pretty much straight forward what we have to do: brutforce the _method params so that __`abi.ecodePacked(_`_`method, (bytes32[], uint64, address)` result in the `0xef51774d` selector.

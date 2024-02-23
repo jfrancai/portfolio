@@ -120,8 +120,8 @@ NOTION_METADATA:
           href: null
   url: "https://www.notion.so/Gatekeeper-Two-d4a070f38b644143a295ecf4467fb7fa"
   public_url: null
-UPDATE_TIME: "2024-02-23T21:51:06.414Z"
-EXPIRY_TIME: "2024-02-23T22:51:01.957Z"
+UPDATE_TIME: "2024-02-23T22:49:44.253Z"
+EXPIRY_TIME: "2024-02-23T23:49:39.370Z"
 
 ---
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.css" integrity="sha384-bYdxxUwYipFNohQlHt0bjN/LCpueqWz13HufFEV1SUatKs1cm4L6fFgCi1jT643X" crossorigin="anonymous">
@@ -173,10 +173,10 @@ contract GatekeeperTwo {
 Evm op codes: [https://www.evm.codes/?fork=shanghai](https://www.evm.codes/?fork=shanghai)
 
 
-![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/01b0d58a-bfc6-43bb-bfaf-44883de909fc/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240223%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240223T215101Z&X-Amz-Expires=3600&X-Amz-Signature=1c5aeeee34adee796552f65f856958e233b4f5745c434f811a4d69216a6549c5&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](/images/01b0d58a-bfc6-43bb-bfaf-44883de909fc.png)
 
 
-![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/fca58f0b-c3a4-4025-9aef-756a0e94ff30/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240223%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240223T215101Z&X-Amz-Expires=3600&X-Amz-Signature=b8ad3c51333a934838e41f5b4c7d0c728fe534652c57177384accc587a12187e&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](/images/fca58f0b-c3a4-4025-9aef-756a0e94ff30.png)
 
 
 Solution:

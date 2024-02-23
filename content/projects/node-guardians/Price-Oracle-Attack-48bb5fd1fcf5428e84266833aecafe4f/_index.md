@@ -125,8 +125,8 @@ NOTION_METADATA:
           href: null
   url: "https://www.notion.so/Price-Oracle-Attack-48bb5fd1fcf5428e84266833aecafe4f"
   public_url: null
-UPDATE_TIME: "2024-02-23T21:50:12.832Z"
-EXPIRY_TIME: "2024-02-23T22:50:01.645Z"
+UPDATE_TIME: "2024-02-23T22:51:40.385Z"
+EXPIRY_TIME: "2024-02-23T23:51:34.613Z"
 
 ---
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.css" integrity="sha384-bYdxxUwYipFNohQlHt0bjN/LCpueqWz13HufFEV1SUatKs1cm4L6fFgCi1jT643X" crossorigin="anonymous">
@@ -135,7 +135,7 @@ EXPIRY_TIME: "2024-02-23T22:50:01.645Z"
 Deployment address : `0x1FD0357FcD623C5a1472B7C922CdB7aa262FaEC1`
 
 
-![](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/05e2b6a9-5161-4f73-974e-0bbe2933f99d/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240223%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240223T215001Z&X-Amz-Expires=3600&X-Amz-Signature=db3f773a93086b50e76047eacad6202416eef10323cab9745af2e2055dd44a96&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](/images/05e2b6a9-5161-4f73-974e-0bbe2933f99d.png)
 
 
 ```solidity

@@ -62,10 +62,6 @@ NOTION_METADATA:
         start: "2024-01-31"
         end: null
         time_zone: null
-    Last edited time:
-      id: "ZdmN"
-      type: "last_edited_time"
-      last_edited_time: "2024-02-14T16:51:00.000Z"
     weight:
       id: "%5Dyda"
       type: "number"
@@ -81,12 +77,6 @@ NOTION_METADATA:
       id: "juZs"
       type: "url"
       url: "https://ethernaut.openzeppelin.com/level/3"
-    Last edited by:
-      id: "mIQC"
-      type: "last_edited_by"
-      last_edited_by:
-        object: "user"
-        id: "7866207c-089f-43df-9333-1dc33859c6a9"
     next:
       id: "pocA"
       type: "rich_text"
@@ -130,21 +120,24 @@ NOTION_METADATA:
           href: null
   url: "https://www.notion.so/Coin-Flip-c27578d40d2f427d968d5623d7000dab"
   public_url: null
-UPDATE_TIME: "2024-02-23T20:55:13.050Z"
----
+UPDATE_TIME: "2024-02-23T22:50:40.028Z"
 
+---
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.css" integrity="sha384-bYdxxUwYipFNohQlHt0bjN/LCpueqWz13HufFEV1SUatKs1cm4L6fFgCi1jT643X" crossorigin="anonymous">
 
-This is a coin
+
+This is a coin 
 flipping game where you need to build up your winning streak by guessing
-the outcome of a coin flip. To complete this level you'll need to use
+ the outcome of a coin flip. To complete this level you'll need to use 
 your psychic abilities to guess the correct outcome 10 times in a row.
+
 
 Things that might help
 
 - See the ["?"](https://ethernaut.openzeppelin.com/help) page above in the top right corner menu, section "Beyond the console"
 
 Here is the first version of my solution:
+
 
 ```solidity
 // SPDX-License-Identifier: UNLICENSED
@@ -182,13 +175,18 @@ contract POC is Script {
 }
 ```
 
+
 It doesn’t work because block.number doesn’t change between executionn of the loop.
+
 
 [link_preview](https://github.com/foundry-rs/foundry/issues/5840)
 
+
 It seems that theire is on way to do this so let’s go by hand for now…
 
+
 Here is the forge script:
+
 
 ```solidity
 // SPDX-License-Identifier: UNLICENSED
@@ -224,9 +222,12 @@ contract POC is Script {
 }
 ```
 
-Actually this is too complecated. So let’s build a contract that will do th attack for us with check in it so that we are sure to get a valid result.
+
+Actually this is too complecated. So let’s build a contract that will do th attack for us with check in it so that we are sure to get a valid result. 
+
 
 here is my attacker contract:
+
 
 ```solidity
 // SPDX-License-Identifier: MIT
@@ -262,20 +263,27 @@ contract CoinFlipAttack {
 }
 ```
 
+
 Let’s deploy this contract :
+
 
 ```solidity
 forge create --rpc-url $SEPOLIA_RPC_URL --private-key $PRIVATE_KEY src/03.sol:CoinFlipAttack --constructor-args $INSTANCE_03
 ```
 
+
 Now we can call our `attack()` function with cast send:
+
 
 ```solidity
 cast send $ATTACKER_03 --rpc-url $SEPOLIA_RPC_URL --private-key $PRIVATE_KEY "attack()"
 ```
 
+
 We can also look up the current consecutive wins on the attacked contract using the following cast command:
+
 
 ```solidity
 cast call $INSTANCE_03 --rpc-url $SEPOLIA_RPC_URL "consecutiveWins()"
 ```
+
