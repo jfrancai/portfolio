@@ -1,19 +1,20 @@
 ---
 title: "Preservation"
 date: "2024-02-24"
-lastmod: "2024-02-24T12:09:00.000Z"
+lastmod: "2024-02-24T14:03:00.000Z"
 draft: false
 difficulty: "⭐⭐⭐⭐"
 prev: "Naught-Coin-5013cfef45d646e693a6feaac127ac33"
 weight: 17
-state: "En cours"
+state: "Terminé"
 level-url: "https://ethernaut.openzeppelin.com/level/16"
+next: "Recovery-1efddca3f4ed4053a79cb06c27873d49"
 type: "docs"
 NOTION_METADATA:
   object: "page"
   id: "15486d55-3b70-48eb-a93b-e9c33dcdd447"
   created_time: "2024-02-24T11:18:00.000Z"
-  last_edited_time: "2024-02-24T12:09:00.000Z"
+  last_edited_time: "2024-02-24T14:03:00.000Z"
   created_by:
     object: "user"
     id: "7866207c-089f-43df-9333-1dc33859c6a9"
@@ -69,9 +70,9 @@ NOTION_METADATA:
       id: "f%40ps"
       type: "status"
       status:
-        id: "e1f6ef4b-49ae-427f-9bb4-8736089f3aa2"
-        name: "En cours"
-        color: "blue"
+        id: "abb7fad3-add1-4b13-946c-06bff36598bf"
+        name: "Terminé"
+        color: "green"
     level-url:
       id: "juZs"
       type: "url"
@@ -79,7 +80,20 @@ NOTION_METADATA:
     next:
       id: "pocA"
       type: "rich_text"
-      rich_text: []
+      rich_text:
+        - type: "text"
+          text:
+            content: "Recovery-1efddca3f4ed4053a79cb06c27873d49"
+            link: null
+          annotations:
+            bold: false
+            italic: false
+            strikethrough: false
+            underline: false
+            code: false
+            color: "default"
+          plain_text: "Recovery-1efddca3f4ed4053a79cb06c27873d49"
+          href: null
     type:
       id: "s%7DKc"
       type: "select"
@@ -106,7 +120,7 @@ NOTION_METADATA:
           href: null
   url: "https://www.notion.so/Preservation-15486d553b7048eba93be9c33dcdd447"
   public_url: null
-UPDATE_TIME: "2024-02-24T12:12:20.856Z"
+UPDATE_TIME: "2024-02-24T21:53:49.838Z"
 
 ---
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.css" integrity="sha384-bYdxxUwYipFNohQlHt0bjN/LCpueqWz13HufFEV1SUatKs1cm4L6fFgCi1jT643X" crossorigin="anonymous">

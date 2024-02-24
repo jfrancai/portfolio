@@ -36,4 +36,6 @@ My primary focus is on solving the levels, and these notes act as checkpoints fo
 {{< card link="gatekeeper-two-d4a070f38b644143a295ecf4467fb7fa" title="Gatekeeper Two" image="gatekeeper-two.svg" >}}
 {{< card link="naught-coin-5013cfef45d646e693a6feaac127ac33" title="Naught Coin" image="naught-coin.svg" >}}
 {{< card link="preservation-15486d553b7048eba93be9c33dcdd447" title="Preservation" image="preservation.svg" >}}
+{{< card link="recovery-1efddca3f4ed4053a79cb06c27873d49" title="Recovery" image="recovery.svg" >}}
+{{< card link="magic-number-6d707756089b4bb286e3ce6cad62ac5c" title="Magic Number" image="magic-number.svg" >}}
 {{< /cards >}}
