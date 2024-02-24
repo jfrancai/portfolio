@@ -1,0 +1,19 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>jfrancai – Preservation</title>
+    <link>//localhost:1313/projects/ethernaut/preservation-15486d553b7048eba93be9c33dcdd447/</link>
+    <description>Recent content in Preservation on jfrancai</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 24 Feb 2024 00:00:00 +0000</lastBuildDate>
+    
+	  <atom:link href="//localhost:1313/projects/ethernaut/preservation-15486d553b7048eba93be9c33dcdd447/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+  </channel>
+</rss>
