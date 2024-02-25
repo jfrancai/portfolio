@@ -1,0 +1,19 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>jfrancai – Dex</title>
+    <link>//localhost:1313/projects/ethernaut/dex-2e8b616a5bd64b05874e71b8b4a30ac7/</link>
+    <description>Recent content in Dex on jfrancai</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 25 Feb 2024 10:41:00 +0000</lastBuildDate>
+    
+	  <atom:link href="//localhost:1313/projects/ethernaut/dex-2e8b616a5bd64b05874e71b8b4a30ac7/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+  </channel>
+</rss>

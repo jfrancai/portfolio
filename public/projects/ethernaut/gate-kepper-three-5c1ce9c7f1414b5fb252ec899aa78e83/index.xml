@@ -1,0 +1,19 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>jfrancai – Gate-Kepper-Three</title>
+    <link>//localhost:1313/projects/ethernaut/gate-kepper-three-5c1ce9c7f1414b5fb252ec899aa78e83/</link>
+    <description>Recent content in Gate-Kepper-Three on jfrancai</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 25 Feb 2024 10:56:00 +0000</lastBuildDate>
+    
+	  <atom:link href="//localhost:1313/projects/ethernaut/gate-kepper-three-5c1ce9c7f1414b5fb252ec899aa78e83/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+  </channel>
+</rss>

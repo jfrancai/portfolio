@@ -38,4 +38,15 @@ My primary focus is on solving the levels, and these notes act as checkpoints fo
 {{< card link="preservation-15486d553b7048eba93be9c33dcdd447" title="Preservation" image="preservation.svg" >}}
 {{< card link="recovery-1efddca3f4ed4053a79cb06c27873d49" title="Recovery" image="recovery.svg" >}}
 {{< card link="magic-number-6d707756089b4bb286e3ce6cad62ac5c" title="Magic Number" image="magic-number.svg" >}}
+{{< card link="alien-codex-d14fa389394f4031b7c2ffcdeeebeb56" title="Alien Codex" image="alien-codex.svg" >}}
+{{< card link="denial-edd8839ce63a4a2194adfd2905ad4940" title="Denial" image="denial.svg" >}}
+{{< card link="shop-b6f28652a23642f2805fd50f577ea02f" title="Shop" image="shop.svg" >}}
+{{< card link="dex-2e8b616a5bd64b05874e71b8b4a30ac7" title="Dex" image="dex.svg" >}}
+{{< card link="dex-two-f9572c09096541d3afbe107d66ac7fd9" title="Dex Two" image="dex-two.svg" >}}
+{{< card link="puzzle-wallet-45b8e0a7c4784a4b952672eecda0daa6" title="Puzzle Wallet" image="puzzle-wallet.svg" >}}
+{{< card link="motorbike-398e954682a44e3fb7240d3a1a9368bf" title="Motorbike" image="motorbike.svg" >}}
+{{< card link="double-entry-point-4add59a518494b4b8275112702b0ec07" title="Double Entry Point" image="double-entry-point.svg" >}}
+{{< card link="good-samaritan-6e915bab63034c2eb529ae24083e3523" title="Good Samaritan" image="good-samaritan.svg" >}}
+{{< card link="gatekeeper-three-5c1ce9c7f1414b5fb252ec899aa78e83" title="Gatekeeper Three" image="gatekeeper-three.svg" >}}
+{{< card link="switch-5a3e05038dd147309496128b2ad2bd09" title="Switch" image="switch.svg" >}}
 {{< /cards >}}

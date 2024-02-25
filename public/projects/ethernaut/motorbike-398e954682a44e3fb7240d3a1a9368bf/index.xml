@@ -1,0 +1,19 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>jfrancai – Motorbike</title>
+    <link>//localhost:1313/projects/ethernaut/motorbike-398e954682a44e3fb7240d3a1a9368bf/</link>
+    <description>Recent content in Motorbike on jfrancai</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 25 Feb 2024 10:45:00 +0000</lastBuildDate>
+    
+	  <atom:link href="//localhost:1313/projects/ethernaut/motorbike-398e954682a44e3fb7240d3a1a9368bf/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+  </channel>
+</rss>

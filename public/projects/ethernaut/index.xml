@@ -5,7 +5,7 @@
     <description>Recent content in The Ethernaut on jfrancai</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 24 Feb 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 25 Feb 2024 10:57:00 +0000</lastBuildDate>
     
 	  <atom:link href="//localhost:1313/projects/ethernaut/index.xml" rel="self" type="application/rss+xml" />
     
@@ -2779,6 +2779,185 @@ That&amp;rsquo;s right: Raw EVM bytecode.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;//localhost:1313/images/9eb5d183-8dde-48d1-9909-1b262dedc2c8.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Then if we call the return value:&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;//localhost:1313/images/3a1636af-b8ee-412a-b4a6-671fd7904c8b.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Alien Codex</title>
+      <link>//localhost:1313/projects/ethernaut/alien-codex-d14fa389394f4031b7c2ffcdeeebeb56/</link>
+      <pubDate>Sun, 25 Feb 2024 10:35:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/projects/ethernaut/alien-codex-d14fa389394f4031b7c2ffcdeeebeb56/</guid>
+      <description>
+        
+        
+        &lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.css&#34; integrity=&#34;sha384-bYdxxUwYipFNohQlHt0bjN/LCpueqWz13HufFEV1SUatKs1cm4L6fFgCi1jT643X&#34; crossorigin=&#34;anonymous&#34;&gt;
+&lt;p&gt;coming soon&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Denial</title>
+      <link>//localhost:1313/projects/ethernaut/denial-edd8839ce63a4a2194adfd2905ad4940/</link>
+      <pubDate>Sun, 25 Feb 2024 10:37:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/projects/ethernaut/denial-edd8839ce63a4a2194adfd2905ad4940/</guid>
+      <description>
+        
+        
+        &lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.css&#34; integrity=&#34;sha384-bYdxxUwYipFNohQlHt0bjN/LCpueqWz13HufFEV1SUatKs1cm4L6fFgCi1jT643X&#34; crossorigin=&#34;anonymous&#34;&gt;
+&lt;p&gt;coming soon&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Shop</title>
+      <link>//localhost:1313/projects/ethernaut/shop-b6f28652a23642f2805fd50f577ea02f/</link>
+      <pubDate>Sun, 25 Feb 2024 10:39:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/projects/ethernaut/shop-b6f28652a23642f2805fd50f577ea02f/</guid>
+      <description>
+        
+        
+        &lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.css&#34; integrity=&#34;sha384-bYdxxUwYipFNohQlHt0bjN/LCpueqWz13HufFEV1SUatKs1cm4L6fFgCi1jT643X&#34; crossorigin=&#34;anonymous&#34;&gt;
+&lt;p&gt;coming soon&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Dex</title>
+      <link>//localhost:1313/projects/ethernaut/dex-2e8b616a5bd64b05874e71b8b4a30ac7/</link>
+      <pubDate>Sun, 25 Feb 2024 10:41:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/projects/ethernaut/dex-2e8b616a5bd64b05874e71b8b4a30ac7/</guid>
+      <description>
+        
+        
+        &lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.css&#34; integrity=&#34;sha384-bYdxxUwYipFNohQlHt0bjN/LCpueqWz13HufFEV1SUatKs1cm4L6fFgCi1jT643X&#34; crossorigin=&#34;anonymous&#34;&gt;
+&lt;p&gt;coming soon&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Dex Two</title>
+      <link>//localhost:1313/projects/ethernaut/dex-two-f9572c09096541d3afbe107d66ac7fd9/</link>
+      <pubDate>Sun, 25 Feb 2024 10:42:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/projects/ethernaut/dex-two-f9572c09096541d3afbe107d66ac7fd9/</guid>
+      <description>
+        
+        
+        &lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.css&#34; integrity=&#34;sha384-bYdxxUwYipFNohQlHt0bjN/LCpueqWz13HufFEV1SUatKs1cm4L6fFgCi1jT643X&#34; crossorigin=&#34;anonymous&#34;&gt;
+&lt;p&gt;coming soon&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Puzzle Wallet</title>
+      <link>//localhost:1313/projects/ethernaut/puzzle-wallet-45b8e0a7c4784a4b952672eecda0daa6/</link>
+      <pubDate>Sun, 25 Feb 2024 10:44:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/projects/ethernaut/puzzle-wallet-45b8e0a7c4784a4b952672eecda0daa6/</guid>
+      <description>
+        
+        
+        &lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.css&#34; integrity=&#34;sha384-bYdxxUwYipFNohQlHt0bjN/LCpueqWz13HufFEV1SUatKs1cm4L6fFgCi1jT643X&#34; crossorigin=&#34;anonymous&#34;&gt;
+&lt;p&gt;coming soon&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Motorbike</title>
+      <link>//localhost:1313/projects/ethernaut/motorbike-398e954682a44e3fb7240d3a1a9368bf/</link>
+      <pubDate>Sun, 25 Feb 2024 10:45:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/projects/ethernaut/motorbike-398e954682a44e3fb7240d3a1a9368bf/</guid>
+      <description>
+        
+        
+        &lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.css&#34; integrity=&#34;sha384-bYdxxUwYipFNohQlHt0bjN/LCpueqWz13HufFEV1SUatKs1cm4L6fFgCi1jT643X&#34; crossorigin=&#34;anonymous&#34;&gt;
+&lt;p&gt;coming soon&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Double-Entry-Point</title>
+      <link>//localhost:1313/projects/ethernaut/double-entry-point-4add59a518494b4b8275112702b0ec07/</link>
+      <pubDate>Sun, 25 Feb 2024 10:52:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/projects/ethernaut/double-entry-point-4add59a518494b4b8275112702b0ec07/</guid>
+      <description>
+        
+        
+        &lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.css&#34; integrity=&#34;sha384-bYdxxUwYipFNohQlHt0bjN/LCpueqWz13HufFEV1SUatKs1cm4L6fFgCi1jT643X&#34; crossorigin=&#34;anonymous&#34;&gt;
+&lt;p&gt;coming soon&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Good-Samaritan</title>
+      <link>//localhost:1313/projects/ethernaut/good-samaritan-6e915bab63034c2eb529ae24083e3523/</link>
+      <pubDate>Sun, 25 Feb 2024 10:54:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/projects/ethernaut/good-samaritan-6e915bab63034c2eb529ae24083e3523/</guid>
+      <description>
+        
+        
+        &lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.css&#34; integrity=&#34;sha384-bYdxxUwYipFNohQlHt0bjN/LCpueqWz13HufFEV1SUatKs1cm4L6fFgCi1jT643X&#34; crossorigin=&#34;anonymous&#34;&gt;
+&lt;p&gt;coming soon&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Gatekeeper-Three</title>
+      <link>//localhost:1313/projects/ethernaut/gatekeeper-three-5c1ce9c7f1414b5fb252ec899aa78e83/</link>
+      <pubDate>Sun, 25 Feb 2024 10:56:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/projects/ethernaut/gatekeeper-three-5c1ce9c7f1414b5fb252ec899aa78e83/</guid>
+      <description>
+        
+        
+        &lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.css&#34; integrity=&#34;sha384-bYdxxUwYipFNohQlHt0bjN/LCpueqWz13HufFEV1SUatKs1cm4L6fFgCi1jT643X&#34; crossorigin=&#34;anonymous&#34;&gt;
+&lt;p&gt;coming soon&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Gatekeepper-Three</title>
+      <link>//localhost:1313/projects/ethernaut/gatekeepper-three-5c1ce9c7f1414b5fb252ec899aa78e83/</link>
+      <pubDate>Sun, 25 Feb 2024 10:56:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/projects/ethernaut/gatekeepper-three-5c1ce9c7f1414b5fb252ec899aa78e83/</guid>
+      <description>
+        
+        
+        &lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.css&#34; integrity=&#34;sha384-bYdxxUwYipFNohQlHt0bjN/LCpueqWz13HufFEV1SUatKs1cm4L6fFgCi1jT643X&#34; crossorigin=&#34;anonymous&#34;&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Switch</title>
+      <link>//localhost:1313/projects/ethernaut/switch-5a3e05038dd147309496128b2ad2bd09/</link>
+      <pubDate>Sun, 25 Feb 2024 10:57:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/projects/ethernaut/switch-5a3e05038dd147309496128b2ad2bd09/</guid>
+      <description>
+        
+        
+        &lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.css&#34; integrity=&#34;sha384-bYdxxUwYipFNohQlHt0bjN/LCpueqWz13HufFEV1SUatKs1cm4L6fFgCi1jT643X&#34; crossorigin=&#34;anonymous&#34;&gt;
+&lt;p&gt;coming soon&lt;/p&gt;
 
       </description>
     </item>

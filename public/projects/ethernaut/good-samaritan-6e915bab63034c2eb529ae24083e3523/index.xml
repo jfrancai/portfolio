@@ -1,0 +1,19 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>jfrancai – Good-Samaritan</title>
+    <link>//localhost:1313/projects/ethernaut/good-samaritan-6e915bab63034c2eb529ae24083e3523/</link>
+    <description>Recent content in Good-Samaritan on jfrancai</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 25 Feb 2024 10:54:00 +0000</lastBuildDate>
+    
+	  <atom:link href="//localhost:1313/projects/ethernaut/good-samaritan-6e915bab63034c2eb529ae24083e3523/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+  </channel>
+</rss>

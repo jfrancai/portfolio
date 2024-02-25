@@ -1,19 +1,20 @@
 ---
 title: "Magic Number"
 date: "2024-02-24"
-lastmod: "2024-02-24T21:52:00.000Z"
+lastmod: "2024-02-25T10:38:00.000Z"
 draft: false
 difficulty: "⭐⭐⭐"
 prev: "Recovery-1efddca3f4ed4053a79cb06c27873d49"
 weight: 19
 state: "Terminé"
 level-url: "https://ethernaut.openzeppelin.com/level/18"
+next: "Alien-Codex-d14fa389394f4031b7c2ffcdeeebeb56"
 type: "docs"
 NOTION_METADATA:
   object: "page"
   id: "6d707756-089b-4bb2-86e3-ce6cad62ac5c"
   created_time: "2024-02-24T15:04:00.000Z"
-  last_edited_time: "2024-02-24T21:52:00.000Z"
+  last_edited_time: "2024-02-25T10:38:00.000Z"
   created_by:
     object: "user"
     id: "7866207c-089f-43df-9333-1dc33859c6a9"
@@ -79,7 +80,20 @@ NOTION_METADATA:
     next:
       id: "pocA"
       type: "rich_text"
-      rich_text: []
+      rich_text:
+        - type: "text"
+          text:
+            content: "Alien-Codex-d14fa389394f4031b7c2ffcdeeebeb56"
+            link: null
+          annotations:
+            bold: false
+            italic: false
+            strikethrough: false
+            underline: false
+            code: false
+            color: "default"
+          plain_text: "Alien-Codex-d14fa389394f4031b7c2ffcdeeebeb56"
+          href: null
     type:
       id: "s%7DKc"
       type: "select"
@@ -106,8 +120,8 @@ NOTION_METADATA:
           href: null
   url: "https://www.notion.so/Magic-Number-6d707756089b4bb286e3ce6cad62ac5c"
   public_url: null
-UPDATE_TIME: "2024-02-24T21:53:36.596Z"
-EXPIRY_TIME: "2024-02-24T22:53:31.830Z"
+UPDATE_TIME: "2024-02-25T11:01:55.145Z"
+EXPIRY_TIME: "2024-02-25T12:01:47.391Z"
 
 ---
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.css" integrity="sha384-bYdxxUwYipFNohQlHt0bjN/LCpueqWz13HufFEV1SUatKs1cm4L6fFgCi1jT643X" crossorigin="anonymous">
