@@ -1,12 +1,12 @@
 ---
 title: "Denial"
 date: "2024-02-25T10:37:00.000Z"
-lastmod: "2024-02-25T22:13:00.000Z"
+lastmod: "2024-02-26T09:11:00.000Z"
 draft: false
 difficulty: "⭐⭐⭐"
 prev: "Alien-Codex-d14fa389394f4031b7c2ffcdeeebeb56"
 weight: 21
-state: "En cours"
+state: "Terminé"
 level-url: "https://ethernaut.openzeppelin.com/level/20"
 next: "Shop-b6f28652a23642f2805fd50f577ea02f"
 type: "docs"
@@ -14,7 +14,7 @@ NOTION_METADATA:
   object: "page"
   id: "edd8839c-e63a-4a21-94ad-fd2905ad4940"
   created_time: "2024-02-25T10:37:00.000Z"
-  last_edited_time: "2024-02-25T22:13:00.000Z"
+  last_edited_time: "2024-02-26T09:11:00.000Z"
   created_by:
     object: "user"
     id: "7866207c-089f-43df-9333-1dc33859c6a9"
@@ -67,9 +67,9 @@ NOTION_METADATA:
       id: "f%40ps"
       type: "status"
       status:
-        id: "e1f6ef4b-49ae-427f-9bb4-8736089f3aa2"
-        name: "En cours"
-        color: "blue"
+        id: "abb7fad3-add1-4b13-946c-06bff36598bf"
+        name: "Terminé"
+        color: "green"
     level-url:
       id: "juZs"
       type: "url"
@@ -117,7 +117,7 @@ NOTION_METADATA:
           href: null
   url: "https://www.notion.so/Denial-edd8839ce63a4a2194adfd2905ad4940"
   public_url: null
-UPDATE_TIME: "2024-02-25T22:17:53.928Z"
+UPDATE_TIME: "2024-02-26T13:02:37.145Z"
 
 ---
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.css" integrity="sha384-bYdxxUwYipFNohQlHt0bjN/LCpueqWz13HufFEV1SUatKs1cm4L6fFgCi1jT643X" crossorigin="anonymous">
