@@ -9,7 +9,7 @@ weight: 2
 </br>
 Node Guardians is a platform for builders, thinkers, and stakers. Their mission is to bolster innovative and promising crypto ecosystems, and contribute to the future of a decentralized internet. They do this through education and infrastructure.
 
-#### [You can see my profile here ⚔️ ](https://nodeguardians.io/character/c6fabb197db9)
+#### [You can see my profile here ⚔️ ](https://nodeguardians.io/character/jfrancai)
 
 </br>
 
