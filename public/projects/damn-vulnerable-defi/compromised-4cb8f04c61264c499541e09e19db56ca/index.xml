@@ -1,0 +1,19 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>jfrancai – Compromised</title>
+    <link>//localhost:1313/projects/damn-vulnerable-defi/compromised-4cb8f04c61264c499541e09e19db56ca/</link>
+    <description>Recent content in Compromised on jfrancai</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 10 Feb 2024 14:51:00 +0000</lastBuildDate>
+    
+	  <atom:link href="//localhost:1313/projects/damn-vulnerable-defi/compromised-4cb8f04c61264c499541e09e19db56ca/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+  </channel>
+</rss>

@@ -1,7 +1,7 @@
 ---
 title: "Gatekeeper-Three"
 date: "2024-02-25T10:56:00.000Z"
-lastmod: "2024-03-11T16:16:00.000Z"
+lastmod: "2024-03-12T09:33:00.000Z"
 draft: false
 difficulty: "⭐⭐⭐"
 prev: "Good-Samaritan-6e915bab63034c2eb529ae24083e3523"
@@ -14,7 +14,7 @@ NOTION_METADATA:
   object: "page"
   id: "5c1ce9c7-f141-4b5f-b252-ec899aa78e83"
   created_time: "2024-02-25T10:56:00.000Z"
-  last_edited_time: "2024-03-11T16:16:00.000Z"
+  last_edited_time: "2024-03-12T09:33:00.000Z"
   created_by:
     object: "user"
     id: "7866207c-089f-43df-9333-1dc33859c6a9"
@@ -117,7 +117,7 @@ NOTION_METADATA:
           href: null
   url: "https://www.notion.so/Gatekeeper-Three-5c1ce9c7f1414b5fb252ec899aa78e83"
   public_url: null
-UPDATE_TIME: "2024-03-11T18:08:16.016Z"
+UPDATE_TIME: "2024-03-19T16:42:53.413Z"
 
 ---
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.css" integrity="sha384-bYdxxUwYipFNohQlHt0bjN/LCpueqWz13HufFEV1SUatKs1cm4L6fFgCi1jT643X" crossorigin="anonymous">
@@ -278,7 +278,7 @@ contract POC is Script {
     console.log('entrant: %s', gate.entrant());
     console.log('owner: %s', gate.owner());
 
-    attacker.attack{ value: 0.001001 ether }(gate);
+     attacker.attack{ value: 0.001001 ether }(gate);
 
     console.log('entrant: %s', gate.entrant());
     console.log('owner: %s', gate.owner());

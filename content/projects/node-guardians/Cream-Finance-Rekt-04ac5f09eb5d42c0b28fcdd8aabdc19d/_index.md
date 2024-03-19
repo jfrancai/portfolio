@@ -1,7 +1,7 @@
 ---
 title: "Cream Finance Rekt"
 date: "2024-02-14T14:27:00.000Z"
-lastmod: "2024-02-14T17:10:00.000Z"
+lastmod: "2024-03-19T16:52:00.000Z"
 draft: false
 featuredImage: "https://cdn.nodeguardians.io/backend-production/Cream_Rekt_part\
   1_1200px_812a079450/Cream_Rekt_part1_1200px_812a079450.webp"
@@ -23,7 +23,7 @@ NOTION_METADATA:
   object: "page"
   id: "04ac5f09-eb5d-42c0-b28f-cdd8aabdc19d"
   created_time: "2024-02-14T14:27:00.000Z"
-  last_edited_time: "2024-02-14T17:10:00.000Z"
+  last_edited_time: "2024-03-19T16:52:00.000Z"
   created_by:
     object: "user"
     id: "7866207c-089f-43df-9333-1dc33859c6a9"
@@ -149,73 +149,38 @@ NOTION_METADATA:
           href: null
   url: "https://www.notion.so/Cream-Finance-Rekt-04ac5f09eb5d42c0b28fcdd8aabdc19d"
   public_url: null
-UPDATE_TIME: "2024-02-23T22:51:58.984Z"
-EXPIRY_TIME: "2024-02-23T23:51:48.358Z"
+UPDATE_TIME: "2024-03-19T16:54:10.663Z"
+EXPIRY_TIME: "2024-03-19T17:54:04.254Z"
 
 ---
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.css" integrity="sha384-bYdxxUwYipFNohQlHt0bjN/LCpueqWz13HufFEV1SUatKs1cm4L6fFgCi1jT643X" crossorigin="anonymous">
 
 
-[https://rekt.news/cream-rekt/](https://rekt.news/cream-rekt/)
+<u>**Rekt article:**</u> [https://rekt.news/cream-rekt/](https://rekt.news/cream-rekt/)
 
 
-![](/images/178ae4f1-c8c0-4d72-b2e0-4ea382dde02f.png)
+The goal of this challenge is to seize all of the $SEAGOLD supply from `SharkVault`.
 
 
-Flash Loan EIP : [https://eips.ethereum.org/EIPS/eip-3156](https://eips.ethereum.org/EIPS/eip-3156)
+![](/images/379abe9f-63f6-45bf-8f6c-abe200f42288.png)
 
 
-## Simple Summary
+From the subject, we can understand that we are able to request for overcollateralized loan to the shark vault.
 
 
-This ERC provides standard interfaces and processes for single-asset flash loans.
+![](/images/b3f31e34-7ec2-4ac1-b250-14b5931c4976.png)
 
 
-##  Abstract
+We can then repay the loan in the opposite direction and withdraw our collateral - fees.
 
 
-A flash loan is a smart contract transaction in which a lender smart 
-contract lends assets to a borrower smart contract with the condition 
-that the assets are returned, plus an optional fee, before the end of 
-the transaction. This ERC specifies interfaces for lenders to accept 
-flash loan requests, and for borrowers to take temporary control of the 
-transaction within the lender execution. The process for the safe 
-execution of flash loans is also specified.
+![](/images/673f0a47-d91f-4873-af73-f62ccb0b7b59.png)
 
 
-##  Motivation
+Finally, their is a liquidation mecanism if the position become undercollateralized.
 
 
-Flash loans allow smart contracts to lend an amount of tokens without
- a requirement for collateral, with the condition that they must be 
-returned within the same transaction.
-
-
-Early adopters of the flash loan pattern have produced different 
-interfaces and different use patterns. The diversification is expected 
-to intensify, and with it the technical debt required to integrate with 
-diverse flash lending patterns.
-
-
-Some of the high level differences in the approaches across the protocols include:
-
-- Repayment approaches at the end of the transaction, where some
-pull the principal plus the fee from the loan receiver, and others where the loan receiver needs to manually return the principal and the fee to the lender.
-- Some lenders offer the ability to repay the loan using a token
-that is different to what was originally borrowed, which can reduce the
-overall complexity of the flash transaction and gas fees.
-- Some lenders offer a single entry point into the protocol
-regardless of whether you’re buying, selling, depositing or chaining
-them together as a flash loan, whereas other protocols offer discrete
-entry points.
-- Some lenders allow to flash mint any amount of their native token
-without charging a fee, effectively allowing flash loans bounded by
-computational constraints instead of asset ownership constraints.
-
-![](/images/2beec3bf-2d47-445d-8dd0-30068879468f.png)
-
-
-First thing first, I want to have a look at the current state of the vault contract:
+First thing first, I want to have a look at the current state of the vault contract, here is a simple script to logs the current balances of Gold and Seagold of the Sharkvault:
 
 
 ```solidity
@@ -243,10 +208,10 @@ contract POC is Script {
         IERC20 gold = IERC20(vault.gold());
         IERC20 seagold = IERC20(vault.seagold());
 
-        console.logAddress(address(gold));
-        console.logAddress(address(seagold));
-        console.logUint(gold.balanceOf(address(vault)));
-        console.logUint(seagold.balanceOf(address(vault)));
+        console.logAddress(address(gold)); // logs the gold token address
+        console.logAddress(address(seagold)); // logs the seagold token address
+        console.logUint(gold.balanceOf(address(vault))); // logs the amount gold in the vault
+        console.logUint(seagold.balanceOf(address(vault))); // logs the amount of seagold in the vault
 
 
         vm.stopBroadcast();
@@ -261,10 +226,10 @@ which gives me the following output :
 ![](/images/d77a8fc9-bff8-4e31-8f60-59bb6cbce852.png)
 
 
-So this is our target to still !
+So there are 3000000000000000000000 unit of $Seagold in the contract to be stolen !
 
 
-Now here is the vault contract:
+Now here is the vault contract code :
 
 
 ```solidity
@@ -419,7 +384,16 @@ contract SharkVault {
 ```
 
 
-Since we are supposed to take advantage of a reentrancy attack, I’m looking for any miss ordered `[checks → internal state change → outside communication]` patern in the contract. In other word, I want to find something in the contract that update the internal state logic of the contract after talking with the outside world.
+From reding the Cream Finance post moterm, we can easily suppose that their is a reentrancy vulnerability inside this contract so I’m looking for any miss ordered `[Checks → Effects → Interactions]` pattern in the contract. 
+
+
+You can find nice description of this pattern inside the solidity documentation: 
+
+
+![](/images/34f88230-0d68-4fbe-9cb3-85f673eff7fe.png)
+
+
+In other word, we want to find something in the contract that update the internal state of the contract after talking with the outside world.
 
 
 And here we have it :
@@ -428,28 +402,30 @@ And here we have it :
 ```solidity
  function borrow(uint256 _amount) external {
 
-        LoanAccount memory borrowerAccount = updatedAccount(msg.sender);
-        borrowerAccount.borrowedSeagold += _amount;
+        LoanAccount memory borrowerAccount = updatedAccount(msg.sender); // local state
+        borrowerAccount.borrowedSeagold += _amount; // local state
 
         // Fail if insufficient remaining balance of $SEAGOLD
-        uint256 seagoldBalance = seagold.balanceOf(address(this));
-        require(_amount <= seagoldBalance, "Insufficient $SEAGLD to lend");
+        uint256 seagoldBalance = seagold.balanceOf(address(this)); // local state
+        require(_amount <= seagoldBalance, "Insufficient $SEAGLD to lend"); // 1st Check
 
         // Fail if borrower has insufficient gold collateral
-        require(_hasEnoughCollateral(borrowerAccount), "Undercollateralized $SEAGLD loan");
+        require(_hasEnoughCollateral(borrowerAccount), "Undercollateralized $SEAGLD loan"); // 2d Check
 
+				//--- DANGER ZONE ---//
+				
         // Transfer $SEAGOLD and update records
-        seagold.transfer(msg.sender, _amount); <==================
-        accounts[msg.sender] = borrowerAccount; <=================
+        seagold.transfer(msg.sender, _amount);  // Interaction (outside world communication)
+        accounts[msg.sender] = borrowerAccount; // Effect (internal state change)
 
     }
 ```
 
 
-Those last two line are very dangerous since transfer can be done to any malicious contract that will recall the borrow function before the `accounnts[msg.sender]` state is updated!
+Those last two line are very dangerous since transfer can be done to any malicious contract that will recall the borrow function before the `accounnts[msg.sender]` state is updated, breaking the internal state logic of the contract !
 
 
-The first line of the function calls `updatedAccount` :
+The first line of the method calls `updatedAccount` here you have the code of this method :
 
 
 ```solidity
@@ -457,7 +433,10 @@ function updatedAccount(
         address _accountOwner
     ) public view returns (LoanAccount memory account) {
 
-        account = accounts[_accountOwner];
+        // we can't rely on this value
+        // since borrow can be called multiple times (recursion pattern)
+        // before it updates the accounts
+				account = accounts[_accountOwner];
 
         if (account.borrowedSeagold > 0) {
             uint256 blockDelta = block.number - account.lastBlock;
@@ -476,7 +455,16 @@ function updatedAccount(
 ```
 
 
-but this call presuppose that `account = accounts[_accountOwner];` is the correct value, which we know is wrong since we can call withdraw as many time as we want without changing the `accounts[msg.sender]` . In order to create an attack, first we need so GOLD collateral. Let’s see how many GOLD we can borrow from the flash lender:
+but this call presuppose that `account = accounts[_accountOwner];` is the correct value, which we know is wrong since we can call `borrow` as many time as we want without changing the `accounts[msg.sender]` .
+
+
+Now, we know there is a vulnerability inside the Sharkvault contract. In order to interact with the borrow method, we first need to deposit some $Gold collateral into it. Don’t forget that we have access to another contract:  the flash lender !
+
+
+![](/images/933ad9cf-d32b-4df5-90c7-e1468c891042.png)
+
+
+Let’s see how many $Gold we can get from the flash loan:
 
 
 ![](/images/890f84cd-9c23-471d-91f8-eb71c84fa3df.png)
@@ -496,15 +484,34 @@ So we’ll be able to `borrow` 750 Seagold on each call which is perfet since 3 
 
 So, here are the step I’m going to implement;
 
+1. Ask for a flash loan of `1000` Gold to the falsh lender
 1. Deposit the `1000` Gold from the Flashloan contract into the SharkVault contract
+1. Make a `borrow()` of 0 SeaGold so I don’t have to repay anything at the end of the call call
 1. Call `borrow()` 750 SeaGold x4 thanks to the contract breach
-1. Make a last `borrow()` of 0 SeaGold so I don’t have to repay anything
 1. Withdraw the `1000` Gold from the SharkVault contract and repay back the Flashloan contract
 
-Now it still remains one problem, how to take advantage of the seagold transfer method ?
+![](/images/630c228c-fb29-42c5-b7f1-1a4803b034c9.png)
 
 
-looking at the decompiled version of the function from goerli scan :
+Here is another point of view from a contract state perspective:
+
+
+ 
+
+
+![](/images/766206a6-f30b-45f4-9feb-0d6069f2a0d7.gif)
+
+
+you can play with the animation here 
+
+
+[image](https://prod-files-secure.s3.us-west-2.amazonaws.com/00345c33-b7f7-443a-aca8-598247fb6d93/e53c7ace-a866-4ff8-b2d0-377d311be1ff/excalidraw-claymate%283%29.html?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240319%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240319T165404Z&X-Amz-Expires=3600&X-Amz-Signature=1286b70636a80314858b561e03f76b2bdca2d34cf722afa99ac27a797d950d95&X-Amz-SignedHeaders=host&x-id=GetObject)
+
+
+Now it still remains one problem, how to take advantage of the Seagold `transfer` method ?
+
+
+We can take a look at the decompiled version of the function from goerliscan :
 
 
 ```solidity
@@ -574,57 +581,6 @@ and the first transaction log from my first POC (see further below) we can see t
 
 
 Here is the correponding eip : [https://eips.ethereum.org/EIPS/eip-1820](https://eips.ethereum.org/EIPS/eip-1820)
-
-
-## Simple Summary
-
-
-This standard defines a universal registry smart contract where any 
-address (contract or regular account) can register which interface it 
-supports and which smart contract is responsible for its implementation.
-
-
-This standard keeps backward compatibility with [ERC-165](https://eips.ethereum.org/EIPS/eip-165).
-
-
-##  Abstract
-
-
-This standard defines a registry where smart contracts and regular 
-accounts can publish which functionality they implement—either directly 
-or through a proxy contract.
-
-
-Anyone can query this registry to ask if a specific address 
-implements a given interface and which smart contract handles its 
-implementation.
-
-
-This registry MAY be deployed on any chain and shares the same address on all chains.
-
-
-Interfaces with zeroes (`0`) as the last 28 bytes are considered [ERC-165](https://eips.ethereum.org/EIPS/eip-165) interfaces,
-and this registry SHALL forward the call to the contract to see if it implements the interface.
-
-
-This contract also acts as an [ERC-165](https://eips.ethereum.org/EIPS/eip-165) cache to reduce gas consumption.
-
-
-##  Motivation
-
-
-There have been different approaches to define pseudo-introspection in Ethereum.
-The first is [ERC-165](https://eips.ethereum.org/EIPS/eip-165) which has the limitation that it cannot be used by regular accounts.
-The second attempt is [ERC-672](https://github.com/ethereum/EIPs/issues/672) which uses reverse [ENS](https://ens.domains/). Using reverse [ENS](https://ens.domains/) has two issues. 
-First, it is unnecessarily complicated, and second, [ENS](https://ens.domains/) is still a centralized contract controlled by a multisig.
-This multisig theoretically would be able to modify the system.
-
-
-This standard is much simpler than [ERC-672](https://github.com/ethereum/EIPs/issues/672), and it is _fully_ decentralized.
-
-
-This standard also provides a _unique_ address for all chains.
-Thus solving the problem of resolving the correct registry address for different chains.
 
 
 Back to the decompiled code:
@@ -736,7 +692,7 @@ function setInterfaceImplementer(address _addr, bytes32 _interfaceHash, address 
 → _interfaceHash (FlashLoan address)
 
 
-So here is the call I made :
+So here is the call I make :
 
 
 ```solidity
@@ -999,4 +955,11 @@ contract POC is Script {
 ```solidity
 forge script script/Shark.s.sol --rpc-url $GOERLI_RPC_URL -vvvv --broadcast --verify
 ```
+
+
+<u>**Refs**</u>:
+
+- [ERC-3156: Flash Loans](https://eips.ethereum.org/EIPS/eip-3156)
+
+![](/images/178ae4f1-c8c0-4d72-b2e0-4ea382dde02f.png)
 

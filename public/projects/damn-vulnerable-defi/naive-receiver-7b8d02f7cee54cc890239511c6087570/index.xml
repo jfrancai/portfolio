@@ -1,0 +1,19 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>jfrancai – Naive receiver</title>
+    <link>//localhost:1313/projects/damn-vulnerable-defi/naive-receiver-7b8d02f7cee54cc890239511c6087570/</link>
+    <description>Recent content in Naive receiver on jfrancai</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 10 Feb 2024 14:49:00 +0000</lastBuildDate>
+    
+	  <atom:link href="//localhost:1313/projects/damn-vulnerable-defi/naive-receiver-7b8d02f7cee54cc890239511c6087570/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+  </channel>
+</rss>

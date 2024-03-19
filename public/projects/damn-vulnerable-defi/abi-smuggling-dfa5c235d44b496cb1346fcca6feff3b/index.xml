@@ -1,0 +1,19 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>jfrancai – ABI Smuggling</title>
+    <link>//localhost:1313/projects/damn-vulnerable-defi/abi-smuggling-dfa5c235d44b496cb1346fcca6feff3b/</link>
+    <description>Recent content in ABI Smuggling on jfrancai</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 10 Feb 2024 14:51:00 +0000</lastBuildDate>
+    
+	  <atom:link href="//localhost:1313/projects/damn-vulnerable-defi/abi-smuggling-dfa5c235d44b496cb1346fcca6feff3b/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+  </channel>
+</rss>

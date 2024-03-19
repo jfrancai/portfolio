@@ -1,19 +1,19 @@
 ---
 title: "Switch"
 date: "2024-02-25T10:57:00.000Z"
-lastmod: "2024-03-11T18:07:00.000Z"
+lastmod: "2024-03-12T14:20:00.000Z"
 draft: false
 difficulty: "⭐⭐⭐⭐"
 prev: "Gatekeeper-Three-5c1ce9c7f1414b5fb252ec899aa78e83"
 weight: 30
-state: "En cours"
+state: "Terminé"
 level-url: "https://ethernaut.openzeppelin.com/level/29"
 type: "docs"
 NOTION_METADATA:
   object: "page"
   id: "5a3e0503-8dd1-4730-9496-128b2ad2bd09"
   created_time: "2024-02-25T10:57:00.000Z"
-  last_edited_time: "2024-03-11T18:07:00.000Z"
+  last_edited_time: "2024-03-12T14:20:00.000Z"
   created_by:
     object: "user"
     id: "7866207c-089f-43df-9333-1dc33859c6a9"
@@ -66,9 +66,9 @@ NOTION_METADATA:
       id: "f%40ps"
       type: "status"
       status:
-        id: "e1f6ef4b-49ae-427f-9bb4-8736089f3aa2"
-        name: "En cours"
-        color: "blue"
+        id: "abb7fad3-add1-4b13-946c-06bff36598bf"
+        name: "Terminé"
+        color: "green"
     level-url:
       id: "juZs"
       type: "url"
@@ -103,7 +103,7 @@ NOTION_METADATA:
           href: null
   url: "https://www.notion.so/Switch-5a3e05038dd147309496128b2ad2bd09"
   public_url: null
-UPDATE_TIME: "2024-03-11T18:08:05.881Z"
+UPDATE_TIME: "2024-03-19T16:42:45.705Z"
 
 ---
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.css" integrity="sha384-bYdxxUwYipFNohQlHt0bjN/LCpueqWz13HufFEV1SUatKs1cm4L6fFgCi1jT643X" crossorigin="anonymous">
@@ -212,6 +212,8 @@ contract POC is Script {
 
   }
 }
-
 ```
+
+
+larz  et nadia remi romain
 

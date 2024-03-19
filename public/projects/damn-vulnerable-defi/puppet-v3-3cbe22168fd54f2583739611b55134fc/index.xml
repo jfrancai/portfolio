@@ -1,0 +1,19 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>jfrancai – Puppet V3</title>
+    <link>//localhost:1313/projects/damn-vulnerable-defi/puppet-v3-3cbe22168fd54f2583739611b55134fc/</link>
+    <description>Recent content in Puppet V3 on jfrancai</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 10 Feb 2024 14:51:00 +0000</lastBuildDate>
+    
+	  <atom:link href="//localhost:1313/projects/damn-vulnerable-defi/puppet-v3-3cbe22168fd54f2583739611b55134fc/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+  </channel>
+</rss>

