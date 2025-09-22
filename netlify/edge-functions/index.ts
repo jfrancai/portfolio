@@ -199,17 +199,6 @@ const html = (title: string, content: string) => `<!DOCTYPE html>
 
 </html>`
 
-const parseFrontmatter = (content: string) => {
-  const match = content.match(/^---\s*\n([\s\S]*?)\n---\s*\n/)
-  if (!match) return { title: 'No title', date: 'No date', content }
-
-  const title = match[1]!.match(/^title:\s*(.+)$/m)?.[1]?.trim() || 'No title'
-  const dateStr = match[1]!.match(/^date:\s*(.+)$/m)?.[1]?.trim()
-  const date = dateStr ? new Date(dateStr).toLocaleDateString() : 'No date'
-
-  return { title, date, content: content.replace(/^---\s*\n[\s\S]*?\n---\s*\n/, '') }
-}
-
 app.get("/", async (c) => {
   const { data: posts, error } = await supabase.from('posts').select('*')
 
@@ -232,13 +221,11 @@ app.get("/posts/:slug", async (c) => {
 
   if (error || !post) return c.notFound()
 
-  const { title, content } = parseFrontmatter(post.content)
 
-  return c.html(html(title, `
+  return c.html(html(post.title, `
     <nav><a href="/">← Back to posts</a></nav>
-    <article><div>${marked.parse(content)}</div></article>
+    <article><div>${marked.parse(post.content)}</div></article>
   `))
 })
 
 export default handle(app)
-
